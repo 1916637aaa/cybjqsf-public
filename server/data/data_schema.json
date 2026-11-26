@@ -1,0 +1,2929 @@
+{
+ "Game_AddCoinByShareR": {
+  "var": "le",
+  "fields": {
+   "lastTime": 0,
+   "count": 0,
+   "coinAdd": 0
+  }
+ },
+ "Game_CheckHappyMomentR": {
+  "var": "ce",
+  "fields": {
+   "ok": 0,
+   "remainTime": 0
+  }
+ },
+ "Game_RAddCoinByAdvert": {
+  "var": "de",
+  "fields": {
+   "coin": 0,
+   "addCoinByAdvertCnt": 0,
+   "addCoinByAdvertLimit": 0,
+   "addCoinByAdvertReset": 0
+  }
+ },
+ "Game_RAddCoinByAdvertV2": {
+  "var": "he",
+  "fields": {
+   "coin": 0,
+   "addCoinByAdvertCnt": 0,
+   "addCoinByAdvertLimit": 0,
+   "addCoinByAdvertReset": 0
+  }
+ },
+ "Game_RAddCoinByShareVideo": {
+  "var": "pe",
+  "fields": {
+   "coin": 0
+  }
+ },
+ "Game_RAddGameTage": {
+  "var": "ue",
+  "fields": {
+   "code": 0,
+   "gameID": 0,
+   "sensitiveWords": 2
+  }
+ },
+ "Game_RAddOtherCoinByAdvert": {
+  "var": "me",
+  "fields": {
+   "coin": 0,
+   "addCoinByAdvertCnt": 0,
+   "addCoinByAdvertLimit": 0,
+   "addCoinByAdvertReset": 0
+  }
+ },
+ "Game_RAddOtherCoinByAdvertV2": {
+  "var": "fe",
+  "fields": {
+   "coin": 0,
+   "addCoinByAdvertCnt": 0,
+   "addCoinByAdvertLimit": 0,
+   "addCoinByAdvertReset": 0
+  }
+ },
+ "Game_RAdminGetGameMsgByReviewId": {
+  "var": "ge",
+  "fields": {
+   "gameData": 1
+  }
+ },
+ "Game_RAdminSetGameStatus": {
+  "var": "ye",
+  "fields": {
+   "gameData": 1
+  }
+ },
+ "Game_RBindRole": {
+  "var": "ve",
+  "fields": {
+   "errorCode": 0
+  }
+ },
+ "Game_RBuyGoods": {
+  "var": "Ce",
+  "fields": {
+   "id": 0,
+   "tileConfs": 2,
+   "actorConfs": 2,
+   "deviceConfs": 2,
+   "propConfs": 2,
+   "weaponConfs": 2,
+   "bulletConfs": 2,
+   "bulletMap": 5
+  }
+ },
+ "Game_RCancelCollectionGames": {
+  "var": "_e",
+  "fields": {
+   "ids": 2
+  }
+ },
+ "Game_RCancelCollectionGoods": {
+  "var": "Se",
+  "fields": {
+   "ids": 2
+  }
+ },
+ "Game_RCancelCollectionTalk": {
+  "var": "Ge",
+  "fields": {
+   "code": 0,
+   "iD": 0
+  }
+ },
+ "Game_RCancelDownTalk": {
+  "var": "Te",
+  "fields": {
+   "upCnt": 0
+  }
+ },
+ "Game_RCancelFollowUser": {
+  "var": "Ie",
+  "fields": {
+   "followId": 0
+  }
+ },
+ "Game_RCancelThumbGameComment": {
+  "var": "be",
+  "fields": {
+   "thumbCnt": 0
+  }
+ },
+ "Game_RCancelThumbGames": {
+  "var": "Me",
+  "fields": {
+   "ids": 2
+  }
+ },
+ "Game_RCancelThumbTalk": {
+  "var": "De",
+  "fields": {
+   "thumbCnt": 0
+  }
+ },
+ "Game_RCancelThumbTalkComment": {
+  "var": "Pe",
+  "fields": {
+   "thumbCnt": 0
+  }
+ },
+ "Game_RCancelUpTalk": {
+  "var": "we",
+  "fields": {
+   "upCnt": 0
+  }
+ },
+ "Game_RClickRecommendsGames": {
+  "var": "Re",
+  "fields": {
+   "id": 0,
+   "clickCnt": 0
+  }
+ },
+ "Game_RCollectionGames": {
+  "var": "Be",
+  "fields": {
+   "ids": 2
+  }
+ },
+ "Game_RCollectionGGoods": {
+  "var": "Le",
+  "fields": {
+   "ids": 2
+  }
+ },
+ "Game_RCollectionTalk": {
+  "var": "xe",
+  "fields": {
+   "code": 0,
+   "iD": 0
+  }
+ },
+ "Game_RCommentGame": {
+  "var": "ke",
+  "fields": {
+   "code": 0,
+   "sensitiveWords": 2,
+   "comment": 1
+  }
+ },
+ "Game_RCommentTalk": {
+  "var": "Ae",
+  "fields": {
+   "code": 0,
+   "sensitiveWords": 2,
+   "comment": 1
+  }
+ },
+ "Game_RCostCoinInGame": {
+  "var": "Fe",
+  "fields": {
+   "curCoin": 0
+  }
+ },
+ "Game_RCostCoinRecommendGame": {
+  "var": "Ne",
+  "fields": {
+   "errorCode": 0
+  }
+ },
+ "Game_RCreateOfficialTalk": {
+  "var": "Oe",
+  "fields": {
+   "code": 0,
+   "sensitiveWords": 2,
+   "talkData": 1
+  }
+ },
+ "Game_RCreateTalk": {
+  "var": "Ue",
+  "fields": {
+   "code": 0,
+   "sensitiveWords": 2,
+   "talkData": 1
+  }
+ },
+ "Game_RDealWithReportGameComment": {
+  "var": "Ee",
+  "fields": {
+   "id": 0
+  }
+ },
+ "Game_RDealWithReportGoods": {
+  "var": "je",
+  "fields": {
+   "id": 0
+  }
+ },
+ "Game_RDealWithReportPlayer": {
+  "var": "He",
+  "fields": {
+   "id": 0
+  }
+ },
+ "Game_RDebugGetRecommendGameMsg": {
+  "var": "We",
+  "fields": {
+   "allStartupRecommendLeftCnt": 0,
+   "allPastRecommendLeftCnt": 0,
+   "allStartupHadRecommendCount": 0,
+   "allPastHadRecommendCount": 0,
+   "allHadRecommendCount": 0,
+   "allNeedRecommendCount": 0,
+   "lastRecommendScala": 0
+  }
+ },
+ "Game_RDeleteTalk": {
+  "var": "Ve",
+  "fields": {
+   "code": 0
+  }
+ },
+ "Game_RDelGameComment": {
+  "var": "Ke",
+  "fields": {
+   "commentId": 0
+  }
+ },
+ "Game_RDelGameRank": {
+  "var": "Je",
+  "fields": {
+   "ids": 2
+  }
+ },
+ "Game_RDelGameShop": {
+  "var": "ze",
+  "fields": {
+   "ids": 2
+  }
+ },
+ "Game_RDelReleaseGameRank": {
+  "var": "Ze",
+  "fields": {
+   "ids": 2
+  }
+ },
+ "Game_RDelRoleActorConf": {
+  "var": "Xe",
+  "fields": {
+   "ids": 2
+  }
+ },
+ "Game_RDelRoleBulletConf": {
+  "var": "qe",
+  "fields": {
+   "ids": 2
+  }
+ },
+ "Game_RDelRoleCreativeConf": {
+  "var": "Ye",
+  "fields": {
+   "gameId": 0,
+   "confId": 0
+  }
+ },
+ "Game_RDelRoleDeviceConf": {
+  "var": "$e",
+  "fields": {
+   "ids": 2
+  }
+ },
+ "Game_RDelRoleGameData": {
+  "var": "Qe",
+  "fields": {
+   "ids": 2
+  }
+ },
+ "Game_RDelRolePropConf": {
+  "var": "et",
+  "fields": {
+   "ids": 2
+  }
+ },
+ "Game_RDelRoleTileConf": {
+  "var": "tt",
+  "fields": {
+   "ids": 2
+  }
+ },
+ "Game_RDelRoleWeaponConf": {
+  "var": "ot",
+  "fields": {
+   "ids": 2
+  }
+ },
+ "Game_RDelTalkChosen": {
+  "var": "it",
+  "fields": {
+   "code": 0
+  }
+ },
+ "Game_RDelTalkComment": {
+  "var": "at",
+  "fields": {
+   "commentId": 0
+  }
+ },
+ "Game_RDelTalkCommentTop": {
+  "var": "nt",
+  "fields": {
+   "code": 0
+  }
+ },
+ "Game_RDelTalkTop": {
+  "var": "st",
+  "fields": {
+   "code": 0
+  }
+ },
+ "Game_RDelVariable": {
+  "var": "rt",
+  "fields": {
+   "ids": 2
+  }
+ },
+ "Game_RDelWorldData": {
+  "var": "lt",
+  "fields": {
+   "ids": 2
+  }
+ },
+ "Game_RDownTalk": {
+  "var": "ct",
+  "fields": {
+   "upCnt": 0
+  }
+ },
+ "Game_RDownTalkComment": {
+  "var": "dt",
+  "fields": {
+   "upCnt": 0
+  }
+ },
+ "Game_RFollowUser": {
+  "var": "ht",
+  "fields": {
+   "followId": 0
+  }
+ },
+ "Game_RGameStatusNotify": {
+  "var": "pt",
+  "fields": {
+   "gameId": 0,
+   "status": 0,
+   "offReason": 1
+  }
+ },
+ "Game_RGetAggregateMsgList": {
+  "var": "ut",
+  "fields": {
+   "newMsgCnt": 0,
+   "newAggregateMsgCnt": 0,
+   "aggregateMsgList": 2
+  }
+ },
+ "Game_RGetBeReportGameData": {
+  "var": "mt",
+  "fields": {
+   "gameDatas": 2
+  }
+ },
+ "Game_RGetBindRoleMsg": {
+  "var": "ft",
+  "fields": {
+   "code": 0
+  }
+ },
+ "Game_RGetChosenGoodsIds": {
+  "var": "gt",
+  "fields": {
+   "goodsIds": 2,
+   "recommendGoodsIds": 2
+  }
+ },
+ "Game_RGetCostCoinRecommendGames": {
+  "var": "yt",
+  "fields": {
+   "gameDatas": 2
+  }
+ },
+ "Game_RGetCreativeRank": {
+  "var": "vt",
+  "fields": {
+   "gameDatas": 2,
+   "sourceReleaseGame": 1
+  }
+ },
+ "Game_RGetFans": {
+  "var": "Ct",
+  "fields": {
+   "newFansCnt": 0,
+   "ids": 2
+  }
+ },
+ "Game_RGetFollow": {
+  "var": "_t",
+  "fields": {
+   "ids": 2
+  }
+ },
+ "Game_RGetGameDetail": {
+  "var": "St",
+  "fields": {
+   "authorMsg": 1,
+   "releaseGameData": 1,
+   "gameTopComment": 1,
+   "creativeGameData": 1,
+   "rankList": 2
+  }
+ },
+ "Game_RGetGameIdListByGameTag": {
+  "var": "Gt",
+  "fields": {
+   "gameIdList": 2
+  }
+ },
+ "Game_RGetGameRank": {
+  "var": "Tt",
+  "fields": {
+   "datas": 2
+  }
+ },
+ "Game_RGetGameShop": {
+  "var": "It",
+  "fields": {
+   "datas": 2
+  }
+ },
+ "Game_RGetGameShopIds": {
+  "var": "bt",
+  "fields": {
+   "ids": 2
+  }
+ },
+ "Game_RGetGiftDynCfg": {
+  "var": "Mt",
+  "fields": {
+   "cfg": 1
+  }
+ },
+ "Game_RGetGiftRankData": {
+  "var": "Dt",
+  "fields": {
+   "code": 0,
+   "rankType": 0,
+   "beginIndex": 0,
+   "rankList": 2
+  }
+ },
+ "Game_RGetGoodsIds": {
+  "var": "Pt",
+  "fields": {
+   "goodsIds": 2,
+   "recommendGoodsIds": 2,
+   "startMember": 0
+  }
+ },
+ "Game_RGetGoodsInfos": {
+  "var": "wt",
+  "fields": {
+   "goodsInfoList": 2
+  }
+ },
+ "Game_RGetHomepageFollowUserGames": {
+  "var": "Rt",
+  "fields": {
+   "gameDatas": 2
+  }
+ },
+ "Game_RGetHomepageGameData": {
+  "var": "Bt",
+  "fields": {
+   "gameDatas": 2
+  }
+ },
+ "Game_RGetHomepageNewGames": {
+  "var": "Lt",
+  "fields": {
+   "startMember": 0,
+   "gameDatas": 2
+  }
+ },
+ "Game_RGetHomepageRecommendsGames": {
+  "var": "xt",
+  "fields": {
+   "gameDatas": 2
+  }
+ },
+ "Game_RGetManualReportSensitiveImg": {
+  "var": "kt",
+  "fields": {
+   "sensitiveImgMsgList": 2
+  }
+ },
+ "Game_RGetMsgList": {
+  "var": "At",
+  "fields": {
+   "newMsgCnt": 0,
+   "msgList": 2
+  }
+ },
+ "Game_RGetNeedReviewImageList": {
+  "var": "Ft",
+  "fields": {
+   "needImageList": 2
+  }
+ },
+ "Game_RGetNewCommentList": {
+  "var": "Nt",
+  "fields": {
+   "startIndex": 0,
+   "newCommentCnt": 0,
+   "commentList": 2
+  }
+ },
+ "Game_RGetNewCommentListV2": {
+  "var": "Ot",
+  "fields": {
+   "startIndex": 0,
+   "newCommentCnt": 0,
+   "commentList": 2
+  }
+ },
+ "Game_RGetNewGameIdList": {
+  "var": "Ut",
+  "fields": {
+   "gameIdList": 2,
+   "startMember": 0
+  }
+ },
+ "Game_RGetNewGameList": {
+  "var": "Et",
+  "fields": {
+   "gameDatas": 2,
+   "startMember": 0
+  }
+ },
+ "Game_RGetNewGoods": {
+  "var": "jt",
+  "fields": {
+   "goodsInfoList": 2,
+   "recommendGoods": 2,
+   "startMember": 0
+  }
+ },
+ "Game_RGetOneDynamicConfig": {
+  "var": "Ht",
+  "fields": {
+   "dynamicConfig": 0
+  }
+ },
+ "Game_RGetOwnGoodsInfos": {
+  "var": "Wt",
+  "fields": {
+   "goodsInfoList": 2
+  }
+ },
+ "Game_RGetPlayGameStatistics": {
+  "var": "Vt",
+  "fields": {
+   "gameDatas": 2
+  }
+ },
+ "Game_RGetRecommendGameIdList": {
+  "var": "Kt",
+  "fields": {
+   "recommendList": 2
+  }
+ },
+ "Game_RGetRecommendGoodsIdList": {
+  "var": "Jt",
+  "fields": {
+   "recommendList": 2
+  }
+ },
+ "Game_RGetReleaseGameRank": {
+  "var": "zt",
+  "fields": {
+   "datas": 2
+  }
+ },
+ "Game_RGetReportGameCommentList": {
+  "var": "Zt",
+  "fields": {
+   "reportGameCommentList": 2,
+   "reportScoreMap": 5
+  }
+ },
+ "Game_RGetReportGameList": {
+  "var": "Xt",
+  "fields": {
+   "reportGameIdList": 2,
+   "reportScoreMap": 5
+  }
+ },
+ "Game_RGetReportGoodsList": {
+  "var": "qt",
+  "fields": {
+   "reportGoodsIdList": 2,
+   "reportScoreMap": 5
+  }
+ },
+ "Game_RGetReportPlayerList": {
+  "var": "Yt",
+  "fields": {
+   "reportPlayerIdList": 2,
+   "reportScoreMap": 5
+  }
+ },
+ "Game_RGetReportSensitiveImg": {
+  "var": "$t",
+  "fields": {
+   "sensitiveImgMsgList": 2
+  }
+ },
+ "Game_RGetReportTalkCommentList": {
+  "var": "Qt",
+  "fields": {
+   "comments": 2,
+   "reportScoreMap": 5
+  }
+ },
+ "Game_RGetReportTalkList": {
+  "var": "eo",
+  "fields": {
+   "talkList": 2,
+   "reportScoreMap": 5
+  }
+ },
+ "Game_RGetReviewGameData": {
+  "var": "to",
+  "fields": {
+   "datas": 2
+  }
+ },
+ "Game_RGetRoleActorConf": {
+  "var": "oo",
+  "fields": {
+   "datas": 2
+  }
+ },
+ "Game_RGetRoleActorIds": {
+  "var": "io",
+  "fields": {
+   "ids": 2
+  }
+ },
+ "Game_RGetRoleBulletConf": {
+  "var": "ao",
+  "fields": {
+   "datas": 2
+  }
+ },
+ "Game_RGetRoleBulletIds": {
+  "var": "no",
+  "fields": {
+   "ids": 2
+  }
+ },
+ "Game_RGetRoleCreativeConf": {
+  "var": "so",
+  "fields": {
+   "confMap": 5
+  }
+ },
+ "Game_RGetRoleDeviceConf": {
+  "var": "ro",
+  "fields": {
+   "datas": 2
+  }
+ },
+ "Game_RGetRoleDeviceIds": {
+  "var": "lo",
+  "fields": {
+   "ids": 2
+  }
+ },
+ "Game_RGetRoleGameData": {
+  "var": "co",
+  "fields": {
+   "datas": 2
+  }
+ },
+ "Game_RGetRoleGameIds": {
+  "var": "ho",
+  "fields": {
+   "ids": 2
+  }
+ },
+ "Game_RGetRoleGiftRankData": {
+  "var": "po",
+  "fields": {
+   "code": 0,
+   "score": 0,
+   "beginIndex": 0,
+   "rankList": 2,
+   "checkerInfo": 1
+  }
+ },
+ "Game_RGetRolePropConf": {
+  "var": "uo",
+  "fields": {
+   "datas": 2
+  }
+ },
+ "Game_RGetRolePropIds": {
+  "var": "mo",
+  "fields": {
+   "ids": 2
+  }
+ },
+ "Game_RGetRoleTileConf": {
+  "var": "fo",
+  "fields": {
+   "datas": 2
+  }
+ },
+ "Game_RGetRoleTileIds": {
+  "var": "go",
+  "fields": {
+   "ids": 2
+  }
+ },
+ "Game_RGetRoleWeaponConf": {
+  "var": "yo",
+  "fields": {
+   "datas": 2
+  }
+ },
+ "Game_RGetRoleWeaponIds": {
+  "var": "vo",
+  "fields": {
+   "ids": 2
+  }
+ },
+ "Game_RGetSimpleGoods": {
+  "var": "Co",
+  "fields": {
+   "goodsInfoList": 2
+  }
+ },
+ "Game_RGetSourceCreativeGameRank": {
+  "var": "_o",
+  "fields": {
+   "gameDatas": 2
+  }
+ },
+ "Game_RGetThumbGameComment": {
+  "var": "So",
+  "fields": {
+   "gameCommentMap": 5
+  }
+ },
+ "Game_RGetThumbTalkComment": {
+  "var": "Go",
+  "fields": {
+   "thumbMap": 5
+  }
+ },
+ "Game_RGetUserCreditMsg": {
+  "var": "To",
+  "fields": {
+   "creditScore": 0,
+   "creditScoreRecoverProcess": 0,
+   "userCreditMsgList": 2
+  }
+ },
+ "Game_RGetUserDetailMsg": {
+  "var": "Io",
+  "fields": {
+   "userDetailMsg": 1
+  }
+ },
+ "Game_RGetUserSimpleMsg": {
+  "var": "bo",
+  "fields": {
+   "userSimpleMsgList": 2
+  }
+ },
+ "Game_RGetVariable": {
+  "var": "Mo",
+  "fields": {
+   "datas": 2
+  }
+ },
+ "Game_RGetVariableIds": {
+  "var": "Do",
+  "fields": {
+   "ids": 2
+  }
+ },
+ "Game_RGetWorldData": {
+  "var": "Po",
+  "fields": {
+   "datas": 2
+  }
+ },
+ "Game_RGetWorldDataIds": {
+  "var": "wo",
+  "fields": {
+   "ids": 2
+  }
+ },
+ "Game_RGMBindRole": {
+  "var": "Ro",
+  "fields": {
+   "errorCode": 0,
+   "user": 1
+  }
+ },
+ "Game_RGMIncOtherCoin": {
+  "var": "Bo",
+  "fields": {
+   "coin": 0
+  }
+ },
+ "Game_RGMRevokeBindRole": {
+  "var": "Lo",
+  "fields": {
+   "errorCode": 0,
+   "user": 1
+  }
+ },
+ "Game_RGMSetGameTage": {
+  "var": "xo",
+  "fields": {
+   "code": 0,
+   "gameID": 0
+  }
+ },
+ "Game_RGoodsStatusNotify": {
+  "var": "ko",
+  "fields": {
+   "goodsId": 0,
+   "status": 0,
+   "offReason": 1
+  }
+ },
+ "Game_RHurryGames": {
+  "var": "Ao",
+  "fields": {
+   "ids": 2
+  }
+ },
+ "Game_RIncCreditScore": {
+  "var": "Fo",
+  "fields": {
+   "playerId": 0,
+   "incScore": 0
+  }
+ },
+ "Game_RLoadFirstLevelGameComment": {
+  "var": "No",
+  "fields": {
+   "comment": 1
+  }
+ },
+ "Game_RLoadFirstLevelTalkComment": {
+  "var": "Oo",
+  "fields": {
+   "comment": 1
+  }
+ },
+ "Game_RLoadGameComment": {
+  "var": "Uo",
+  "fields": {
+   "commentsCnt": 0,
+   "commentsCntSum": 0,
+   "comments": 2
+  }
+ },
+ "Game_RLoadGameSubComment": {
+  "var": "Eo",
+  "fields": {
+   "comments": 2
+  }
+ },
+ "Game_RLoadOwnTalk": {
+  "var": "jo",
+  "fields": {
+   "talkList": 2
+  }
+ },
+ "Game_RLoadOwnTalkComment": {
+  "var": "Ho",
+  "fields": {
+   "comments": 2
+  }
+ },
+ "Game_RLoadTalk": {
+  "var": "Wo",
+  "fields": {
+   "startMember": 0,
+   "talkList": 2
+  }
+ },
+ "Game_RLoadTalkByIdList": {
+  "var": "Vo",
+  "fields": {
+   "talkList": 2
+  }
+ },
+ "Game_RLoadTalkComment": {
+  "var": "Ko",
+  "fields": {
+   "commentsCnt": 0,
+   "commentsCntSum": 0,
+   "comments": 2
+  }
+ },
+ "Game_RLoadTalkDetail": {
+  "var": "Jo",
+  "fields": {
+   "talkData": 1
+  }
+ },
+ "Game_RLoadTalkSubComment": {
+  "var": "zo",
+  "fields": {
+   "comments": 2
+  }
+ },
+ "Game_RLogin": {
+  "var": "Zo",
+  "fields": {
+   "role": 1,
+   "dynamicConfig": 5,
+   "roleGameConf": 1,
+   "offLineChangeMsg": 1,
+   "saleSummarys": 2,
+   "gameSaleSummarys": 2,
+   "adSummarys": 2,
+   "rebornSummarys": 2,
+   "unlockGameRewards": 2,
+   "unlockGoodsRewards": 2,
+   "gameSlotUnlockLvls": 2,
+   "goodsSlotUnlockLvls": 2,
+   "hotGameIdList": 2,
+   "newGameDatas": 2,
+   "followGameDatas": 2,
+   "newMsgCnt": 0,
+   "newAggregateMsgCnt": 0,
+   "newFansCnt": 0,
+   "newCommentCnt": 0,
+   "canObtainTTCoin": 0,
+   "customActorGroups": 2,
+   "addCoinByAdvertCnt": 0,
+   "addCoinByAdvertLimit": 0,
+   "addCoinByAdvertReset": 0,
+   "collectionGoods": 2,
+   "giftCfgVersion": 0,
+   "userPlatforms": 2
+  }
+ },
+ "Game_RModifyOfficialTalk": {
+  "var": "Xo",
+  "fields": {
+   "code": 0,
+   "sensitiveWords": 2,
+   "talkData": 1
+  }
+ },
+ "Game_RModifyTalk": {
+  "var": "qo",
+  "fields": {
+   "code": 0,
+   "sensitiveWords": 2,
+   "talkData": 1
+  }
+ },
+ "Game_RModifyTalkComment": {
+  "var": "Yo",
+  "fields": {
+   "code": 0,
+   "comment": 1
+  }
+ },
+ "Game_RNewSearchGoods": {
+  "var": "$o",
+  "fields": {
+   "goodsInfoList": 2
+  }
+ },
+ "Game_RObtainTTCoin0319": {
+  "var": "Qo",
+  "fields": {
+   "coin": 0
+  }
+ },
+ "Game_ROffGame": {
+  "var": "ei",
+  "fields": {
+   "id": 0
+  }
+ },
+ "Game_ROffGoods": {
+  "var": "ti",
+  "fields": {
+   "id": 0
+  }
+ },
+ "Game_ROfficialDeleteTalk": {
+  "var": "oi",
+  "fields": {
+   "code": 0
+  }
+ },
+ "Game_ROwnOffGame": {
+  "var": "ii",
+  "fields": {
+   "id": 0
+  }
+ },
+ "Game_RPlayGames": {
+  "var": "ai",
+  "fields": {
+   "ids": 2,
+   "playCntList": 2
+  }
+ },
+ "Game_RPublishGame": {
+  "var": "ni",
+  "fields": {
+   "id": 0,
+   "code": 0,
+   "sensitiveWords": 2
+  }
+ },
+ "Game_RReplyTalkComment": {
+  "var": "si",
+  "fields": {
+   "code": 0,
+   "sensitiveWords": 2,
+   "comment": 1
+  }
+ },
+ "Game_RReportGame": {
+  "var": "ri",
+  "fields": {
+   "id": 0
+  }
+ },
+ "Game_RReportGameComment": {
+  "var": "li",
+  "fields": {
+   "reportCnt": 0
+  }
+ },
+ "Game_RReportGoods": {
+  "var": "ci",
+  "fields": {
+   "id": 0
+  }
+ },
+ "Game_RReportPlayer": {
+  "var": "di",
+  "fields": {
+   "id": 0
+  }
+ },
+ "Game_RReportTalk": {
+  "var": "hi",
+  "fields": {
+   "reportCnt": 0
+  }
+ },
+ "Game_RReportTalkComment": {
+  "var": "pi",
+  "fields": {
+   "reportCnt": 0
+  }
+ },
+ "Game_RReviewGame": {
+  "var": "ui",
+  "fields": {
+   "datas": 2
+  }
+ },
+ "Game_RRevokeReportGame": {
+  "var": "mi",
+  "fields": {
+   "id": 0
+  }
+ },
+ "Game_RRevokeReportGameComment": {
+  "var": "fi",
+  "fields": {
+   "id": 0
+  }
+ },
+ "Game_RRevokeReportGoods": {
+  "var": "gi",
+  "fields": {
+   "id": 0
+  }
+ },
+ "Game_RRevokeReportPlayer": {
+  "var": "yi",
+  "fields": {
+   "id": 0
+  }
+ },
+ "Game_RRoleNewUserImgNotify": {
+  "var": "vi",
+  "fields": {
+   "userImg": 0,
+   "status": 0,
+   "offReason": 1
+  }
+ },
+ "Game_RSaveAllCustomColors": {
+  "var": "Ci",
+  "fields": {
+   "colorDatas": 2
+  }
+ },
+ "Game_RSaveAllVariable": {
+  "var": "_i",
+  "fields": {
+   "retVariableDatas": 2
+  }
+ },
+ "Game_RSaveCustomColors": {
+  "var": "Si",
+  "fields": {
+   "colorDatas": 2
+  }
+ },
+ "Game_RSaveGameRank": {
+  "var": "Gi",
+  "fields": {
+   "gameId": 0,
+   "id": 0
+  }
+ },
+ "Game_RSaveGameShop": {
+  "var": "Ti",
+  "fields": {
+   "gameId": 0,
+   "id": 0
+  }
+ },
+ "Game_RSaveRoleActorConf": {
+  "var": "Ii",
+  "fields": {
+   "id": 0
+  }
+ },
+ "Game_RSaveRoleBulletConf": {
+  "var": "bi",
+  "fields": {
+   "id": 0
+  }
+ },
+ "Game_RSaveRoleCreativeConf": {
+  "var": "Mi",
+  "fields": {
+   "gameId": 0,
+   "confId": 0
+  }
+ },
+ "Game_RSaveRoleDeviceConf": {
+  "var": "Di",
+  "fields": {
+   "id": 0
+  }
+ },
+ "Game_RSaveRoleGameData": {
+  "var": "Pi",
+  "fields": {
+   "id": 0
+  }
+ },
+ "Game_RSaveRolePropConf": {
+  "var": "wi",
+  "fields": {
+   "id": 0
+  }
+ },
+ "Game_RSaveRoleTileConf": {
+  "var": "Ri",
+  "fields": {
+   "id": 0
+  }
+ },
+ "Game_RSaveRoleWeaponConf": {
+  "var": "Bi",
+  "fields": {
+   "id": 0
+  }
+ },
+ "Game_RSaveVariable": {
+  "var": "Li",
+  "fields": {
+   "gameId": 0,
+   "id": 0
+  }
+ },
+ "Game_RSaveWorldData": {
+  "var": "xi",
+  "fields": {
+   "gameId": 0,
+   "id": 0
+  }
+ },
+ "Game_RSearchGame": {
+  "var": "ki",
+  "fields": {
+   "gameDatas": 2
+  }
+ },
+ "Game_RSearchGameByTag": {
+  "var": "Ai",
+  "fields": {
+   "gameDatas": 2
+  }
+ },
+ "Game_RSearchGoods": {
+  "var": "Fi",
+  "fields": {
+   "goodsInfoList": 2
+  }
+ },
+ "Game_RSearchRole": {
+  "var": "Ni",
+  "fields": {
+   "roleDatas": 2
+  }
+ },
+ "Game_RSearchTalk": {
+  "var": "Oi",
+  "fields": {
+   "talkList": 2
+  }
+ },
+ "Game_RSendGift": {
+  "var": "Ui",
+  "fields": {
+   "code": 0,
+   "coin": 0
+  }
+ },
+ "Game_RSensitiveMsg": {
+  "var": "Ei",
+  "fields": {
+   "code": 0,
+   "sensitiveWords": 2
+  }
+ },
+ "Game_RSetTalkChosen": {
+  "var": "ji",
+  "fields": {
+   "code": 0
+  }
+ },
+ "Game_RSetTalkCommentTop": {
+  "var": "Hi",
+  "fields": {
+   "code": 0
+  }
+ },
+ "Game_RSetTalkTop": {
+  "var": "Wi",
+  "fields": {
+   "code": 0
+  }
+ },
+ "Game_RTalkCommentStatusNotify": {
+  "var": "Vi",
+  "fields": {
+   "talkCommentId": 0,
+   "status": 0,
+   "offReason": 1
+  }
+ },
+ "Game_RTalkStatusNotify": {
+  "var": "Ki",
+  "fields": {
+   "talkId": 0,
+   "status": 0,
+   "offReason": 1
+  }
+ },
+ "Game_RThumbGameComment": {
+  "var": "Ji",
+  "fields": {
+   "thumbCnt": 0
+  }
+ },
+ "Game_RThumbGames": {
+  "var": "zi",
+  "fields": {
+   "ids": 2
+  }
+ },
+ "Game_RThumbTalk": {
+  "var": "Zi",
+  "fields": {
+   "thumbCnt": 0
+  }
+ },
+ "Game_RThumbTalkComment": {
+  "var": "Xi",
+  "fields": {
+   "thumbCnt": 0
+  }
+ },
+ "Game_RUpdateUserImg": {
+  "var": "qi",
+  "fields": {
+   "code": 0
+  }
+ },
+ "Game_RUpdateUserInfo": {
+  "var": "Yi",
+  "fields": {
+   "code": 0,
+   "sensitiveWords": 2
+  }
+ },
+ "Game_RUploadGameRankScore": {
+  "var": "$i",
+  "fields": {
+   "gameId": 0,
+   "scores": 2
+  }
+ },
+ "Game_RUploadGoods": {
+  "var": "Qi",
+  "fields": {
+   "id": 0,
+   "code": 0,
+   "sensitiveWords": 2
+  }
+ },
+ "Game_RUploadImage": {
+  "var": "ea",
+  "fields": {
+   "isOK": 0,
+   "sensitiveImageResult": 1,
+   "url": 0,
+   "reason": 0
+  }
+ },
+ "Game_RUploadReleaseGame": {
+  "var": "ta",
+  "fields": {
+   "cdnUrl": 0
+  }
+ },
+ "Game_RUploadTakeExamScore": {
+  "var": "oa",
+  "fields": {
+   "score": 0
+  }
+ },
+ "Game_RUpTalk": {
+  "var": "ia",
+  "fields": {
+   "upCnt": 0
+  }
+ },
+ "Game_RUpTalkComment": {
+  "var": "aa",
+  "fields": {
+   "upCnt": 0
+  }
+ },
+ "Game_SubGameListR": {
+  "var": "na",
+  "fields": {
+   "subGameList": 2
+  }
+ },
+ "Login_RAuthUser": {
+  "var": "sa",
+  "fields": {
+   "userToken": 0,
+   "uId": 0,
+   "servers": 2,
+   "roles": 2
+  }
+ },
+ "Login_RAuthUserSingle": {
+  "var": "ra",
+  "fields": {
+   "roleToken": 0,
+   "roleId": 0,
+   "bindInfo": 1,
+   "bindPlatformUId": 0
+  }
+ },
+ "Login_RGetAppUpdateInfo": {
+  "var": "la",
+  "fields": {
+   "isForceUpdate": 0,
+   "version": 0,
+   "url": 0
+  }
+ },
+ "Login_RSelectServer": {
+  "var": "ca",
+  "fields": {
+   "roleToken": 0
+  }
+ },
+ "NotifyAdvertFinish": {
+  "var": "da",
+  "fields": {
+   "transId": 0,
+   "extraData": 0
+  }
+ },
+ "OIM_GetConversationListResp": {
+  "var": "ha",
+  "fields": {
+   "convs": 2
+  }
+ },
+ "OIM_GetHistoryResp": {
+  "var": "pa",
+  "fields": {
+   "msgs": 2
+  }
+ },
+ "OIMNewMsgNotify": {
+  "var": "ua",
+  "fields": {
+   "msg": 1
+  }
+ },
+ "RespSync": {
+  "var": "ma",
+  "fields": {
+   "role": 1
+  }
+ },
+ "Room_CustomChangeP": {
+  "var": "fa",
+  "fields": {
+   "room": 1
+  }
+ },
+ "Room_DismissP": {
+  "var": "ga",
+  "fields": {
+   "room": 1
+  }
+ },
+ "Room_FrameMsgP": {
+  "var": "ya",
+  "fields": {
+   "roomId": 0,
+   "frame": 0,
+   "msgs": 2
+  }
+ },
+ "Room_FrameSyncStartP": {
+  "var": "va",
+  "fields": {
+   "roomId": 0
+  }
+ },
+ "Room_FrameSyncStopP": {
+  "var": "Ca",
+  "fields": {
+   "roomId": 0
+  }
+ },
+ "Room_ListR": {
+  "var": "_a",
+  "fields": {
+   "roomList": 2
+  }
+ },
+ "Room_LockP": {
+  "var": "Sa",
+  "fields": {
+   "room": 1
+  }
+ },
+ "Room_MemberGroupChangeP": {
+  "var": "Ga",
+  "fields": {
+   "room": 1
+  }
+ },
+ "Room_MemberJoinP": {
+  "var": "Ta",
+  "fields": {
+   "room": 1,
+   "roleId": 0
+  }
+ },
+ "Room_MemberLeaveP": {
+  "var": "Ia",
+  "fields": {
+   "room": 1,
+   "roleId": 0
+  }
+ },
+ "Room_MsgP": {
+  "var": "ba",
+  "fields": {
+   "roomId": 0,
+   "roleId": 0,
+   "msg": 0
+  }
+ },
+ "Room_PingR": {
+  "var": "Ma",
+  "fields": {
+   "roomId": 0
+  }
+ },
+ "Room_REnter": {
+  "var": "Da",
+  "fields": {
+   "userToken": 0,
+   "uId": 0,
+   "servers": 2,
+   "roles": 2
+  }
+ },
+ "Room_Resp": {
+  "var": "Pa",
+  "fields": {
+   "room": 1
+  }
+ },
+ "Room_StartFailP": {
+  "var": "wa",
+  "fields": {
+   "room": 1
+  }
+ },
+ "Room_StartingP": {
+  "var": "Ra",
+  "fields": {
+   "room": 1
+  }
+ },
+ "Room_StartP": {
+  "var": "Ba",
+  "fields": {
+   "room": 1
+  }
+ },
+ "Room_StopP": {
+  "var": "La",
+  "fields": {
+   "room": 1
+  }
+ },
+ "Room_UnlockP": {
+  "var": "xa",
+  "fields": {
+   "room": 1
+  }
+ },
+ "ActorConf": {
+  "var": "s",
+  "fields": {
+   "id": 0,
+   "goodsUId": 0,
+   "conf": 0
+  }
+ },
+ "ActorGroupRefData": {
+  "var": "r",
+  "fields": {
+   "confType": 0,
+   "confId": 0
+  }
+ },
+ "ActorGroupData": {
+  "var": "l",
+  "fields": {
+   "groupName": 0,
+   "refDataList": 2
+  }
+ },
+ "AggregateUserInfo": {
+  "var": "R",
+  "fields": {
+   "playerId": 0,
+   "userLevel": 0,
+   "userName": 0,
+   "userImg": 0,
+   "stamp": 0
+  }
+ },
+ "AggregateMsgData": {
+  "var": "B",
+  "fields": {
+   "type": 0,
+   "lastStamp": 0,
+   "gameId": 0,
+   "gameIcon": 0,
+   "goodsId": 0,
+   "goodsTextureName": 0,
+   "userInfoList": 2
+  }
+ },
+ "AnalyticsGameData": {
+  "var": "L",
+  "fields": {
+   "showId": 0,
+   "showType": 0,
+   "gameId": 0,
+   "st": 0,
+   "bk": 0
+  }
+ },
+ "AnalyticsGoodsData": {
+  "var": "x",
+  "fields": {
+   "showId": 0,
+   "showType": 0,
+   "goodsId": 0,
+   "st": 0,
+   "bk": 0
+  }
+ },
+ "BeBindInfo": {
+  "var": "k",
+  "fields": {
+   "userKey": 0,
+   "roleId": 0,
+   "bindIP": 0,
+   "bindType": 0,
+   "bindCode": 0,
+   "bindTime": 4
+  }
+ },
+ "BugMsg": {
+  "var": "A",
+  "fields": {
+   "type": 0,
+   "msg": 0,
+   "stamp": 0
+  }
+ },
+ "BulletConf": {
+  "var": "F",
+  "fields": {
+   "id": 0,
+   "goodsUId": 0,
+   "conf": 0
+  }
+ },
+ "ColorData": {
+  "var": "N",
+  "fields": {
+   "r": 0,
+   "g": 0,
+   "b": 0
+  }
+ },
+ "ManualReview": {
+  "var": "O",
+  "fields": {
+   "contentId": 0,
+   "content": 0,
+   "batchId": 0
+  }
+ },
+ "SensitiveScore": {
+  "var": "U",
+  "fields": {
+   "Ad": 0,
+   "Normal": 0,
+   "Sexy": 0,
+   "Porn": 0,
+   "Abuse": 0,
+   "Polity": 0,
+   "Terror": 0,
+   "Anniversary_flag": 0,
+   "Cartoon_leader": 0,
+   "Sensitive_flag": 0,
+   "Sensitive_text": 0,
+   "Leader_recognition": 0,
+   "Bloody": 0,
+   "Fandongtaibiao": 0,
+   "Plant_ppx": 0,
+   "High_risk_social_event": 0,
+   "High_risk_boom": 0,
+   "High_risk_money": 0,
+   "High_risk_terrorist_uniform": 0,
+   "High_risk_sensitive_map": 0,
+   "Great_hall": 0,
+   "Cartoon_porn": 0,
+   "Party_founding_memorial": 0
+  }
+ },
+ "SensitiveImageResult": {
+  "var": "E",
+  "fields": {
+   "result": 0,
+   "source": 0,
+   "score": 1,
+   "manualReview": 1
+  }
+ },
+ "CombImageReviewMap": {
+  "var": "j",
+  "fields": {
+   "combImageUrl": 0,
+   "imageUrlList": 2,
+   "imageUrlHashList": 2,
+   "applyTime": 4,
+   "reviewCode": 0,
+   "reviewTime": 4,
+   "sensitiveImageResult": 1
+  }
+ },
+ "CommentMeData": {
+  "var": "H",
+  "fields": {
+   "id": 0,
+   "commentId": 0,
+   "type": 0,
+   "playerId": 0,
+   "userLevel": 0,
+   "userImg": 0,
+   "userName": 0,
+   "gameIcon": 0,
+   "content": 0,
+   "targetPlayerId": 0,
+   "targetPlayerName": 0,
+   "stamp": 0,
+   "thumbCnt": 0,
+   "reportCnt": 0
+  }
+ },
+ "CreativeGameData": {
+  "var": "W",
+  "fields": {
+   "id": 0,
+   "playerName": 0,
+   "name": 0,
+   "iconTextureName": 0,
+   "advert": 0,
+   "openData": 0,
+   "packUrl": 0,
+   "secondaryCnt": 0,
+   "secondaryList": 2,
+   "lastPublishTime": 0
+  }
+ },
+ "CreativeGameScore": {
+  "var": "V",
+  "fields": {
+   "gameUId": 0,
+   "score": 0
+  }
+ },
+ "CustomColor": {
+  "var": "K",
+  "fields": {
+   "id": 0,
+   "data": 1
+  }
+ },
+ "DeviceConf": {
+  "var": "J",
+  "fields": {
+   "id": 0,
+   "goodsUId": 0,
+   "conf": 0
+  }
+ },
+ "DynamicGameGiftCfg": {
+  "var": "z",
+  "fields": {
+   "id": 0,
+   "exp": 0,
+   "coin": 0,
+   "iconUrl": 0,
+   "name": 0,
+   "intr": 0
+  }
+ },
+ "DynamicGameGift": {
+  "var": "Z",
+  "fields": {
+   "version": 0,
+   "datas": 5
+  }
+ },
+ "ESCacheData": {
+  "var": "X",
+  "fields": {
+   "id": 0,
+   "name": 0
+  }
+ },
+ "GameCellData": {
+  "var": "q",
+  "fields": {
+   "id": 0,
+   "iconTextureName": 0,
+   "name": 0,
+   "rank": 0,
+   "thumbCnt": 0,
+   "collectionCnt": 0,
+   "playCnt": 0,
+   "hurryCnt": 0,
+   "advert": 0,
+   "openCreativeGame": 0,
+   "lastPublishTime": 0
+  }
+ },
+ "GameComment": {
+  "var": "Y",
+  "fields": {
+   "gameId": 0,
+   "id": 0,
+   "playerId": 0,
+   "msg": 0,
+   "userLevel": 0,
+   "userImg": 0,
+   "userName": 0,
+   "gameIcon": 0,
+   "targetPlayerId": 0,
+   "targetPlayerName": 0,
+   "stamp": 0,
+   "likeCnt": 0,
+   "reportCnt": 0,
+   "subCommentsCnt": 0,
+   "commentIds": 2,
+   "openCnt": 0,
+   "comments": 2
+  }
+ },
+ "ImageOffReason": {
+  "var": "$",
+  "fields": {
+   "imageUrl": 0,
+   "sensitiveImageResult": 1
+  }
+ },
+ "OffReason": {
+  "var": "Q",
+  "fields": {
+   "images": 2,
+   "strs": 2,
+   "imageOffReasonList": 2
+  }
+ },
+ "GameData": {
+  "var": "ee",
+  "fields": {
+   "uId": 0,
+   "playerId": 0,
+   "id": 0,
+   "thumbCnt": 0,
+   "collectionCnt": 0,
+   "playCnt": 0,
+   "hurryCnt": 0,
+   "worldIds": 2,
+   "variableIds": 2,
+   "gameShopIds": 2,
+   "gameRankIds": 2,
+   "name": 0,
+   "advert": 0,
+   "variableDatas": 2,
+   "data": 0,
+   "thawTime": 0,
+   "isOldTangData": 0,
+   "iconTextureName": 0,
+   "isOff": 0,
+   "status": 0,
+   "offReason": 1,
+   "openCreativeGame": 0,
+   "publishTimes": 0,
+   "creativeSourceUId": 0,
+   "openData": 0,
+   "gameDataCdnUrl": 0,
+   "firstPublishTime": 0,
+   "lastPublishTime": 0
+  }
+ },
+ "GiftData": {
+  "var": "te",
+  "fields": {
+   "giftID": 0,
+   "giftCount": 0
+  }
+ },
+ "GameGiftRankScoreInfo": {
+  "var": "oe",
+  "fields": {
+   "roleId": 0,
+   "userLevel": 0,
+   "userName": 0,
+   "userImg": 0,
+   "userIntro": 0,
+   "score": 0,
+   "rank": 0,
+   "giftDatas": 2
+  }
+ },
+ "GameGiftRank": {
+  "var": "ie",
+  "fields": {
+   "rankKey": 0,
+   "rid": 0,
+   "score": 0,
+   "gameName": 0,
+   "gameIcon": 0,
+   "gameDataCdnUrl": 0,
+   "rankList": 2
+  }
+ },
+ "GameRankConf": {
+  "var": "ae",
+  "fields": {
+   "id": 0,
+   "sortType": 0,
+   "cycleType": 0,
+   "conf": 0
+  }
+ },
+ "GameRankScoreInfo": {
+  "var": "ne",
+  "fields": {
+   "roleId": 0,
+   "userLevel": 0,
+   "userName": 0,
+   "userImg": 0,
+   "userIntro": 0,
+   "score": 0,
+   "rank": 0
+  }
+ },
+ "GameShopConf": {
+  "var": "se",
+  "fields": {
+   "id": 0,
+   "conf": 0
+  }
+ },
+ "GameStatisticsData": {
+  "var": "re",
+  "fields": {
+   "id": 0,
+   "iconTextureName": 0,
+   "name": 0,
+   "rank": 0,
+   "playCnt": 0,
+   "advert": 0,
+   "playCntStatistics": 0,
+   "playAllCnt": 0,
+   "playAllTime": 0,
+   "playAveTime": 0
+  }
+ },
+ "GameTagaData": {
+  "var": "le",
+  "fields": {
+   "tagMsg": 0,
+   "recommendTimes": 0,
+   "lastEditTime": 0
+  }
+ },
+ "GameTageInfo": {
+  "var": "ce",
+  "fields": {
+   "id": 0,
+   "sortType": 0,
+   "cycleType": 0,
+   "conf": 0,
+   "rankList": 2
+  }
+ },
+ "GDAddCoin": {
+  "var": "de",
+  "fields": {
+   "lastTime": 0,
+   "count": 0
+  }
+ },
+ "GDBindRoleInfo": {
+  "var": "he",
+  "fields": {
+   "id": 0,
+   "bindIP": 0,
+   "bindType": 0,
+   "bindCode": 0,
+   "bindTime": 4
+  }
+ },
+ "GDDynamicConfig": {
+  "var": "pe",
+  "fields": {
+   "id": 0
+  }
+ },
+ "GDGameTopComment": {
+  "var": "ue",
+  "fields": {
+   "uId": 0,
+   "gameId": 0,
+   "id": 0,
+   "commentsCnt": 0,
+   "commentsCntSum": 0,
+   "comments": 2
+  }
+ },
+ "GDGiftScoreInfo": {
+  "var": "me",
+  "fields": {
+   "fGiftScore": 0,
+   "mGiftScore": 0,
+   "wGiftScore": 0,
+   "mBeginDay": 0,
+   "wBeginDay": 0,
+   "holidayGiftScore": 0,
+   "hBeginDay": 0
+  }
+ },
+ "PropConf": {
+  "var": "fe",
+  "fields": {
+   "id": 0,
+   "goodsUId": 0,
+   "conf": 0
+  }
+ },
+ "TileConf": {
+  "var": "ge",
+  "fields": {
+   "id": 0,
+   "goodsUId": 0,
+   "conf": 0
+  }
+ },
+ "WeaponConf": {
+  "var": "ye",
+  "fields": {
+   "id": 0,
+   "goodsUId": 0,
+   "conf": 0
+  }
+ },
+ "GoodsContent": {
+  "var": "ve",
+  "fields": {
+   "tileConfs": 2,
+   "actorConfs": 2,
+   "deviceConfs": 2,
+   "propConfs": 2,
+   "weaponConfs": 2,
+   "bulletConfs": 2
+  }
+ },
+ "GDGoodsInfo": {
+  "var": "Ce",
+  "fields": {
+   "playerId": 0,
+   "id": 0,
+   "goodsType": 0,
+   "name": 0,
+   "iconTextureName": 0,
+   "advert": 0,
+   "isOff": 0,
+   "status": 0,
+   "offReason": 1,
+   "goodsContent": 1,
+   "price": 0,
+   "saleCnt": 0,
+   "saleCoin": 0,
+   "upStamp": 0,
+   "isAgainUpload": 0,
+   "collectionCnt": 0
+  }
+ },
+ "GDRoomMember": {
+  "var": "_e",
+  "fields": {
+   "id": 0,
+   "name": 0,
+   "group": 0,
+   "idxInGroup": 0,
+   "matchScore": 0,
+   "avatar": 2,
+   "custom": 5
+  }
+ },
+ "GDTeam": {
+  "var": "Se",
+  "fields": {
+   "id": 0,
+   "owner": 0,
+   "size": 0,
+   "createAt": 0,
+   "state": 0,
+   "password": 0,
+   "members": 3,
+   "custom": 5
+  }
+ },
+ "GDMatch": {
+  "var": "Ge",
+  "fields": {
+   "type": 0,
+   "scoreDiff": 0,
+   "teamSize": 0,
+   "teamNum": 0,
+   "timeoutAt": 0,
+   "team": 1,
+   "score": 0
+  }
+ },
+ "GDReleaseGameData": {
+  "var": "Te",
+  "fields": {
+   "id": 0,
+   "name": 0,
+   "iconTextureName": 0,
+   "advert": 0,
+   "status": 0,
+   "isPlay": 0,
+   "isThumb": 0,
+   "isHurry": 0,
+   "isCollection": 0,
+   "thumbCnt": 0,
+   "collectionCnt": 0,
+   "playCnt": 0,
+   "hurryCnt": 0,
+   "reportCnt": 0,
+   "dataVersion": 0,
+   "gameDataCdnUrl": 0,
+   "gameTags": 2,
+   "playCntStatistics": 0,
+   "playAllCnt": 0,
+   "playAllTime": 0,
+   "playAveTime": 0,
+   "isInRecommendPool": 0,
+   "recommendFansCnt": 0,
+   "recommendLevel": 0,
+   "recommendClickAllCnt": 0,
+   "recommendCnt": 0,
+   "recommendAllCnt": 0,
+   "recommendScore": 0,
+   "needRecommendCnt": 0,
+   "recommendTagTime": 0,
+   "openCreativeGame": 0,
+   "creativeSourceUId": 0,
+   "openData": 0,
+   "reviewRecommendScore": 0,
+   "hurryList": 2,
+   "playUserList": 2,
+   "lastPublishTime": 0,
+   "tagList": 2,
+   "gDGiftScoreInfo": 1
+  }
+ },
+ "GDUserInfo": {
+  "var": "Ie",
+  "fields": {
+   "platformUId": 0,
+   "openId": 0,
+   "unionId": 0,
+   "userName": 0,
+   "userImg": 0,
+   "userSex": 0,
+   "province": 0,
+   "city": 0
+  }
+ },
+ "UserCreditMsg": {
+  "var": "be",
+  "fields": {
+   "score": 0,
+   "reason": 0,
+   "stamp": 0
+  }
+ },
+ "GDRole": {
+  "var": "Me",
+  "fields": {
+   "id": 0,
+   "uId": 0,
+   "sId": 0,
+   "uKey": 0,
+   "userInfo": 1,
+   "coin": 0,
+   "diamond": 0,
+   "creditScore": 0,
+   "reviewCreditScore": 0,
+   "examScore": 0,
+   "publishGameTimes": 0,
+   "publishGoodsTimes": 0,
+   "creditTime": 4,
+   "creditMsgList": 2,
+   "goodsIds": 2,
+   "myGameMaxCnt": 0,
+   "myGoodsMaxCnt": 0,
+   "authed": 0,
+   "creatorVersion": 0,
+   "userName": 0,
+   "exp": 0,
+   "level": 0,
+   "userImg": 0,
+   "userIntro": 0,
+   "gameIncId": 0,
+   "worldIncId": 0,
+   "variableIncId": 0,
+   "customColorIncId": 0,
+   "games": 2,
+   "collectionGames": 2,
+   "worlds": 2,
+   "variables": 2,
+   "fansCount": 0,
+   "bindRoleCode": 0,
+   "beBindList": 2,
+   "channel": 0,
+   "customActorGroups": 2,
+   "customColors": 2,
+   "guideVersion": 0,
+   "completeTaskIds": 2,
+   "follows": 2,
+   "createAt": 4,
+   "collectionGoods": 2,
+   "collectionTalks": 2,
+   "newUserImg": 0,
+   "userImgTime": 4,
+   "newUserImgReviewStatus": 0,
+   "offReason": 1,
+   "addCoinCounters": 3,
+   "aBTest": 3
+  }
+ },
+ "GDRoleBugMsg": {
+  "var": "De",
+  "fields": {
+   "id": 0,
+   "lastReportTime": 0,
+   "lastDealTime": 0,
+   "bugMap": 5
+  }
+ },
+ "GDRoleCommentLikeMsg": {
+  "var": "Pe",
+  "fields": {
+   "id": 0,
+   "lastCommentStamp": 0,
+   "gameCommentMap": 5,
+   "lastReportStamp": 0,
+   "reportCommentMap": 5
+  }
+ },
+ "GDRoleCountMsg": {
+  "var": "we",
+  "fields": {
+   "id": 0,
+   "lastLoginThumbCount": 0,
+   "thumbCount": 0,
+   "lastLoginPlayCount": 0,
+   "playCount": 0,
+   "lastLoginCollectionCount": 0,
+   "collectionCount": 0,
+   "hurryCount": 0
+  }
+ },
+ "GDRoleFansData": {
+  "var": "Re",
+  "fields": {
+   "uId": 0,
+   "playerId": 0,
+   "targetId": 0
+  }
+ },
+ "GDRoleGameConf": {
+  "var": "Be",
+  "fields": {
+   "id": 0,
+   "tileConfIds": 2,
+   "actorConfIds": 2,
+   "propConfIds": 2,
+   "deviceConfIds": 2,
+   "weaponConfIds": 2,
+   "bulletConfIds": 2,
+   "gameShopConfIds": 2,
+   "gameRankConfIds": 2
+  }
+ },
+ "MsgData": {
+  "var": "Le",
+  "fields": {
+   "type": 0,
+   "playerId": 0,
+   "userLevel": 0,
+   "userName": 0,
+   "userImg": 0,
+   "gameId": 0,
+   "gameIcon": 0,
+   "goodsId": 0,
+   "goodsTextureName": 0
+  }
+ },
+ "GDRoleMsgList": {
+  "var": "xe",
+  "fields": {
+   "id": 0,
+   "newMsgCnt": 0,
+   "msgList": 2,
+   "offLineAggregateMsgMap": 5,
+   "newAggregateMsgCnt": 0,
+   "aggregateMsgList": 2,
+   "newFansCnt": 0,
+   "newFansList": 2,
+   "newCommentCnt": 0,
+   "newCommentIdList": 2
+  }
+ },
+ "GDRolePlayGame": {
+  "var": "ke",
+  "fields": {
+   "id": 0,
+   "playGames": 5,
+   "playGamesStatistics": 5
+  }
+ },
+ "SaleSummary": {
+  "var": "Ae",
+  "fields": {
+   "type": 0,
+   "gameId": 0,
+   "name": 0,
+   "textureName": 0,
+   "earnCoin": 0,
+   "saleCnt": 0
+  }
+ },
+ "GDRoleSaleMsg": {
+  "var": "Fe",
+  "fields": {
+   "id": 0,
+   "saleCntMap": 5,
+   "gameSaleCntMap": 5,
+   "saleTypeCntMap": 5
+  }
+ },
+ "GDRoleSimpleMsg": {
+  "var": "Ne",
+  "fields": {
+   "id": 0,
+   "userName": 0,
+   "coin": 0,
+   "diamond": 0,
+   "level": 0,
+   "creditScore": 0,
+   "isFollow": 0,
+   "authed": 0,
+   "userImg": 0,
+   "fansCount": 0,
+   "followsCount": 0
+  }
+ },
+ "GDRoleThumb": {
+  "var": "Oe",
+  "fields": {
+   "id": 0,
+   "thumbGames": 5
+  }
+ },
+ "GDRoom": {
+  "var": "Ue",
+  "fields": {
+   "id": 0,
+   "type": 0,
+   "subGameId": 0,
+   "name": 0,
+   "owner": 0,
+   "ownerName": 0,
+   "state": 0,
+   "frameRate": 0,
+   "custom": 5,
+   "teams": 2,
+   "groupNum": 0,
+   "memberNumPerGroup": 0,
+   "audienceNum": 0,
+   "useMaster": 0,
+   "members": 3,
+   "locked": 0,
+   "createAt": 4
+  }
+ },
+ "GDRoomFrameSyncMsg": {
+  "var": "Ee",
+  "fields": {
+   "roleId": 0,
+   "frame": 0,
+   "msg": 0
+  }
+ },
+ "GDServer": {
+  "var": "je",
+  "fields": {
+   "id": 0,
+   "name": 0,
+   "status": 0,
+   "busyStatus": 0
+  }
+ },
+ "GDServerRole": {
+  "var": "He",
+  "fields": {
+   "id": 0,
+   "sId": 0,
+   "name": 0,
+   "lv": 0,
+   "loginAt": 4
+  }
+ },
+ "GDSubGame": {
+  "var": "We",
+  "fields": {
+   "id": 0,
+   "name": 0,
+   "desc": 0,
+   "version": 0,
+   "creatorId": 0,
+   "creatorName": 0,
+   "createAt": 4
+  }
+ },
+ "GDUser": {
+  "var": "Ve",
+  "fields": {
+   "id": 0,
+   "key": 0,
+   "platform": 0,
+   "platformUId": 0,
+   "platformId": 0,
+   "visitorUId": 0,
+   "openId": 0,
+   "unionId": 0,
+   "userName": 0,
+   "userImg": 0,
+   "userSex": 0,
+   "shareCode": 0,
+   "loginPlatform": 0,
+   "province": 0,
+   "city": 0,
+   "isSubscribe": 0,
+   "authed": 0,
+   "channel": 0,
+   "scene": 0,
+   "referrerInfo": 0,
+   "clientVersion": 0,
+   "clientIp": 0,
+   "isAppVisitor": 0,
+   "regTime": 4,
+   "bindInfo": 1,
+   "roles": 3,
+   "userPlatforms": 2
+  }
+ },
+ "GDVariable": {
+  "var": "Ke",
+  "fields": {
+   "id": 0,
+   "data": 0
+  }
+ },
+ "GDWorldData": {
+  "var": "Je",
+  "fields": {
+   "id": 0,
+   "info": 0,
+   "layoutMin": 0
+  }
+ },
+ "GiftRankActivity": {
+  "var": "ze",
+  "fields": {
+   "endStamp": 0,
+   "startStamp": 0,
+   "name": 0
+  }
+ },
+ "GoodsCellData": {
+  "var": "Ze",
+  "fields": {
+   "playerId": 0,
+   "id": 0,
+   "goodsType": 0,
+   "name": 0,
+   "iconTextureName": 0,
+   "advert": 0,
+   "price": 0,
+   "saleCnt": 0,
+   "upStamp": 0,
+   "goodsContentCnt": 0,
+   "goodsInfoList": 2
+  }
+ },
+ "ImageReviewInfo": {
+  "var": "Xe",
+  "fields": {
+   "reviewImage": 0,
+   "reviewType": 0,
+   "applyIdList": 2,
+   "applyPlayerIdList": 2,
+   "applyTime": 4,
+   "reviewCode": 0,
+   "reviewTime": 4,
+   "isAppeal": 0,
+   "appealPlayerId": 0,
+   "sensitiveImageResult": 1
+  }
+ },
+ "ImageSize": {
+  "var": "qe",
+  "fields": {
+   "width": 0,
+   "height": 0
+  }
+ },
+ "Score": {
+  "var": "Ye",
+  "fields": {
+   "abuse": 0,
+   "ad": 0,
+   "porn": 0,
+   "terror": 0
+  }
+ },
+ "SensitiveMsgDetails": {
+  "var": "$e",
+  "fields": {
+   "word": 0,
+   "source": 0,
+   "label": 0
+  }
+ },
+ "SensitiveMsgData": {
+  "var": "Qe",
+  "fields": {
+   "result": 0,
+   "source": 0,
+   "score": 1,
+   "details": 2
+  }
+ },
+ "SensitiveMsgResult": {
+  "var": "et",
+  "fields": {
+   "errCode": 0,
+   "errMsg": 0,
+   "data": 1
+  }
+ },
+ "MsgReviewInfo": {
+  "var": "tt",
+  "fields": {
+   "reviewStr": 0,
+   "reviewType": 0,
+   "applyIdList": 2,
+   "applyPlayerIdList": 2,
+   "applyTime": 4,
+   "reviewCode": 0,
+   "reviewTime": 4,
+   "isAppeal": 0,
+   "appealPlayerId": 0,
+   "sensitiveMsgResult": 1
+  }
+ },
+ "OffLineChangeMsg": {
+  "var": "ot",
+  "fields": {
+   "exp": 0,
+   "incExp": 0,
+   "levelUpNeedExp": 0,
+   "oldLevel": 0,
+   "level": 0,
+   "incPlayCount": 0,
+   "incThumbCount": 0
+  }
+ },
+ "OIMUser": {
+  "var": "it",
+  "fields": {
+   "id": 0,
+   "name": 0,
+   "avatar": 0,
+   "extra": 0
+  }
+ },
+ "OIMConversation": {
+  "var": "at",
+  "fields": {
+   "convType": 0,
+   "oppId": 0,
+   "oppInfo": 1,
+   "time": 4
+  }
+ },
+ "OIMMsg": {
+  "var": "nt",
+  "fields": {
+   "id": 0,
+   "from": 1,
+   "oppId": 0,
+   "time": 4,
+   "convType": 0,
+   "contType": 0,
+   "content": 0,
+   "extra": 0
+  }
+ },
+ "PlatformRecommendData": {
+  "var": "st",
+  "fields": {
+   "st": 0,
+   "bk": 0,
+   "refine": 0,
+   "id": 0,
+   "type": 0,
+   "scoreOpt": 0
+  }
+ },
+ "PlatformRecommend": {
+  "var": "rt",
+  "fields": {
+   "data": 2
+  }
+ },
+ "ReleaseGameGameRank": {
+  "var": "lt",
+  "fields": {
+   "id": 0,
+   "sortType": 0,
+   "cycleType": 0,
+   "conf": 0,
+   "rankList": 2
+  }
+ },
+ "RetVariableData": {
+  "var": "ct",
+  "fields": {
+   "gameId": 0,
+   "id": 0
+  }
+ },
+ "ReviewInfo": {
+  "var": "dt",
+  "fields": {
+   "reviewType": 0,
+   "applyId": 0,
+   "applyPlayerId": 0,
+   "reviewImageMap": 5,
+   "combImageList": 2,
+   "reviewImageList": 2,
+   "successImageList": 2,
+   "failImageList": 2,
+   "reviewStr": 0,
+   "failStrList": 2,
+   "applyTime": 4,
+   "reviewTime": 4,
+   "reviewImageCode": 0,
+   "reviewMsgCode": 0
+  }
+ },
+ "ReviewResult": {
+  "var": "ht",
+  "fields": {
+   "reviewId": 0,
+   "resultType": 0,
+   "describe": 0
+  }
+ },
+ "RoleActivity": {
+  "var": "pt",
+  "fields": {
+   "id": 0,
+   "activityTT20210319Time": 0
+  }
+ },
+ "RoleCreativeConf": {
+  "var": "ut",
+  "fields": {
+   "id": 0,
+   "confMap": 5
+  }
+ },
+ "RoleCreativeWorldLayout": {
+  "var": "mt",
+  "fields": {
+   "id": 0,
+   "worldLayoutMap": 5
+  }
+ },
+ "RoleManualSensitiveImgMsg": {
+  "var": "ft",
+  "fields": {
+   "sensitiveImgUrl": 0,
+   "sensitiveImageResult": 1
+  }
+ },
+ "RoleReviewGameData": {
+  "var": "gt",
+  "fields": {
+   "id": 0,
+   "name": 0,
+   "iconTextureName": 0,
+   "dataVersion": 0,
+   "advert": 0,
+   "gameDataCdnUrl": 0,
+   "gameTags": 2,
+   "openCreativeGame": 0,
+   "creativeSourceUId": 0,
+   "openData": 0,
+   "publishTime": 0
+  }
+ },
+ "RoleStatisticSensitiveImgMsg": {
+  "var": "yt",
+  "fields": {
+   "sensitiveImgUrl": 0,
+   "sensitiveImageResult": 1
+  }
+ },
+ "RoleTalkCommentMsg": {
+  "var": "vt",
+  "fields": {
+   "id": 0,
+   "lastStamp": 0,
+   "commentIdList": 2,
+   "upMap": 5,
+   "downMap": 5,
+   "thumbMap": 5,
+   "unThumbMap": 5,
+   "lastReportStamp": 0,
+   "reportMap": 5
+  }
+ },
+ "RoleTalkMsg": {
+  "var": "Ct",
+  "fields": {
+   "id": 0,
+   "lastStamp": 0,
+   "talkIdList": 2,
+   "officialTalkIdList": 2,
+   "upMap": 5,
+   "downMap": 5,
+   "thumbMap": 5,
+   "unThumbMap": 5,
+   "lastReportStamp": 0,
+   "reportMap": 5
+  }
+ },
+ "ScoreInfo": {
+  "var": "_t",
+  "fields": {
+   "id": 0,
+   "score": 0
+  }
+ },
+ "SecondaryGameData": {
+  "var": "St",
+  "fields": {
+   "id": 0,
+   "creativeSourceUId": 0,
+   "comprehensiveScore": 0,
+   "lastPublishTime": 0
+  }
+ },
+ "TalkComment": {
+  "var": "Gt",
+  "fields": {
+   "talkId": 0,
+   "id": 0,
+   "playerId": 0,
+   "content": 0,
+   "userLevel": 0,
+   "userImg": 0,
+   "userName": 0,
+   "userIntro": 0,
+   "replayCommentId": 0,
+   "targetPlayerId": 0,
+   "targetPlayerName": 0,
+   "thumbCnt": 0,
+   "reportCnt": 0,
+   "subCommentsCnt": 0,
+   "commentIds": 2,
+   "openCnt": 0,
+   "comments": 2,
+   "status": 0,
+   "offReason": 1,
+   "stamp": 0
+  }
+ },
+ "TalkData": {
+  "var": "Tt",
+  "fields": {
+   "uId": 0,
+   "playerId": 0,
+   "userLevel": 0,
+   "userImg": 0,
+   "userName": 0,
+   "userIntro": 0,
+   "talkType": 0,
+   "title": 0,
+   "simpleContent": 0,
+   "content": 0,
+   "upCnt": 0,
+   "reportCnt": 0,
+   "commentsCnt": 0,
+   "commentsCntSum": 0,
+   "isTop": 0,
+   "isUp": 0,
+   "isDown": 0,
+   "topComment": 1,
+   "comments": 2,
+   "status": 0,
+   "offReason": 1,
+   "createStamp": 0,
+   "newCommentStamp": 0,
+   "upStamp": 0,
+   "collectionCntSum": 0
+  }
+ },
+ "TalkTopComment": {
+  "var": "It",
+  "fields": {
+   "uId": 0,
+   "talkId": 0,
+   "id": 0,
+   "upCnt": 0,
+   "reportCnt": 0,
+   "commentsCnt": 0,
+   "commentsCntSum": 0,
+   "topComment": 1,
+   "comments": 2
+  }
+ },
+ "UserDetailMsg": {
+  "var": "bt",
+  "fields": {
+   "playerId": 0,
+   "userName": 0,
+   "userImg": 0,
+   "userIntro": 0,
+   "level": 0,
+   "isFollow": 0,
+   "fansCount": 0,
+   "followCount": 0,
+   "goodsIds": 2,
+   "gameDatas": 2
+  }
+ },
+ "UserSimpleMsg": {
+  "var": "Mt",
+  "fields": {
+   "playerId": 0,
+   "channel": 0,
+   "userName": 0,
+   "userImg": 0,
+   "userIntro": 0,
+   "level": 0,
+   "isFollow": 0
+  }
+ },
+ "VariableData": {
+  "var": "Dt",
+  "fields": {
+   "gameId": 0,
+   "id": 0,
+   "data": 0
+  }
+ }
+}

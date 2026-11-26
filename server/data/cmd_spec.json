@@ -1,0 +1,3431 @@
+{
+ "game_addcoinbyadvert": {
+  "cmd": "game_addcoinbyadvert",
+  "const": "Game_AddCoinByAdvert",
+  "resp": ""
+ },
+ "game_addcoinbyadvertv2": {
+  "cmd": "game_addcoinbyadvertv2",
+  "const": "Game_AddCoinByAdvertV2",
+  "resp": "Game_RAddCoinByAdvertV2",
+  "param_keys": [
+   "transId"
+  ],
+  "read_fields": [
+   "AD",
+   "CMDS",
+   "EventDefines",
+   "GDAddCoin",
+   "Game_RAddCoinByAdvertV2",
+   "NetIns",
+   "addCoinByAdvertCnt",
+   "coin",
+   "count",
+   "game",
+   "lastTime",
+   "role"
+  ],
+  "ctx": "e(\"../../Role\"); class h { constructor() { this.coin = 0; this.flyCoinCnt = 0; } setCoin(e) { this.coin = e || 0; cc.game.emit(\"refreshCoinBar\"); } requestAddCoinByAd(e) { return i(this, void 0, void 0, function*() { let t = { transId: e }, o = yield l.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_AddCoinByAdvertV2, params: t }, a.Game_RAddCoinByAdvertV2); if (!o) return; let i = this.coin, n = o.coin, s = n - i; this.flyCoinCnt += s"
+ },
+ "game_addcoinbyshare": {
+  "cmd": "game_addcoinbyshare",
+  "const": "Game_AddCoinByShare",
+  "resp": ""
+ },
+ "game_addcoinbysharevideo": {
+  "cmd": "game_addcoinbysharevideo",
+  "const": "Game_AddCoinByShareVideo",
+  "resp": ""
+ },
+ "game_addgametage": {
+  "cmd": "game_addgametage",
+  "const": "Game_AddGameTage",
+  "resp": "Game_RAddGameTage",
+  "param_keys": [
+   "addTagMsg",
+   "gameID",
+   "removeTagMsg"
+  ],
+  "read_fields": [
+   "DynamicMng",
+   "GameTagaData",
+   "Game_RAddGameTage",
+   "cache",
+   "isGmPlayer",
+   "lastEditTime",
+   "recommendTimes",
+   "releaseGameData",
+   "sensitiveWords",
+   "tagMsg"
+  ],
+  "ctx": ": a.CMDS.Game_GMSetGameTage, params: i }, a.Game_RGMSetGameTage)) && this.syncCacheGameTagCnt(e, t, o, \"set\"); }); } uploadGameTag(e, t, o) { return i(this, void 0, void 0, function*() { let i = { gameID: e, addTagMsg: t, removeTagMsg: o }, n = yield r.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_AddGameTage, params: i }, a.Game_RAddGameTage); if (n && 0 == n.sensitiveWords.length) { let i = l.DynamicMng.Ins.isGmPlayer() ? 5 : 1; fo"
+ },
+ "game_additem": {
+  "cmd": "game_additem",
+  "const": "Game_AddItem",
+  "resp": ""
+ },
+ "game_addothercoinbyadvert": {
+  "cmd": "game_addothercoinbyadvert",
+  "const": "Game_AddOtherCoinByAdvert",
+  "resp": ""
+ },
+ "game_addothercoinbyadvertv2": {
+  "cmd": "game_addothercoinbyadvertv2",
+  "const": "Game_AddOtherCoinByAdvertV2",
+  "resp": "Game_RAddOtherCoinByAdvertV2",
+  "param_keys": [
+   "gameId",
+   "name",
+   "targetId",
+   "textureName",
+   "transId"
+  ],
+  "read_fields": [
+   "AD",
+   "Label",
+   "Sprite",
+   "_RF",
+   "addCoinByAdvertCnt",
+   "emitTrigger",
+   "onFail",
+   "onSucc"
+  ],
+  "ctx": "nitId.GameAD, succ: () => a(this, void 0, void 0, function*() { this.closePanel(); let o = r.AD.transID; r.AD.transID = \"\"; let i = { targetId: this.gameData.playerId, name: e.str, textureName: e.url, gameId: this.gameData.id, transId: o }, a = yield l.NetIns.SendCmdAsync({ cmd: n.CMDS.Game_AddOtherCoinByAdvertV2, params: i }, n.Game_RAddOtherCoinByAdvertV2); if (a) { r.AD.addCoinByAdvertCnt = a.addCoinByAdvertCnt; e.onSucc &&"
+ },
+ "game_admingetgamemsgbyreviewid": {
+  "cmd": "game_admingetgamemsgbyreviewid",
+  "const": "Game_AdminGetGameMsgByReviewId",
+  "resp": ""
+ },
+ "game_adminsetgamestatus": {
+  "cmd": "game_adminsetgamestatus",
+  "const": "Game_AdminSetGameStatus",
+  "resp": ""
+ },
+ "game_bindrole": {
+  "cmd": "game_bindrole",
+  "const": "Game_BindRole",
+  "resp": "Game_RBindRole",
+  "param_keys": [
+   "code",
+   "info",
+   "platform"
+  ],
+  "read_fields": [
+   "EditBox",
+   "Game_RBindRole",
+   "Label",
+   "_RF",
+   "errorCode"
+  ],
+  "ctx": " \"点错了\", color: h.UIColor.blue }); }) : this.requestLink(e) : d.default.showToast(\"密钥不能为空\"); } requestLink(e) { return a(this, void 0, void 0, function*() { let t = { code: e, info: p.Hortor.loginAuthInfo, platform: p.Hortor.loginPlatform }, o = yield r.NetIns.SendCmdAsync({ cmd: n.CMDS.Game_BindRole, params: t }, n.Game_RBindRole); if (o && 0 == o.errorCode) { this.closePanel(); this.onSucc && this.onSucc(); } else d.default.s"
+ },
+ "game_buygoods": {
+  "cmd": "game_buygoods",
+  "const": "Game_BuyGoods",
+  "resp": "Game_RBuyGoods",
+  "param_keys": [
+   "id",
+   "isDiscount"
+  ],
+  "read_fields": [
+   "Game_RBuyGoods",
+   "Mng",
+   "actorConfs",
+   "actorMng",
+   "conf",
+   "deviceConfs",
+   "id",
+   "tileConfs",
+   "tileMng"
+  ],
+  "ctx": "Id); this.infoCache.delete(e.goodsId); } else t.sensitiveWords && t.sensitiveWords.length > 0 || u.Ins.myGoodsIds.unshift(t.id); return t; }); } buy(e, t) { return i(this, void 0, void 0, function*() { let o = { id: e, isDiscount: 1 != t }, i = yield r.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_BuyGoods, params: o }, a.Game_RBuyGoods), s = []; if (i) { if (i.tileConfs) for (let t = 0; t < i.tileConfs.length; t++) { let o = i.tileC"
+ },
+ "game_cancelcollectiongames": {
+  "cmd": "game_cancelcollectiongames",
+  "const": "Game_CancelCollectionGames",
+  "resp": "Game_RCancelCollectionGames",
+  "param_keys": [
+   "iD",
+   "ids"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RCancelCollectionGames",
+   "Game_RCollectionTalk",
+   "NetIns",
+   "TGA",
+   "TGAConst",
+   "code"
+  ],
+  "ctx": "tGame\"); } else { s.default.showToast(\"网络错误！\"); s.default.blockInput(!1, \"collectGame\"); } }); } unCollectGame(e) { return i(this, void 0, void 0, function*() { const t = \"unCollectGame\"; s.default.blockInput(!0, t); let o = { ids: [ e ] }; if (yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_CancelCollectionGames, params: o }, a.Game_RCancelCollectionGames)) { this.ids.indexOf(e) >= 0 && this.ids.splice(e, 1); s.default.blockIn"
+ },
+ "game_cancelcollectiongoods": {
+  "cmd": "game_cancelcollectiongoods",
+  "const": "Game_CancelCollectionGoods",
+  "resp": "Game_RCancelCollectionGoods",
+  "param_keys": [
+   "ids"
+  ],
+  "read_fields": [
+   "Game_RCancelCollectionGoods",
+   "loadGames",
+   "loadGoodsCellDatas",
+   "loadTalksByIds"
+  ],
+  "ctx": "his.goodsIds.add(e); s.default.blockInput(!1, \"collectGoods\"); } else { s.default.showToast(\"网络错误！\"); s.default.blockInput(!1, \"collectGoods\"); } }); } unCollectGoods(e) { return i(this, void 0, void 0, function*() { let t = { ids: [ e ] }; if (yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_CancelCollectionGoods, params: t }, a.Game_RCancelCollectionGoods)) { this.goodsIds.delete(e); s.default.blockInput(!1, \"unCollectGoods\");"
+ },
+ "game_cancelcollectiontalk": {
+  "cmd": "game_cancelcollectiontalk",
+  "const": "Game_CancelCollectionTalk",
+  "resp": "Game_RCancelCollectionTalk",
+  "param_keys": [
+   "iD",
+   "ids"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RCancelCollectionTalk",
+   "Game_RCollectionGGoods",
+   "NetIns"
+  ],
+  "ctx": "onst.talkCollect, { talkId: e }); } else s.default.showToast(\"收藏数量已满\"); else { s.default.showToast(\"网络错误！\"); s.default.blockInput(!1, \"collectTalk\"); } }); } unCollectTalk(e) { return i(this, void 0, void 0, function*() { let t = { iD: e }; if (yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_CancelCollectionTalk, params: t }, a.Game_RCancelCollectionTalk)) { this.talkIds.delete(e); s.default.blockInput(!1, \"unCollectTalk\"); } e"
+ },
+ "game_canceldowntalk": {
+  "cmd": "game_canceldowntalk",
+  "const": "Game_CancelDownTalk",
+  "resp": "Game_RCancelDownTalk",
+  "param_keys": [
+   "talkId"
+  ],
+  "read_fields": [
+   "Game",
+   "Game_RCancelDownTalk",
+   "Goods",
+   "Imgs",
+   "Mng",
+   "Project",
+   "Text",
+   "filter",
+   "gameId",
+   "gameMng",
+   "imgDatas",
+   "includes",
+   "text",
+   "type",
+   "upCnt"
+  ],
+  "ctx": "MDS.Game_CancelUpTalk, params: t }, s.Game_RCancelUpTalk); this.updateCacheProperty(e, \"upCnt\", o.upCnt); this.updateCacheProperty(e, \"isUp\", !1); }); } cancelDownTalk(e) { return n(this, void 0, void 0, function*() { let t = { talkId: e }, o = yield l.NetIns.SendCmdAsync({ cmd: s.CMDS.Game_CancelDownTalk, params: t }, s.Game_RCancelDownTalk); this.updateCacheProperty(e, \"upCnt\", o.upCnt); this.updateCacheProperty(e, \"isDown\","
+ },
+ "game_cancelfollowuser": {
+  "cmd": "game_cancelfollowuser",
+  "const": "Game_CancelFollowUser",
+  "resp": "Game_RFollowUser",
+  "param_keys": [
+   "followId"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RFollowUser",
+   "NetIns",
+   "authorMsg",
+   "cache",
+   "fansCount",
+   "isFollow"
+  ],
+  "ctx": "he.forEach(t => { if (t.authorMsg && t.authorMsg.id == e) { t.authorMsg.isFollow = !0; t.authorMsg.fansCount++; } }); } catch (e) {} return 1; }); } unFollow(e) { return i(this, void 0, void 0, function*() { try { let t = { followId: e }; if (!(yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_CancelFollowUser, params: t }, a.Game_RFollowUser))) return -1; let o = this.followIds.indexOf(e); o >= 0 && this.followIds.splice(o, 1); "
+ },
+ "game_cancelthumbgamecomment": {
+  "cmd": "game_cancelthumbgamecomment",
+  "const": "Game_CancelThumbGameComment",
+  "resp": "Game_RCancelThumbGameComment",
+  "param_keys": [
+   "commentId"
+  ],
+  "read_fields": [
+   "CommentMng",
+   "_RF"
+  ],
+  "ctx": "); let i = this.loadLikeData(e); i[t] = !0; this.saveLikeData(e, i); r.default.blockInput(!1, \"likeComment\"); }); } unlike(e, t) { return i(this, void 0, void 0, function*() { r.default.blockInput(!0, \"unlikeComment\"); let o = { commentId: t }; yield s.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_CancelThumbGameComment, params: o }, a.Game_RCancelThumbGameComment); let i = this.loadLikeData(e); delete i[t]; this.saveLikeData(e, i); "
+ },
+ "game_cancelthumbgames": {
+  "cmd": "game_cancelthumbgames",
+  "const": "Game_CancelThumbGames",
+  "resp": "Game_RCancelThumbGames",
+  "param_keys": [
+   "ids"
+  ],
+  "read_fields": [
+   "Game_RCancelThumbGames",
+   "ThumbMng",
+   "_RF"
+  ],
+  "ctx": "mdAsync({ cmd: a.CMDS.Game_ThumbGames, params: t }, a.Game_RThumbGames); s.default.blockInput(!1, \"thumbGame\"); }); } unThumbGame(e) { return i(this, void 0, void 0, function*() { s.default.blockInput(!0, \"unThumbGame\"); let t = { ids: [ e ] }; yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_CancelThumbGames, params: t }, a.Game_RCancelThumbGames); s.default.blockInput(!1, \"unThumbGame\"); }); } } o.ThumbMng = r; r.Ins = new r()"
+ },
+ "game_cancelthumbtalk": {
+  "cmd": "game_cancelthumbtalk",
+  "const": "Game_CancelThumbTalk",
+  "resp": ""
+ },
+ "game_cancelthumbtalkcomment": {
+  "cmd": "game_cancelthumbtalkcomment",
+  "const": "Game_CancelThumbTalkComment",
+  "resp": "Game_RCancelThumbTalkComment",
+  "param_keys": [
+   "commentId"
+  ],
+  "read_fields": [
+   "TalkCommentMng",
+   "_RF"
+  ],
+  "ctx": "); let i = this.loadLikeData(e); i[t] = !0; this.saveLikeData(e, i); r.default.blockInput(!1, \"likeComment\"); }); } unlike(e, t) { return i(this, void 0, void 0, function*() { r.default.blockInput(!0, \"unlikeComment\"); let o = { commentId: t }; yield s.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_CancelThumbTalkComment, params: o }, a.Game_RCancelThumbTalkComment); let i = this.loadLikeData(e); delete i[t]; this.saveLikeData(e, i); "
+ },
+ "game_canceluptalk": {
+  "cmd": "game_canceluptalk",
+  "const": "Game_CancelUpTalk",
+  "resp": "Game_RCancelUpTalk",
+  "param_keys": [
+   "talkId"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RCancelDownTalk",
+   "Game_RCancelUpTalk",
+   "NetIns",
+   "Text",
+   "filter",
+   "tex",
+   "type",
+   "upCnt"
+  ],
+  "ctx": "cmd: s.CMDS.Game_DownTalk, params: t }, s.Game_RDownTalk); this.updateCacheProperty(e, \"upCnt\", o.upCnt); this.updateCacheProperty(e, \"isDown\", !0); }); } cancelUpTalk(e) { return n(this, void 0, void 0, function*() { let t = { talkId: e }, o = yield l.NetIns.SendCmdAsync({ cmd: s.CMDS.Game_CancelUpTalk, params: t }, s.Game_RCancelUpTalk); this.updateCacheProperty(e, \"upCnt\", o.upCnt); this.updateCacheProperty(e, \"isUp\", !1); "
+ },
+ "game_checkhappymoment": {
+  "cmd": "game_checkhappymoment",
+  "const": "Game_CheckHappyMoment",
+  "resp": "",
+  "param_keys": [],
+  "read_fields": [
+   "Game_CheckHappyMomentR",
+   "Hortor",
+   "Mng",
+   "OpenPanelByName",
+   "checkAddiction",
+   "closeCallback",
+   "getReviewImageMap",
+   "ok",
+   "remainTime",
+   "tileConfIds",
+   "tileMng"
+  ],
+  "ctx": "uc); }); } e.ensureRealName = t; function o() { return i(this, void 0, void 0, function*() { h.default.Ins.realNamed || (yield t()); if (!h.default.Ins.realNamed) return !1; if (h.default.Ins.isInAddiction(orange.TimeUtil.serverTime)) { let e = yield u.NetIns.SendCmdAsync({ cmd: p.CMDS.Game_CheckHappyMoment }, p.Game_CheckHappyMomentR); console.warn(\"Game_CheckHappyMoment: \" + e.ok + \" | \" + e.remainTime); return !(!e || !e.ok"
+ },
+ "game_clearnewcomment": {
+  "cmd": "game_clearnewcomment",
+  "const": "Game_ClearNewComment",
+  "resp": "",
+  "param_keys": [],
+  "read_fields": [
+   "Game_RClearNewComment",
+   "MsgMng",
+   "_RF"
+  ],
+  "ctx": "e < t.commentList.length; e++) { let o = t.commentList[e]; this.commentMeList.push(o); } this.commentMeList.sort((e, t) => t.stamp - e.stamp); } return this.commentMeList; }); } clearCommentMeDot() { return i(this, void 0, void 0, function*() { yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_ClearNewComment, params: {} }, a.Game_RClearNewComment); this.newCommentCnt = 0; }); } } o.MsgMng = r; r.Ins = new r(); cc._RF.pop(); }, {"
+ },
+ "game_clearnewfans": {
+  "cmd": "game_clearnewfans",
+  "const": "Game_ClearNewFans",
+  "resp": "",
+  "param_keys": [],
+  "read_fields": [
+   "FollowMng",
+   "Game_RClearNewFans",
+   "_RF"
+  ],
+  "ctx": "his.playerId, e); } return this.getFansIds(); }); } clearFansIds() { this.fansIds = []; } clearOtherIdsMap() { this.otherFollowIdsMap = new Map(); this.otherFansIdsMap = new Map(); } clearFansDot() { return i(this, void 0, void 0, function*() { yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_ClearNewFans, params: {} }, a.Game_RClearNewFans); this.newFansCnt = 0; }); } } o.FollowMng = d; d.Ins = new d(); cc._RF.pop(); }, { \"../."
+ },
+ "game_clearnewmsg": {
+  "cmd": "game_clearnewmsg",
+  "const": "Game_ClearNewMsg",
+  "resp": "",
+  "param_keys": [
+   "count",
+   "startIndex"
+  ],
+  "read_fields": [
+   "CMDS",
+   "DynamicMng",
+   "Game_RClearNewMsg",
+   "Game_RGetNewCommentListV2",
+   "NetIns",
+   "commentList",
+   "isInspectVersion",
+   "newCommentCnt",
+   "stamp",
+   "startIndex"
+  ],
+  "ctx": ") { this.newAggregateMsgCnt = i.newAggregateMsgCnt; for (let e = 0; e < i.aggregateMsgList.length; e++) { let t = i.aggregateMsgList[e]; this.msgs.push(t); } } return this.msgs; }); } clearMsgDot() { return i(this, void 0, void 0, function*() { yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_ClearNewMsg, params: {} }, a.Game_RClearNewMsg); this.newAggregateMsgCnt = 0; }); } appendLoadCommentMe() { return i(this, void 0, void 0,"
+ },
+ "game_clearreportgame": {
+  "cmd": "game_clearreportgame",
+  "const": "Game_ClearReportGame",
+  "resp": "",
+  "param_keys": [
+   "end",
+   "id",
+   "needDelSourceGame",
+   "reason",
+   "score",
+   "start"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RClearReportGame",
+   "Game_RGetReportPlayerList",
+   "Game_RGetUserSimpleMsg",
+   "Game_RReportPlayer",
+   "NetIns",
+   "lengt",
+   "reportPlayerIdList"
+  ],
+  "ctx": " void 0, void 0, function*() { let i = { id: e, score: t, reason: o, needDelSourceGame: s }; yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_OffGame, params: i }, a.Game_ROffGame); }); } clearGame() { return i(this, void 0, void 0, function*() { yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_ClearReportGame, params: {} }, a.Game_RClearReportGame); }); } reportPlayer(e) { return i(this, void 0, void 0, function*() { let t = { id"
+ },
+ "game_clearreportgamecomment": {
+  "cmd": "game_clearreportgamecomment",
+  "const": "Game_ClearReportGameComment",
+  "resp": "",
+  "param_keys": [
+   "end",
+   "id",
+   "reason",
+   "score",
+   "start",
+   "talkId"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RGetReportTalkList",
+   "Game_ROfficialDele",
+   "Game_RReportTalk",
+   "NetIns",
+   "talkList"
+  ],
+  "ctx": "unction*() { let i = { id: e, score: o, reason: t }; yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_DealWithReportGameComment, params: i }, a.Game_RDealWithReportGameComment); }); } clearComments() { return i(this, void 0, void 0, function*() { yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_ClearReportGameComment, params: {} }, a.Game_RClearReportGameComment); }); } reportTalk(e) { return i(this, void 0, void 0, function*() { "
+ },
+ "game_clearreportgoods": {
+  "cmd": "game_clearreportgoods",
+  "const": "Game_ClearReportGoods",
+  "resp": "",
+  "param_keys": [
+   "commentId",
+   "end",
+   "id",
+   "reason",
+   "score",
+   "start"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RClearReportGoods",
+   "Game_RReportGameComment",
+   "NetIns",
+   "reportGameCommentList"
+  ],
+  "ctx": "id 0, void 0, function*() { let i = { id: e, score: o, reason: t }; yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_DealWithReportGoods, params: i }, a.Game_RDealWithReportGoods); }); } clearGoods() { return i(this, void 0, void 0, function*() { yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_ClearReportGoods, params: {} }, a.Game_RClearReportGoods); }); } reportComment(e) { return i(this, void 0, void 0, function*() { let t = {"
+ },
+ "game_clearreportplayer": {
+  "cmd": "game_clearreportplayer",
+  "const": "Game_ClearReportPlayer",
+  "resp": "",
+  "param_keys": [
+   "end",
+   "id",
+   "start"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RClearReportPlayer",
+   "Game_RGetReportGoodsList",
+   "Game_RReportGoods",
+   "NetIns",
+   "id",
+   "loadGoodsCellDatas",
+   "reportCnt",
+   "reportGoodsIdList",
+   "reportScoreMap"
+  ],
+  "ctx": " needResetUserName: s, needResetUserImg: r, needResetIntro: l }; yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_DealWithReportPlayer, params: i }, a.Game_RDealWithReportPlayer); }); } clearPlayer() { return i(this, void 0, void 0, function*() { yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_ClearReportPlayer, params: {} }, a.Game_RClearReportPlayer); }); } reportGoods(e) { return i(this, void 0, void 0, function*() { let t = {"
+ },
+ "game_clearreporttalk": {
+  "cmd": "game_clearreporttalk",
+  "const": "Game_ClearReportTalk",
+  "resp": "",
+  "param_keys": [
+   "talkId"
+  ],
+  "read_fields": [
+   "Game_RClearReportTalk",
+   "ReportMng",
+   "_RF"
+  ],
+  "ctx": "{ return i(this, void 0, void 0, function*() { let t = { talkId: e }; yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_OfficialDeleteTalk, params: t }, a.Game_ROfficialDeleteTalk); }); } clearTalks() { return i(this, void 0, void 0, function*() { yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_ClearReportTalk, params: {} }, a.Game_RClearReportTalk); }); } } o.ReportMng = r; r.Ins = new r(); cc._RF.pop(); }, { \"../../../scripts/_a"
+ },
+ "game_clearreporttalkcomment": {
+  "cmd": "game_clearreporttalkcomment",
+  "const": "Game_ClearReportTalkComment",
+  "resp": ""
+ },
+ "game_clickrecommendsgames": {
+  "cmd": "game_clickrecommendsgames",
+  "const": "Game_ClickRecommendsGames",
+  "resp": "Game_RClickRecommendsGames",
+  "param_keys": [
+   "id"
+  ],
+  "read_fields": [
+   "DB",
+   "Game_RClickRecommendsGames",
+   "RedMark",
+   "_RF"
+  ],
+  "ctx": "ent(h.default), l = e.games[i], p = l.gameCellData; s.from = \"RecommendComp\"; s.setData(p, t, l.bk, l.st); c.DynamicMng.Ins.isPlanATest(d.ABTestType.onlyChosen) && (s.clickCall = () => a(this, void 0, void 0, function*() { let e = { id: p.id }; yield r.NetIns.SendCmdAsync({ cmd: n.CMDS.Game_ClickRecommendsGames, params: e }, n.Game_RClickRecommendsGames); })); }); } }; i([ u(h.default) ], m.prototype, \"gameCell\", void 0); m = "
+ },
+ "game_collectiongames": {
+  "cmd": "game_collectiongames",
+  "const": "Game_CollectionGames",
+  "resp": "Game_RCollectionGames",
+  "param_keys": [
+   "ids"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RCancelCollectionGames",
+   "Game_RCollectionGames",
+   "NetIns"
+  ],
+  "ctx": "Games || []; this.talkIds = new Set(e.collectionTalks || []); this.goodsIds = new Set(e.collectionGoods || []); } collectGame(e) { return i(this, void 0, void 0, function*() { s.default.blockInput(!0, \"collectGame\"); let t = { ids: [ e ] }; if (yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_CollectionGames, params: t }, a.Game_RCollectionGames)) { this.ids.unshift(e); s.default.blockInput(!1, \"collectGame\"); } else { s.default"
+ },
+ "game_collectionggoods": {
+  "cmd": "game_collectionggoods",
+  "const": "Game_CollectionGGoods",
+  "resp": "Game_RCollectionGGoods",
+  "param_keys": [
+   "ids"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RCancelCollectionGoods",
+   "Game_RCollectionGGoods",
+   "NetIns",
+   "loadGames"
+  ],
+  "ctx": "s.talkIds.delete(e); s.default.blockInput(!1, \"unCollectTalk\"); } else { s.default.showToast(\"网络错误！\"); s.default.blockInput(!1, \"unCollectTalk\"); } }); } collectGoods(e) { return i(this, void 0, void 0, function*() { let t = { ids: [ e ] }; if (yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_CollectionGGoods, params: t }, a.Game_RCollectionGGoods)) { s.default.showToast(\"收藏成功\"); this.goodsIds.add(e); s.default.blockInput(!1, \"c"
+ },
+ "game_collectiontalk": {
+  "cmd": "game_collectiontalk",
+  "const": "Game_CollectionTalk",
+  "resp": "Game_RCollectionTalk",
+  "param_keys": [
+   "iD"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RCancelCollectionTalk",
+   "Game_RCollectionTalk",
+   "NetIns",
+   "TGA",
+   "TGAConst",
+   "code"
+  ],
+  "ctx": ") { this.ids.indexOf(e) >= 0 && this.ids.splice(e, 1); s.default.blockInput(!1, t); } else { s.default.showToast(\"网络错误！\"); s.default.blockInput(!1, t); } }); } collectTalk(e) { return i(this, void 0, void 0, function*() { let t = { iD: e }, o = yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_CollectionTalk, params: t }, a.Game_RCollectionTalk); if (o) if (1 != o.code) { s.default.showToast(\"收藏成功\"); this.talkIds.add(e); s.defaul"
+ },
+ "game_commentgame": {
+  "cmd": "game_commentgame",
+  "const": "Game_CommentGame",
+  "resp": "Game_RCommentGame",
+  "param_keys": [
+   "commentId",
+   "gameId",
+   "msg"
+  ],
+  "read_fields": [
+   "Game_RCommentGame",
+   "comment",
+   "comments",
+   "id",
+   "openCnt",
+   "sensitiveWords",
+   "subCommentsCnt"
+  ],
+  "ctx": "ime - this.lastCommentStamp < 1e4) { r.default.showToast(\"你发消息太快了！\"); return !1; } if (h.CreditMng.Ins.credit < 2) { r.default.showToast(\"近期违规，不能发表评论\"); return !1; } r.default.showLoading(\"发送中\"); let i = { gameId: e, commentId: t, msg: o }, n = yield s.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_CommentGame, params: i }, a.Game_RCommentGame); if (n) { let e = n.comment; if (n.sensitiveWords && n.sensitiveWords.length > 0) { r.defau"
+ },
+ "game_commenttalk": {
+  "cmd": "game_commenttalk",
+  "const": "Game_CommentTalk",
+  "resp": "Game_RCommentTalk",
+  "param_keys": [
+   "content",
+   "reviewImageMap",
+   "reviewStr",
+   "talkId"
+  ],
+  "read_fields": [
+   "Game_RCommentTalk",
+   "comment",
+   "comments",
+   "id",
+   "openCnt",
+   "sensitiveWords",
+   "subCommentsCnt",
+   "updateCacheProperty"
+  ],
+  "ctx": "ewStr: o.msg, reviewImageMap: new Map() }; i = yield s.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_ReplyTalkComment, params: n }, a.Game_RReplyTalkComment); } else { let t = { talkId: e, content: o, reviewStr: o.msg, reviewImageMap: new Map() }; i = yield s.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_CommentTalk, params: t }, a.Game_RCommentTalk); } if (i) { let a = i.comment; if (i.sensitiveWords && i.sensitiveWords.length > 0) { r.def"
+ },
+ "game_costcoiningame": {
+  "cmd": "game_costcoiningame",
+  "const": "Game_CostCoinInGame",
+  "resp": "Game_RCostCoinInGame",
+  "param_keys": [
+   "coin",
+   "gameId",
+   "name",
+   "textureName",
+   "type"
+  ],
+  "read_fields": [
+   "Game_RCostCoinInGame",
+   "_RF",
+   "curCoin",
+   "game"
+  ],
+  "ctx": "= i; this.coin = o; cc.game.emit(\"refreshCoinBar\"); return { type: \"coin\", cnt: i }; }); } requestCostCoinInGame(e, t, o, n, s) { return i(this, void 0, void 0, function*() { let i = { type: e, gameId: o, coin: t, name: n, textureName: s }, r = yield l.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_CostCoinInGame, params: i }, a.Game_RCostCoinInGame); if (!r) return !1; this.coin = r.curCoin; cc.game.emit(\"refreshCoinBar\"); return !0;"
+ },
+ "game_costcoinrecommendgame": {
+  "cmd": "game_costcoinrecommendgame",
+  "const": "Game_CostCoinRecommendGame",
+  "resp": ""
+ },
+ "game_dealwithreportgamecomment": {
+  "cmd": "game_dealwithreportgamecomment",
+  "const": "Game_DealWithReportGameComment",
+  "resp": "Game_RDealWithReportGameComment",
+  "param_keys": [
+   "id",
+   "reason",
+   "score",
+   "talkId"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RGetReportTalkList",
+   "Game_RReportTalk",
+   "NetIns",
+   "talkList"
+  ],
+  "ctx": "rtGameCommentList); t && t.reportGameCommentList && t.reportGameCommentList.length > 0 && (e = t.reportGameCommentList); return e; }); } banComments(e, t, o) { return i(this, void 0, void 0, function*() { let i = { id: e, score: o, reason: t }; yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_DealWithReportGameComment, params: i }, a.Game_RDealWithReportGameComment); }); } clearComments() { return i(this, void 0, void 0, functio"
+ },
+ "game_dealwithreportgoods": {
+  "cmd": "game_dealwithreportgoods",
+  "const": "Game_DealWithReportGoods",
+  "resp": "Game_RDealWithReportGoods",
+  "param_keys": [
+   "commentId",
+   "id",
+   "reason",
+   "score"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RClearReportGoods",
+   "Game_RDealWithReportGoods",
+   "Game_RReportGameComment",
+   "NetIns",
+   "reportGameCommentList"
+  ],
+  "ctx": "atas(t.reportGoodsIdList); for (let o = 0; o < e.length; o++) { let i = e[o]; i.reportCnt = t.reportScoreMap.get(i.id); } } return e; }); } banGoods(e, t, o) { return i(this, void 0, void 0, function*() { let i = { id: e, score: o, reason: t }; yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_DealWithReportGoods, params: i }, a.Game_RDealWithReportGoods); }); } clearGoods() { return i(this, void 0, void 0, function*() { yield n."
+ },
+ "game_dealwithreportplayer": {
+  "cmd": "game_dealwithreportplayer",
+  "const": "Game_DealWithReportPlayer",
+  "resp": "Game_RDealWithReportPlayer",
+  "param_keys": [
+   "id",
+   "needResetIntro",
+   "needResetUserImg",
+   "needResetUserName",
+   "reason",
+   "score"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RClearReportPlayer",
+   "Game_RDealWithReportPlayer",
+   "Game_RGetReportGoodsList",
+   "Game_RReportGoods",
+   "NetIns",
+   "reportGoodsIdList"
+  ],
+  "ctx": "ortCnt = t.reportScoreMap.get(i.playerId + \"\"); } } return e; }); } banPlayer(e, t, o, s, r, l) { return i(this, void 0, void 0, function*() { let i = { id: e, score: o, reason: t, needResetUserName: s, needResetUserImg: r, needResetIntro: l }; yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_DealWithReportPlayer, params: i }, a.Game_RDealWithReportPlayer); }); } clearPlayer() { return i(this, void 0, void 0, function*() { yield"
+ },
+ "game_debuggetrecommendgamemsg": {
+  "cmd": "game_debuggetrecommendgamemsg",
+  "const": "Game_DebugGetRecommendGameMsg",
+  "resp": ""
+ },
+ "game_delactorgroups": {
+  "cmd": "game_delactorgroups",
+  "const": "Game_DelActorGroups",
+  "resp": "Game_RDelActorGroups",
+  "param_keys": [
+   "groupName"
+  ],
+  "read_fields": [
+   "ActorGroupRefData",
+   "AllGroupName",
+   "Game_RDelActorGroups",
+   "JumpGroupName",
+   "RpgGroup",
+   "RpgGroupName",
+   "belongGameId",
+   "confId",
+   "confType",
+   "id",
+   "refDataList",
+   "type"
+  ],
+  "ctx": " => t.groupName == e.groupName) || this.customGroups.unshift(e); return e; } }); } delete(e) { return i(this, void 0, void 0, function*() { let t = this.customGroups.findIndex(t => t.groupName == e); if (t < 0) return; let o = { groupName: e }; yield s.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_DelActorGroups, params: o }, a.Game_RDelActorGroups); this.customGroups.splice(t, 1); }); } curGroupAppend(e) { return i(this, void 0, voi"
+ },
+ "game_delcustomcolors": {
+  "cmd": "game_delcustomcolors",
+  "const": "Game_DelCustomColors",
+  "resp": "Game_RDelCustomColors",
+  "param_keys": [
+   "ids"
+  ],
+  "read_fields": [
+   "ColorMng",
+   "Game_RDelCustomColors",
+   "_RF"
+  ],
+  "ctx": "rs = o.colorDatas; return o.colorDatas; }); } delete(e) { return i(this, void 0, void 0, function*() { if (!e) return; let t = []; this.customColors.forEach(o => { o.id != e && t.push(o); }); this.customColors = t; let o = { ids: [ e ] }; if (!(yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_DelCustomColors, params: o }, a.Game_RDelCustomColors))) { s.default.showToast(\"网路错误，创建失败！\"); return null; } }); } } o.ColorMng = r; r.Ins"
+ },
+ "game_deletegamerankscore": {
+  "cmd": "game_deletegamerankscore",
+  "const": "Game_DeleteGameRankScore",
+  "resp": "Game_RDeleteGameRankScore",
+  "param_keys": [
+   "id",
+   "targetId"
+  ],
+  "read_fields": [
+   "Game_RDeleteGameRankScore",
+   "_RF",
+   "crossPlatform"
+  ],
+  "ctx": " o = { gameId: e, scores: t }; yield s.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_UploadGameRankScore, params: o }, a.Game_RUploadGameRankScore); }); } deleteScore(e, t) { return i(this, void 0, void 0, function*() { let o = { id: e, targetId: t }; yield s.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_DeleteGameRankScore, params: o }, a.Game_RDeleteGameRankScore); this.deleteHistoryScore(e); }); } getHistoryScore(e) { return (n.crossPlat"
+ },
+ "game_deletetalk": {
+  "cmd": "game_deletetalk",
+  "const": "Game_DeleteTalk",
+  "resp": "Game_RDeleteTalk",
+  "param_keys": [
+   "talkId"
+  ],
+  "read_fields": [
+   "Game_RDeleteTalk",
+   "Talk_Del",
+   "Util",
+   "deleteDraftByTalkId",
+   "game",
+   "instantiate",
+   "prefabs",
+   "role"
+  ],
+  "ctx": "s.role.uId) && this.userTalks.get(u.default.Ins.role.uId).unshift(t.talkData); } this.clearCache(); cc.game.emit(i.Talk_Refresh); d.default.hideLoading(); }); } deleteTalk(e) { return n(this, void 0, void 0, function*() { let t = { talkId: e }; yield l.NetIns.SendCmdAsync({ cmd: s.CMDS.Game_DeleteTalk, params: t }, s.Game_RDeleteTalk); if (this.userTalks.has(u.default.Ins.role.uId)) { let t = this.userTalks.get(u.default.Ins.r"
+ },
+ "game_delgamecomment": {
+  "cmd": "game_delgamecomment",
+  "const": "Game_DelGameComment",
+  "resp": "Game_RDelGameComment",
+  "param_keys": [
+   "commentId"
+  ],
+  "read_fields": [
+   "Game_RDelGameComment",
+   "comments",
+   "id",
+   "openCnt",
+   "subCommentsCnt"
+  ],
+  "ctx": "omment.commentsCnt++; this.gameTopComment.comments.unshift(e); } r.default.hideLoading(); return !0; } r.default.hideLoading(\"发送失败\"); return !1; }); } deleteComment(e) { return i(this, void 0, void 0, function*() { let t = { commentId: e }; if (yield s.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_DelGameComment, params: t }, a.Game_RDelGameComment)) for (let t = 0; t < this.gameTopComment.comments.length; t++) { let o = this.gameTop"
+ },
+ "game_delgamerank": {
+  "cmd": "game_delgamerank",
+  "const": "Game_DelGameRank",
+  "resp": "Game_RDelGameRank",
+  "param_keys": [
+   "ids"
+  ],
+  "read_fields": [
+   "GameGoodsCostType",
+   "Game_RDelGameRank",
+   "_RF",
+   "gameRankIds",
+   "id"
+  ],
+  "ctx": "k, confId: e.id, data: e }; yield s.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_SaveRoleCreativeConf, params: t }, a.Game_RSaveRoleCreativeConf); }); } requestDeleteConf(e, t) { return i(this, void 0, void 0, function*() { let o = { ids: [ e.id ] }; yield s.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_DelGameRank, params: o }, a.Game_RDelGameRank); let i = t.gameRankIds.indexOf(e.id); i >= 0 && t.gameRankIds.splice(i, 1); }); } getCostIc"
+ },
+ "game_delgameshop": {
+  "cmd": "game_delgameshop",
+  "const": "Game_DelGameShop",
+  "resp": "Game_RDelGameShop",
+  "param_keys": [
+   "ids"
+  ],
+  "read_fields": [
+   "GameGoodsCostType",
+   "Game_RDelGameShop",
+   "_RF",
+   "gameShopIds",
+   "id"
+  ],
+  "ctx": "et t = { gameId: null, id: e.id, data: e }; yield a.NetIns.SendCmdAsync({ cmd: n.CMDS.Game_SaveGameShop, params: t }, n.Game_RSaveGameShop); }); } requestDeleteConf(e, t) { return i(this, void 0, void 0, function*() { let o = { ids: [ e.id ] }; yield a.NetIns.SendCmdAsync({ cmd: n.CMDS.Game_DelGameShop, params: o }, n.Game_RDelGameShop); let i = t.gameShopIds.indexOf(e.id); i >= 0 && t.gameShopIds.splice(i, 1); }); } getCostIc"
+ },
+ "game_delreleasegamerank": {
+  "cmd": "game_delreleasegamerank",
+  "const": "Game_DelReleaseGameRank",
+  "resp": ""
+ },
+ "game_delroleactorconf": {
+  "cmd": "game_delroleactorconf",
+  "const": "Game_DelRoleActorConf",
+  "resp": "Game_RDelRoleActorConf",
+  "param_keys": [
+   "data",
+   "id",
+   "ids"
+  ],
+  "read_fields": [
+   "Game_RDelRoleActorConf",
+   "_RF",
+   "done",
+   "next",
+   "throw",
+   "value"
+  ],
+  "ctx": "*() { let t = { id: e.id, data: e }; yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_SaveRoleActorConf, params: t }, a.Game_RSaveRoleActorConf); }); } requestDeleteConf(e) { return i(this, void 0, void 0, function*() { let t = { ids: [ e.id ] }; yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_DelRoleActorConf, params: t }, a.Game_RDelRoleActorConf); }); } }; cc._RF.pop(); }, { \"../../../scripts/_autogen/cmd/cmd\": \"cmd\", \"../../."
+ },
+ "game_delrolebulletconf": {
+  "cmd": "game_delrolebulletconf",
+  "const": "Game_DelRoleBulletConf",
+  "resp": "Game_RDelRoleBulletConf",
+  "param_keys": [
+   "data",
+   "id",
+   "ids"
+  ],
+  "read_fields": [
+   "Game_RDelRoleBulletConf",
+   "_RF",
+   "done",
+   "next",
+   "throw",
+   "va"
+  ],
+  "ctx": ") { let t = { id: e.id, data: e }; yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_SaveRoleBulletConf, params: t }, a.Game_RSaveRoleBulletConf); }); } requestDeleteConf(e) { return i(this, void 0, void 0, function*() { let t = { ids: [ e.id ] }; yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_DelRoleBulletConf, params: t }, a.Game_RDelRoleBulletConf); }); } }; cc._RF.pop(); }, { \"../../../scripts/_autogen/cmd/cmd\": \"cmd\", \"../.."
+ },
+ "game_delrolecreativeconf": {
+  "cmd": "game_delrolecreativeconf",
+  "const": "Game_DelRoleCreativeConf",
+  "resp": "Game_RDelRoleCreativeConf",
+  "param_keys": [
+   "confId",
+   "confType",
+   "gameId"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RDelRoleCreativeConf",
+   "Game_RSaveRoleCreativeConf",
+   "NetIns",
+   "belongGameId",
+   "id"
+  ],
+  "ctx": ".customIds.unshift(e.id); return e; } }); } delete(e, t) { return i(this, void 0, void 0, function*() { if (!e) return; let o = e.id; if (e.belongGameId) { let t = { gameId: e.belongGameId, confType: this.creativeConfType, confId: e.id }; if (!(yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_DelRoleCreativeConf, params: t }, a.Game_RDelRoleCreativeConf))) { s.default.showToast(\"网络错误，删除失败！\"); return; } let i = this.extraIds.inde"
+ },
+ "game_delroledeviceconf": {
+  "cmd": "game_delroledeviceconf",
+  "const": "Game_DelRoleDeviceConf",
+  "resp": "Game_RDelRoleDeviceConf",
+  "param_keys": [
+   "data",
+   "id",
+   "ids"
+  ],
+  "read_fields": [
+   "Game_RDelRoleDeviceConf",
+   "_RF",
+   "done",
+   "next",
+   "throw",
+   "va"
+  ],
+  "ctx": ") { let t = { id: e.id, data: e }; yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_SaveRoleDeviceConf, params: t }, a.Game_RSaveRoleDeviceConf); }); } requestDeleteConf(e) { return i(this, void 0, void 0, function*() { let t = { ids: [ e.id ] }; yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_DelRoleDeviceConf, params: t }, a.Game_RDelRoleDeviceConf); }); } }; cc._RF.pop(); }, { \"../../../scripts/_autogen/cmd/cmd\": \"cmd\", \"../.."
+ },
+ "game_delrolegamedata": {
+  "cmd": "game_delrolegamedata",
+  "const": "Game_DelRoleGameData",
+  "resp": "Game_RDelRoleGameData",
+  "param_keys": [
+   "id",
+   "ids"
+  ],
+  "read_fields": [
+   "CMDS",
+   "GameStatus",
+   "Game_RDelRoleGameData",
+   "Game_ROwnOffGame",
+   "Game_RSaveRoleGameData",
+   "NetIns",
+   "id",
+   "status"
+  ],
+  "ctx": "eRoleGameData, params: i }, n.Game_RSaveRoleGameData); if (!l) return null; o.id = l.id; this.cache.set(o.id, o); this.gameIds.unshift(o.id); return o; }); } delete(e) { return i(this, void 0, void 0, function*() { let t = { ids: [ e ] }; if (!(yield a.NetIns.SendCmdAsync({ cmd: n.CMDS.Game_DelRoleGameData, params: t }, n.Game_RDelRoleGameData))) return; this.cache.delete(e); let o = this.gameIds.indexOf(e); o >= 0 && this.gam"
+ },
+ "game_delrolepropconf": {
+  "cmd": "game_delrolepropconf",
+  "const": "Game_DelRolePropConf",
+  "resp": "Game_RDelRolePropConf",
+  "param_keys": [
+   "data",
+   "id",
+   "ids"
+  ],
+  "read_fields": [
+   "Game_RDelRolePropConf",
+   "_RF",
+   "done",
+   "next",
+   "throw",
+   "value"
+  ],
+  "ctx": "on*() { let t = { id: e.id, data: e }; yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_SaveRolePropConf, params: t }, a.Game_RSaveRolePropConf); }); } requestDeleteConf(e) { return i(this, void 0, void 0, function*() { let t = { ids: [ e.id ] }; yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_DelRolePropConf, params: t }, a.Game_RDelRolePropConf); }); } }; cc._RF.pop(); }, { \"../../../scripts/_autogen/cmd/cmd\": \"cmd\", \"../../../"
+ },
+ "game_delroletileconf": {
+  "cmd": "game_delroletileconf",
+  "const": "Game_DelRoleTileConf",
+  "resp": "Game_RDelRoleTileConf",
+  "param_keys": [
+   "data",
+   "id",
+   "ids"
+  ],
+  "read_fields": [
+   "Game_RDelRoleTileConf",
+   "_RF",
+   "done",
+   "next",
+   "throw",
+   "value"
+  ],
+  "ctx": "on*() { let t = { id: e.id, data: e }; yield r.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_SaveRoleTileConf, params: t }, a.Game_RSaveRoleTileConf); }); } requestDeleteConf(e) { return i(this, void 0, void 0, function*() { let t = { ids: [ e.id ] }; yield r.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_DelRoleTileConf, params: t }, a.Game_RDelRoleTileConf); }); } }; cc._RF.pop(); }, { \"../../../scripts/_autogen/cmd/cmd\": \"cmd\", \"../../../"
+ },
+ "game_delroleweaponconf": {
+  "cmd": "game_delroleweaponconf",
+  "const": "Game_DelRoleWeaponConf",
+  "resp": "Game_RDelRoleWeaponConf",
+  "param_keys": [
+   "data",
+   "id",
+   "ids"
+  ],
+  "read_fields": [
+   "Game_RDelRoleWeaponConf",
+   "_RF",
+   "next",
+   "throw"
+  ],
+  "ctx": ") { let t = { id: e.id, data: e }; yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_SaveRoleWeaponConf, params: t }, a.Game_RSaveRoleWeaponConf); }); } requestDeleteConf(e) { return i(this, void 0, void 0, function*() { let t = { ids: [ e.id ] }; yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_DelRoleWeaponConf, params: t }, a.Game_RDelRoleWeaponConf); }); } }; cc._RF.pop(); }, { \"../../../scripts/_autogen/cmd/cmd\": \"cmd\", \"../.."
+ },
+ "game_deltalkchosen": {
+  "cmd": "game_deltalkchosen",
+  "const": "Game_DelTalkChosen",
+  "resp": "Game_RSetTalkChosen",
+  "param_keys": [
+   "talkId"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RDownTalk",
+   "Game_RSetTalkChosen",
+   "Game_RUpTalk",
+   "NetIns",
+   "upCnt"
+  ],
+  "ctx": " void 0, void 0, function*() { let t = { talkId: e }; yield l.NetIns.SendCmdAsync({ cmd: s.CMDS.Game_SetTalkChosen, params: t }, s.Game_RSetTalkChosen); }); } removeChosen(e) { return n(this, void 0, void 0, function*() { let t = { talkId: e }; yield l.NetIns.SendCmdAsync({ cmd: s.CMDS.Game_DelTalkChosen, params: t }, s.Game_RSetTalkChosen); }); } upTalk(e) { return n(this, void 0, void 0, function*() { let t = { talkId: e }, "
+ },
+ "game_deltalkcomment": {
+  "cmd": "game_deltalkcomment",
+  "const": "Game_DelTalkComment",
+  "resp": "Game_RDelTalkComment",
+  "param_keys": [
+   "commentId"
+  ],
+  "read_fields": [
+   "Game_RDelTalkComment",
+   "comments",
+   "deleteCacheComment",
+   "id",
+   "openCnt",
+   "subCommentsCnt",
+   "updateCac",
+   "updateCacheProperty"
+  ],
+  "ctx": "eLoading(); m.TGA.track(m.TGAConst.talkComment, { talkId: e, content: o.msg, level: 2 }); return !0; } r.default.hideLoading(\"发送失败\"); return !1; }); } deleteComment(e) { return i(this, void 0, void 0, function*() { let t = { commentId: e }; if (yield s.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_DelTalkComment, params: t }, a.Game_RDelTalkComment)) for (let t = 0; t < this.talkData.comments.length; t++) { let o = this.talkData.comm"
+ },
+ "game_deltalkcommenttop": {
+  "cmd": "game_deltalkcommenttop",
+  "const": "Game_DelTalkCommentTop",
+  "resp": ""
+ },
+ "game_deltalktop": {
+  "cmd": "game_deltalktop",
+  "const": "Game_DelTalkTop",
+  "resp": "Game_RDelTalkTop",
+  "param_keys": [
+   "talkId"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RDelTalkTop",
+   "Game_RSetTalkChosen",
+   "Game_RUpTalk",
+   "NetIns",
+   "upCnt"
+  ],
+  "ctx": "n n(this, void 0, void 0, function*() { let t = { talkId: e }; yield l.NetIns.SendCmdAsync({ cmd: s.CMDS.Game_SetTalkTop, params: t }, s.Game_RSetTalkTop); }); } removeTop(e) { return n(this, void 0, void 0, function*() { let t = { talkId: e }; yield l.NetIns.SendCmdAsync({ cmd: s.CMDS.Game_DelTalkTop, params: t }, s.Game_RDelTalkTop); }); } setChosen(e) { return n(this, void 0, void 0, function*() { let t = { talkId: e }; yie"
+ },
+ "game_delvariable": {
+  "cmd": "game_delvariable",
+  "const": "Game_DelVariable",
+  "resp": "Game_RDelVariable",
+  "param_keys": [
+   "confId",
+   "confType",
+   "data",
+   "gameId",
+   "ids"
+  ],
+  "read_fields": [
+   "CMDS",
+   "CreativeConfType",
+   "Game_RDelVariable",
+   "Game_RSaveRoleCreativeConf",
+   "Game_RSaveVariable",
+   "NetIns",
+   "belongGameId",
+   "id"
+  ],
+  "ctx": "c({ cmd: s.CMDS.Game_SaveVariable, params: t }, s.Game_RSaveVariable); if (!o) return null; e.id = o.id; this.gameData.variableDatas.push(e); return e; }); } delete(e) { return i(this, void 0, void 0, function*() { let t = { ids: [ e ] }; if (!(yield n.NetIns.SendCmdAsync({ cmd: s.CMDS.Game_DelVariable, params: t }, s.Game_RDelVariable))) return null; let o = this.gameData.variableDatas.indexOf(t => t.id == e); o >= 0 && this."
+ },
+ "game_delworlddata": {
+  "cmd": "game_delworlddata",
+  "const": "Game_DelWorldData",
+  "resp": "Game_RDelWorldData",
+  "param_keys": [
+   "gameId",
+   "id",
+   "ids",
+   "info",
+   "layoutMin"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RDelWorldData",
+   "Game_RSaveWorldData",
+   "NetIns",
+   "game",
+   "id",
+   "info",
+   "layoutMin"
+  ],
+  "ctx": " } delete(e, t) { return i(this, void 0, void 0, function*() { if (t) { t.projectLayout && delete t.projectLayout.worldCellPos[e]; let o = t.worldIds.indexOf(e); o >= 0 && t.worldIds.splice(o, 1); } this.cache.delete(e); let o = { ids: [ e ] }; yield n.NetIns.SendCmdAsync({ cmd: s.CMDS.Game_DelWorldData, params: o }, s.Game_RDelWorldData); }); } save(e, t = !1) { return i(this, void 0, void 0, function*() { let o = { id: e.id,"
+ },
+ "game_downtalk": {
+  "cmd": "game_downtalk",
+  "const": "Game_DownTalk",
+  "resp": "Game_RDownTalk",
+  "param_keys": [
+   "talkId"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RCancelDownTalk",
+   "Game_RCancelUpTalk",
+   "Game_RDownTalk",
+   "NetIns",
+   "upCnt"
+  ],
+  "ctx": "mdAsync({ cmd: s.CMDS.Game_UpTalk, params: t }, s.Game_RUpTalk); this.updateCacheProperty(e, \"upCnt\", o.upCnt); this.updateCacheProperty(e, \"isUp\", !0); }); } downTalk(e) { return n(this, void 0, void 0, function*() { let t = { talkId: e }, o = yield l.NetIns.SendCmdAsync({ cmd: s.CMDS.Game_DownTalk, params: t }, s.Game_RDownTalk); this.updateCacheProperty(e, \"upCnt\", o.upCnt); this.updateCacheProperty(e, \"isDown\", !0); }); } "
+ },
+ "game_downtalkcomment": {
+  "cmd": "game_downtalkcomment",
+  "const": "Game_DownTalkComment",
+  "resp": ""
+ },
+ "game_followuser": {
+  "cmd": "game_followuser",
+  "const": "Game_FollowUser",
+  "resp": "Game_RFollowUser",
+  "param_keys": [
+   "followId"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RFollowUser",
+   "NetIns",
+   "authorMsg",
+   "cache",
+   "fansCount",
+   "isFollow"
+  ],
+  "ctx": " null; this.fansIds = []; this.otherFollowIdsMap = new Map(); this.otherFansIdsMap = new Map(); this.newFansCnt = 0; this.playerInfoMap = new Map(); } follow(e) { return i(this, void 0, void 0, function*() { try { let t = { followId: e }; if (!(yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_FollowUser, params: t }, a.Game_RFollowUser))) return -1; this.followIds.unshift(e); let o = this.playerInfoMap.get(e); o && (o.isFollow ="
+ },
+ "game_getaggregatemsglist": {
+  "cmd": "game_getaggregatemsglist",
+  "const": "Game_GetAggregateMsgList",
+  "resp": "Game_RGetAggregateMsgList",
+  "param_keys": [
+   "endIndex",
+   "startIndex"
+  ],
+  "read_fields": [
+   "CMDS",
+   "DynamicMng",
+   "Game_RClearNewMsg",
+   "Game_RGe",
+   "Game_RGetAggregateMsgList",
+   "NetIns",
+   "aggregateMsgList",
+   "isInspectVersion",
+   "newAggregateMsgCnt"
+  ],
+  "ctx": "ndLoadMsgs() { return i(this, void 0, void 0, function*() { if (s.DynamicMng.Ins.isInspectVersion()) return []; let e = this.msgs.length, t = e + 10; if (e >= (t = Math.min(t, 999))) return this.msgs; let o = { startIndex: e, endIndex: t }, i = yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_GetAggregateMsgList, params: o }, a.Game_RGetAggregateMsgList); if (i) { this.newAggregateMsgCnt = i.newAggregateMsgCnt; for (let e = 0; e"
+ },
+ "game_getbereportgamedata": {
+  "cmd": "game_getbereportgamedata",
+  "const": "Game_GetBeReportGameData",
+  "resp": "Game_RGetBeReportGameData",
+  "param_keys": [
+   "end",
+   "id",
+   "ids",
+   "needDelSourceGame",
+   "reason",
+   "score",
+   "start"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RClearReportGame",
+   "Game_RGetBeReportGameData",
+   "Game_ROffGame",
+   "NetIns",
+   "id",
+   "reportCnt",
+   "reportScoreMap"
+  ],
+  "ctx": " [], t = yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_GetReportGameIdList, params: { start: 0, end: 1e3 } }, a.Game_RGetReportGameList); if (t && t.reportGameIdList && t.reportGameIdList.length > 0) { let o = { ids: t.reportGameIdList }; e = (yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_GetBeReportGameData, params: o }, a.Game_RGetBeReportGameData)).gameDatas || []; for (let o = 0; o < e.length; o++) { let i = e[o]; i.repo"
+ },
+ "game_getbindrolemsg": {
+  "cmd": "game_getbindrolemsg",
+  "const": "Game_GetBindRoleMsg",
+  "resp": "Game_RGetBindRoleMsg",
+  "param_keys": [
+   "bindType"
+  ],
+  "read_fields": [
+   "Enter",
+   "Game_RGetBindRoleMsg",
+   "Hortor",
+   "Node",
+   "SaveDefines",
+   "Slider",
+   "code",
+   "crossPlatform"
+  ],
+  "ctx": "tikTok; u.Hortor.loginPlatType == u.PlatType.WeChat ? e = C.GDBindType.wechat : u.Hortor.loginPlatType == u.PlatType.QQ ? e = C.GDBindType.qQ : u.Hortor.loginPlatType == u.PlatType.Apple && (e = C.GDBindType.apple); let t = { bindType: e }, o = yield v.NetIns.SendCmdAsync({ cmd: y.CMDS.Game_GetBindRoleMsg, params: t }, y.Game_RGetBindRoleMsg); console.log(\">>Game_GetBindRoleMsg>>\", o ? JSON.stringify(o) : o); o && h.crossPlatf"
+ },
+ "game_getchosengoodsids": {
+  "cmd": "game_getchosengoodsids",
+  "const": "Game_GetChosenGoodsIds",
+  "resp": "Game_RGetChosenGoodsIds",
+  "param_keys": [
+   "end",
+   "goodsSort",
+   "goodsType",
+   "start"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RGetChosenGoodsIds",
+   "NetIns",
+   "TGA",
+   "checkUploadGoodsShow",
+   "goodsIds",
+   "includes",
+   "recommendList",
+   "tempGoodsShowDatas"
+  ],
+  "ctx": "nspectVersion()) return d.DynamicMng.Ins.inspectGoodsIds; let o = e + \"-\" + t, i = this.chosenRanks.get(o) || [], n = i.length, s = n + 10; if (n >= (s = Math.min(s, 999))) return i; let c = { goodsType: e, goodsSort: t, start: n, end: s }, h = yield r.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_GetChosenGoodsIds, params: c }, a.Game_RGetChosenGoodsIds); if (h) { let e = h.goodsIds; for (let t = 0; t < e.length; t++) { let o = e[t]"
+ },
+ "game_getcostcoinrecommendgames": {
+  "cmd": "game_getcostcoinrecommendgames",
+  "const": "Game_GetCostCoinRecommendGames",
+  "resp": ""
+ },
+ "game_getcreativerank": {
+  "cmd": "game_getcreativerank",
+  "const": "Game_GetCreativeRank",
+  "resp": "Game_RGetCreativeRank",
+  "param_keys": [],
+  "read_fields": [
+   "CreativeGameSortType",
+   "Game_RGetCreativeRank",
+   "_RF",
+   "gameDatas",
+   "sourceReleaseGame"
+  ],
+  "ctx": "his.getKey(e, t); return this.cache.get(o) || []; } appendLoad(e, t) { return i(this, void 0, void 0, function*() { let o = this.getKey(e, t), i = this.cache.get(o) || [], n = { gameId: e, sortType: t, start: i.length, end: i.length + 12 }, r = yield s.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_GetCreativeRank, params: n }, a.Game_RGetCreativeRank); if (0 == i.length && r.sourceReleaseGame) { i.push(r.sourceReleaseGame); r.sourceR"
+ },
+ "game_getfans": {
+  "cmd": "game_getfans",
+  "const": "Game_GetFans",
+  "resp": "Game_RGetFans",
+  "param_keys": [
+   "endIndex",
+   "rid",
+   "startIndex"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RClearNewFans",
+   "Game_RGetFans",
+   "NetIns",
+   "ids",
+   "newFansCnt"
+  ],
+  "ctx": " return i(this, void 0, void 0, function*() { if (r.DynamicMng.Ins.isInspectVersion()) return []; let t = this.getFansIds().length, o = t + e; if (t >= o) return this.getFansIds(); let i = { startIndex: t, endIndex: o, rid: this.playerId }, s = yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_GetFans, params: i }, a.Game_RGetFans); if (s) { let e = s.ids; if (this.isSelf()) { this.fansIds = this.fansIds.concat(e); this.newFansCn"
+ },
+ "game_getfollow": {
+  "cmd": "game_getfollow",
+  "const": "Game_GetFollow",
+  "resp": "Game_RGetFollow",
+  "param_keys": [
+   "rid"
+  ],
+  "read_fields": [
+   "CMDS",
+   "DynamicMng",
+   "Game_RGetFans",
+   "Game_RGetFollow",
+   "NetIns",
+   "ids",
+   "isInspectVersion",
+   "role"
+  ],
+  "ctx": "s; this.otherFansIdsMap.has(this.playerId) || this.otherFansIdsMap.set(this.playerId, []); return this.otherFansIdsMap.get(this.playerId); } loadOtherFollowIds() { return i(this, void 0, void 0, function*() { let e = { rid: this.playerId }, t = yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_GetFollow, params: e }, a.Game_RGetFollow); t && this.otherFollowIdsMap.set(this.playerId, t.ids); }); } appendLoadFansIds(e = 10) { retur"
+ },
+ "game_getgamedetail": {
+  "cmd": "game_getgamedetail",
+  "const": "Game_GetGameDetail",
+  "resp": "Game_RGetGameDetail",
+  "param_keys": [
+   "id"
+  ],
+  "read_fields": [
+   "Game_RGetGameDetail",
+   "_RF"
+  ],
+  "ctx": "n/cmd/cmd\"), n = e(\"../../Frame/NetworkMgr\"); class s { constructor() { this.cache = new Map(); this.game_request = new Set(); } load(e) { return i(this, void 0, void 0, function*() { let t = this.cache.get(e); if (!t) { let o = { id: e }; (t = yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_GetGameDetail, params: o }, a.Game_RGetGameDetail)) && this.cache.set(e, t); } return t; }); } deleteCache(e) { this.cache.delete(e); } is"
+ },
+ "game_getgameidlistbygametag": {
+  "cmd": "game_getgameidlistbygametag",
+  "const": "Game_GetGameIdListByGameTag",
+  "resp": "Game_RGetGameIdListByGameTag",
+  "param_keys": [
+   "end",
+   "gameTag",
+   "start"
+  ],
+  "read_fields": [
+   "Util",
+   "crossPlatform",
+   "gameIdList",
+   "loadGames"
+  ],
+  "ctx": " let e = r.crossPlatform.getStorageSync(\"hotGameIds\") || [], t = r.crossPlatform.getStorageSync(\"hotGameIdsStamp\") || 0; if (c.Util.isToday(t) && e.length > 0) this.hotGameIds = e; else { let e = { gameTag: \"ZongBang\", start: 0, end: 500 }, t = yield l.NetIns.SendCmdAsync({ cmd: s.CMDS.Game_GetGameIdListByGameTag, params: e }, s.Game_RGetGameIdListByGameTag); if (t) { this.hotGameIds = t.gameIdList; c.Util.shuffle(this.hotGame"
+ },
+ "game_getgamerank": {
+  "cmd": "game_getgamerank",
+  "const": "Game_GetGameRank",
+  "resp": "Game_RGetGameRank",
+  "param_keys": [
+   "cycleType",
+   "data",
+   "gameId",
+   "id",
+   "ids",
+   "sortType"
+  ],
+  "read_fields": [
+   "CMDS",
+   "CreativeConfType",
+   "Game_RGetGameRank",
+   "Game_RSaveGameRank",
+   "NetIns",
+   "belongGameId",
+   "conf",
+   "cycleType",
+   "datas",
+   "gameRankIds",
+   "id",
+   "sortType"
+  ],
+  "ctx": "default = class extends l.BaseConfMng { constructor() { super(); this.confType = r.CommonDataType.Rank; this.creativeConfType = n.CreativeConfType.shop; } requestLoadConf(e) { return i(this, void 0, void 0, function*() { let t = { ids: e }, o = yield s.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_GetGameRank, params: t }, a.Game_RGetGameRank); if (o) { let e = []; for (let t = 0; t < o.datas.length; t++) { let i = o.datas[t]; i.conf"
+ },
+ "game_getgameshop": {
+  "cmd": "game_getgameshop",
+  "const": "Game_GetGameShop",
+  "resp": "Game_RGetGameShop",
+  "param_keys": [
+   "data",
+   "gameId",
+   "id",
+   "ids"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RGetGameShop",
+   "Game_RSaveGameShop",
+   "NetIns",
+   "conf",
+   "datas",
+   "gameShopIds",
+   "id"
+  ],
+  "ctx": "default = class extends r.BaseConfMng { constructor() { super(); this.confType = l.CommonDataType.Shop; this.creativeConfType = s.CreativeConfType.shop; } requestLoadConf(e) { return i(this, void 0, void 0, function*() { let t = { ids: e }, o = yield a.NetIns.SendCmdAsync({ cmd: n.CMDS.Game_GetGameShop, params: t }, n.Game_RGetGameShop); if (o) { let e = []; for (let t = 0; t < o.datas.length; t++) { let i = o.datas[t]; i.conf"
+ },
+ "game_getgameshopids": {
+  "cmd": "game_getgameshopids",
+  "const": "Game_GetGameShopIds",
+  "resp": ""
+ },
+ "game_getgiftrankdata": {
+  "cmd": "game_getgiftrankdata",
+  "const": "Game_GetGiftRankData",
+  "resp": "Game_RGetGiftRankData",
+  "param_keys": [
+   "beginIndex",
+   "gameId"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RGetGiftRankData",
+   "Game_RGetRoleGiftRankData",
+   "GiftRankCellData",
+   "GiftRankMng",
+   "NetIns",
+   "_RF",
+   "gameIcon",
+   "gameId",
+   "gameName",
+   "rankKey",
+   "rankList",
+   "score"
+  ],
+  "ctx": "| []; } deleteGiftRank(e) { this.giftRankMap.delete(e); } appendLoadGiftRank(e, t) { return i(this, void 0, void 0, function*() { let t = this.getGiftRank(e); this.giftRankMap.set(e, t); let o = t.length, i = { rankType: e, beginIndex: o }, n = yield s.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_GetGiftRankData, params: i }, a.Game_RGetGiftRankData); if (null != n) for (let e = 0; e < n.rankList.length; e++) { let o = n.rankList[e]"
+ },
+ "game_getgoodsids": {
+  "cmd": "game_getgoodsids",
+  "const": "Game_GetGoodsIds",
+  "resp": "Game_RGetGoodsIds",
+  "param_keys": [],
+  "read_fields": [
+   "DynamicMng",
+   "Game_RGetGoodsIds",
+   "TGA",
+   "goodsIds",
+   "includes",
+   "inspectGoodsIds",
+   "isInspectVersion"
+  ],
+  "ctx": "Goods); if (e) { (p = new a.Game_RGetGoodsIds()).startMember = e.startMember; for (let t = 0; t < e.goodsInfoList.length; t++) { let o = e.goodsInfoList[t]; p.goodsIds.push(e.goodsInfoList[t].id); this.cellDataCache.set(o.id, o); } } } else p = yield r.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_GetGoodsIds, params: h }, a.Game_RGetGoodsIds); if (p) { let e = p.goodsIds; for (let t = 0; t < e.length; t++) { let o = e[t]; i.includes"
+ },
+ "game_getgoodsinfos": {
+  "cmd": "game_getgoodsinfos",
+  "const": "Game_GetGoodsInfos",
+  "resp": "Game_RGetGoodsInfos",
+  "param_keys": [
+   "ids"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RGetGoodsInfos",
+   "Game_RGetOwnGoodsInfos",
+   "NetIns",
+   "goodsInfoList",
+   "id"
+  ],
+  "ctx": "es(e) && (t = !0); return t; }); } loadGoodsInfos(e) { return i(this, void 0, void 0, function*() { let t = []; for (let o = 0; o < e.length; o++) { let i = e[o]; this.infoCache.get(i) || t.push(i); } if (t.length > 0) { let e = { ids: t }, o = yield r.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_GetGoodsInfos, params: e }, a.Game_RGetGoodsInfos); for (let e = 0; e < o.goodsInfoList.length; e++) { let t = o.goodsInfoList[e]; this.in"
+ },
+ "game_getmanualreportsensitiveimg": {
+  "cmd": "game_getmanualreportsensitiveimg",
+  "const": "Game_GetManualReportSensitiveImg",
+  "resp": ""
+ },
+ "game_getmsglist": {
+  "cmd": "game_getmsglist",
+  "const": "Game_GetMsgList",
+  "resp": ""
+ },
+ "game_getnewcommentlist": {
+  "cmd": "game_getnewcommentlist",
+  "const": "Game_GetNewCommentList",
+  "resp": ""
+ },
+ "game_getnewcommentlistv2": {
+  "cmd": "game_getnewcommentlistv2",
+  "const": "Game_GetNewCommentListV2",
+  "resp": "Game_RGetNewCommentListV2",
+  "param_keys": [
+   "count",
+   "startIndex"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RClearNewComment",
+   "Game_RGetNewCommentListV2",
+   "MsgMng",
+   "NetIns",
+   "_RF",
+   "commentList",
+   "newCommentCnt",
+   "stamp",
+   "startIndex"
+  ],
+  "ctx": "} }, a.Game_RClearNewMsg); this.newAggregateMsgCnt = 0; }); } appendLoadCommentMe() { return i(this, void 0, void 0, function*() { if (s.DynamicMng.Ins.isInspectVersion()) return []; let e = { startIndex: this.commentMeStartIdx, count: 8 }, t = yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_GetNewCommentListV2, params: e }, a.Game_RGetNewCommentListV2); if (t) { this.commentMeStartIdx = t.startIndex; this.newCommentCnt = t.new"
+ },
+ "game_getnewgameidlist": {
+  "cmd": "game_getnewgameidlist",
+  "const": "Game_GetNewGameIdList",
+  "resp": ""
+ },
+ "game_getnewgamelist": {
+  "cmd": "game_getnewgamelist",
+  "const": "Game_GetNewGameList",
+  "resp": "Game_RGetNewGameList",
+  "param_keys": [
+   "endIndex",
+   "startIndex"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RGetNewGameList",
+   "NetIns",
+   "cache",
+   "gameDatas",
+   "id"
+  ],
+  "ctx": "ndLoadFreshGames(e) { return n(this, void 0, void 0, function*() { let t = \"\"; this.freshGames.length > 0 && (t = this.freshGames[0].id); let o = this.freshGames.length, i = o + e, a = { start: o, end: i = Math.min(i, 20), startMember: t }, n = yield l.NetIns.SendCmdAsync({ cmd: s.CMDS.Game_GetNewGameList, params: a }, s.Game_RGetNewGameList); if (n) { for (let e = 0; e < n.gameDatas.length; e++) { let t = n.gameDatas[e]; this"
+ },
+ "game_getnewgoods": {
+  "cmd": "game_getnewgoods",
+  "const": "Game_GetNewGoods",
+  "resp": "Game_RGetNewGoods",
+  "param_keys": [
+   "end",
+   "goodsSort",
+   "goodsType",
+   "start",
+   "startMember"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RGetGoodsIds",
+   "Game_RGetNewGoods",
+   "NetIns",
+   "TGA",
+   "goodsIds",
+   "goodsInfoList",
+   "id",
+   "includes",
+   "startMember"
+  ],
+  "ctx": "t, i = this.normalRanks.get(o) || [], s = i.length, c = s + 11; if (s >= (c = Math.min(c, 999))) return i; let h = { goodsType: e, goodsSort: t, start: s, end: c, startMember: \"\" }, p = null; if (t == n.GoodsSortType.goodsUpStampDesc) { let e = yield r.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_GetNewGoods, params: h }, a.Game_RGetNewGoods); if (e) { (p = new a.Game_RGetGoodsIds()).startMember = e.startMember; for (let t = 0; t < "
+ },
+ "game_getowngoodsinfos": {
+  "cmd": "game_getowngoodsinfos",
+  "const": "Game_GetOwnGoodsInfos",
+  "resp": "Game_RGetOwnGoodsInfos",
+  "param_keys": [
+   "id",
+   "ids"
+  ],
+  "read_fields": [
+   "CMDS",
+   "GDGoodsInfo",
+   "Game_RGetOwnGoodsInfos",
+   "Game_ROffGoods",
+   "NetIns",
+   "goodsInfoList",
+   "id",
+   "name"
+  ],
+  "ctx": "urn o; }); } loadMyGoodsInfos() { return i(this, void 0, void 0, function*() { let e = this.myGoodsIds, t = []; for (let o = 0; o < e.length; o++) { let i = e[o]; this.infoCache.get(i) || t.push(i); } if (t.length > 0) { let e = { ids: t }, o = yield r.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_GetOwnGoodsInfos, params: e }, a.Game_RGetOwnGoodsInfos); for (let e = 0; e < o.goodsInfoList.length; e++) { let t = o.goodsInfoList[e]; t"
+ },
+ "game_getplaygamestatistics": {
+  "cmd": "game_getplaygamestatistics",
+  "const": "Game_GetPlayGameStatistics",
+  "resp": "Game_RGetPlayGameStatistics",
+  "param_keys": [
+   "end",
+   "start"
+  ],
+  "read_fields": [
+   "Game_RGetPlayGameStatistics",
+   "Util",
+   "gameDatas",
+   "name",
+   "playAllCnt",
+   "playAveTime",
+   "playCntStatistics"
+  ],
+  "ctx": "his.exportBtn.node.on(s.default.CLICK, this.onExportBtn, this); } onBackBtn() { d.default.ins.Back(); } onAppendBtn() { return a(this, void 0, void 0, function*() { let e = { start: this.gameDatas.length, end: this.gameDatas.length + 1e3 }, t = yield l.NetIns.SendCmdAsync({ cmd: n.CMDS.Game_GetPlayGameStatistics, params: e }, n.Game_RGetPlayGameStatistics); if (t) { for (let e = 0; e < t.gameDatas.length; e++) { let o = t.game"
+ },
+ "game_getrecommendgameidlist": {
+  "cmd": "game_getrecommendgameidlist",
+  "const": "Game_GetRecommendGameIdList",
+  "resp": "Game_RGetRecommendGameIdList",
+  "param_keys": [
+   "count",
+   "showType"
+  ],
+  "read_fields": [
+   "_RF",
+   "bk",
+   "gameShow",
+   "id",
+   "loadGames",
+   "recommendList",
+   "st"
+  ],
+  "ctx": "is, void 0, void 0, function*() { if (p.default.Ins.tempGameShowDatas.length > 0) { console.log(\"julian\", p.default.Ins.tempGameShowDatas.length); yield p.default.Ins.checkUploadGameShow(); } let t = { count: e, showType: \"RecommendComp\" }, o = yield l.NetIns.SendCmdAsync({ cmd: s.CMDS.Game_GetRecommendGameIdList, params: t }, s.Game_RGetRecommendGameIdList); if (o) { let e = []; for (let t = 0; t < o.recommendList.length; t++"
+ },
+ "game_getrecommendgoodsidlist": {
+  "cmd": "game_getrecommendgoodsidlist",
+  "const": "Game_GetRecommendGoodsIdList",
+  "resp": "Game_RGetRecommendGoodsIdList",
+  "param_keys": [
+   "count",
+   "showType"
+  ],
+  "read_fields": [
+   "bk",
+   "goodsShow",
+   "id",
+   "recommendList",
+   "st"
+  ],
+  "ctx": "pe: e, page: \"精选\" }); return i; }); } appendLoadRcmdGoods(e) { return i(this, void 0, void 0, function*() { p.default.Ins.tempGoodsShowDatas.length > 0 && (yield p.default.Ins.checkUploadGoodsShow()); let t = { count: e, showType: \"rcmd\" }, o = yield r.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_GetRecommendGoodsIdList, params: t }, a.Game_RGetRecommendGoodsIdList); if (o) { let e = []; for (let t = 0; t < o.recommendList.length; t"
+ },
+ "game_getreleasegamerank": {
+  "cmd": "game_getreleasegamerank",
+  "const": "Game_GetReleaseGameRank",
+  "resp": "Game_RGetReleaseGameRank",
+  "param_keys": [
+   "gameId",
+   "ids",
+   "scores"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RDeleteGameRankScore",
+   "Game_RGetReleaseGameRank",
+   "Game_RUploadGameRankScore",
+   "NetIns",
+   "datas",
+   "rankList"
+  ],
+  "ctx": "t a = e(\"../../../scripts/_autogen/cmd/cmd\"), n = e(\"../../Frame/CrossPlatform\"), s = e(\"../../Frame/NetworkMgr\"); class r { constructor() { this.max = 99; } loadRank(e) { return i(this, void 0, void 0, function*() { let t = { ids: [ e ] }, o = yield s.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_GetReleaseGameRank, params: t }, a.Game_RGetReleaseGameRank); if (o && o.datas && o.datas[0]) { let e = o.datas[0]; for (let t = 0; t < e."
+ },
+ "game_getreportgamecommentlist": {
+  "cmd": "game_getreportgamecommentlist",
+  "const": "Game_GetReportGameCommentList",
+  "resp": "",
+  "param_keys": [
+   "commentId",
+   "end",
+   "id",
+   "reason",
+   "score",
+   "start"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Ne",
+   "NetIns",
+   "reportGameCommentList"
+  ],
+  "ctx": "is, void 0, void 0, function*() { let t = { commentId: e }; n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_ReportGameComment, params: t }, a.Game_RReportGameComment); }); } loadComments() { return i(this, void 0, void 0, function*() { let e = [], t = yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_GetReportGameCommentList, params: { start: 0, end: 1e3 } }, a.Game_RGetReportGameCommentList); t && t.reportGameCommentList && t.reportGam"
+ },
+ "game_getreportgameidlist": {
+  "cmd": "game_getreportgameidlist",
+  "const": "Game_GetReportGameIdList",
+  "resp": "",
+  "param_keys": [
+   "end",
+   "id",
+   "ids",
+   "start"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RGetBeReportGameData",
+   "Game_RGetReportGameList",
+   "Game_ROffGame",
+   "NetIns",
+   "id",
+   "reportCnt",
+   "reportGameIdList",
+   "reportScoreMap"
+  ],
+  "ctx": "e(e) { return i(this, void 0, void 0, function*() { let t = { id: e }; yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_ReportGame, params: t }, a.Game_RReportGame); }); } loadGames() { return i(this, void 0, void 0, function*() { let e = [], t = yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_GetReportGameIdList, params: { start: 0, end: 1e3 } }, a.Game_RGetReportGameList); if (t && t.reportGameIdList && t.reportGameIdList.lengt"
+ },
+ "game_getreportgoodsidlist": {
+  "cmd": "game_getreportgoodsidlist",
+  "const": "Game_GetReportGoodsIdList",
+  "resp": "",
+  "param_keys": [
+   "end",
+   "id",
+   "reason",
+   "score",
+   "start"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RClearReportGoods",
+   "Game_RDealWithReportGoods",
+   "Game_RGetReportGoodsList",
+   "NetIns",
+   "id",
+   "loadGoodsCellDatas",
+   "reportCnt",
+   "reportGoodsIdList",
+   "reportScoreMap"
+  ],
+  "ctx": "Goods(e) { return i(this, void 0, void 0, function*() { let t = { id: e }; n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_ReportGoods, params: t }, a.Game_RReportGoods); }); } loadGoods() { return i(this, void 0, void 0, function*() { let e = [], t = yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_GetReportGoodsIdList, params: { start: 0, end: 1e3 } }, a.Game_RGetReportGoodsList); if (t && t.reportGoodsIdList && t.reportGoodsIdList.l"
+ },
+ "game_getreportplayeridlist": {
+  "cmd": "game_getreportplayeridlist",
+  "const": "Game_GetReportPlayerIdList",
+  "resp": "",
+  "param_keys": [
+   "end",
+   "id",
+   "ids",
+   "start"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RDealWit",
+   "Game_RGetReportPlayerList",
+   "Game_RGetUserSimpleMsg",
+   "NetIns",
+   "playerId",
+   "reportCnt",
+   "reportPlayerIdList",
+   "reportScoreMap"
+  ],
+  "ctx": "er(e) { return i(this, void 0, void 0, function*() { let t = { id: e }; n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_ReportPlayer, params: t }, a.Game_RReportPlayer); }); } loadPlayer() { return i(this, void 0, void 0, function*() { let e = [], t = yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_GetReportPlayerIdList, params: { start: 0, end: 1e3 } }, a.Game_RGetReportPlayerList); if (t && t.reportPlayerIdList && t.reportPlayerIdLi"
+ },
+ "game_getreportsensitiveimg": {
+  "cmd": "game_getreportsensitiveimg",
+  "const": "Game_GetReportSensitiveImg",
+  "resp": ""
+ },
+ "game_getreporttalkcommentlist": {
+  "cmd": "game_getreporttalkcommentlist",
+  "const": "Game_GetReportTalkCommentList",
+  "resp": ""
+ },
+ "game_getreporttalklist": {
+  "cmd": "game_getreporttalklist",
+  "const": "Game_GetReportTalkList",
+  "resp": "",
+  "param_keys": [
+   "end",
+   "start",
+   "talkId"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RClearReportTalk",
+   "Game_RGetReportTalkList",
+   "Game_ROfficialDeleteTalk",
+   "NetIns",
+   "ReportMng",
+   "_RF",
+   "talkList"
+  ],
+  "ctx": "alk(e) { return i(this, void 0, void 0, function*() { let t = { talkId: e }; n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_ReportTalk, params: t }, a.Game_RReportTalk); }); } loadTalks() { return i(this, void 0, void 0, function*() { let e = [], t = yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_GetReportTalkList, params: { start: 0, end: 1e3 } }, a.Game_RGetReportTalkList); t && t.talkList && t.talkList.length > 0 && (e = t.talkLi"
+ },
+ "game_getreviewgamedata": {
+  "cmd": "game_getreviewgamedata",
+  "const": "Game_GetReviewGameData",
+  "resp": ""
+ },
+ "game_getroleactorconf": {
+  "cmd": "game_getroleactorconf",
+  "const": "Game_GetRoleActorConf",
+  "resp": "Game_RGetRoleActorConf",
+  "param_keys": [
+   "data",
+   "id",
+   "ids"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RGetRoleActorConf",
+   "Game_RSaveRoleActorConf",
+   "NetIns",
+   "conf",
+   "datas",
+   "goodsUId",
+   "id"
+  ],
+  "ctx": ".8 }; e.jumpPlatformConf = e.jumpPlatformConf || { moveSpeed: 192, jumpStep: 2, jumpHight: 160, aiMoveType: l.AIMoveType.None, beatenLockHpTime: .8 }; } } requestLoadConf(e) { return i(this, void 0, void 0, function*() { let t = { ids: e }, o = yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_GetRoleActorConf, params: t }, a.Game_RGetRoleActorConf); if (o) { let e = []; for (let t = 0; t < o.datas.length; t++) { let i = o.datas["
+ },
+ "game_getroleactorids": {
+  "cmd": "game_getroleactorids",
+  "const": "Game_GetRoleActorIds",
+  "resp": ""
+ },
+ "game_getrolebulletconf": {
+  "cmd": "game_getrolebulletconf",
+  "const": "Game_GetRoleBulletConf",
+  "resp": "Game_RGetRoleBulletConf",
+  "param_keys": [
+   "data",
+   "id",
+   "ids"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RGetRoleBulletConf",
+   "Game_RSaveRoleBulletConf",
+   "NetIns",
+   "conf",
+   "datas",
+   "goodsUId",
+   "id"
+  ],
+  "ctx": "this.creativeConfType = l.CreativeConfType.weapon; this.appendBuildIn(s.Config.bulletConfs); } upgradeConf(e) { e && (e.type = r.CommonDataType.Bullet); } requestLoadConf(e) { return i(this, void 0, void 0, function*() { let t = { ids: e }, o = yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_GetRoleBulletConf, params: t }, a.Game_RGetRoleBulletConf); if (o) { let e = []; for (let t = 0; t < o.datas.length; t++) { let i = o.data"
+ },
+ "game_getrolebulletids": {
+  "cmd": "game_getrolebulletids",
+  "const": "Game_GetRoleBulletIds",
+  "resp": ""
+ },
+ "game_getrolecreativeconf": {
+  "cmd": "game_getrolecreativeconf",
+  "const": "Game_GetRoleCreativeConf",
+  "resp": "Game_RGetRoleCreativeConf",
+  "param_keys": [
+   "gameId"
+  ],
+  "read_fields": [
+   "CommonDataType",
+   "CreativeAttrType",
+   "Game_RGetRoleCreativeConf",
+   "confId",
+   "confMap",
+   "extraCache",
+   "extraIds"
+  ],
+  "ctx": "hopConfs.forEach(e => { M.Ins.gameShopMng.extraIds.push(e.id); }); n.gameRankConfs.forEach(e => { M.Ins.gameRankMng.extraIds.push(e.id); }); } else l.default.hideLoading(\"加载模版失败\"); l.default.showLoading(\"加载数据中..\"); let i = { gameId: t.id }, c = yield r.NetIns.SendCmdAsync({ cmd: n.CMDS.Game_GetRoleCreativeConf, params: i }, n.Game_RGetRoleCreativeConf); if (c) { let t = (t, o, i) => { let a = c.confMap.get(o); if (a) for (let "
+ },
+ "game_getroledeviceconf": {
+  "cmd": "game_getroledeviceconf",
+  "const": "Game_GetRoleDeviceConf",
+  "resp": "Game_RGetRoleDeviceConf",
+  "param_keys": [
+   "data",
+   "id",
+   "ids"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RGetRoleDeviceConf",
+   "Game_RSaveRoleDeviceConf",
+   "NetIns",
+   "conf",
+   "datas",
+   "goodsUId",
+   "id"
+  ],
+  "ctx": "eviceButton\"); \"ToggleThorn\" == e.prefabName && (e.prefabName = \"Lurker\"); \"Device/ToggleThorn\" == e.textureName && (e.textureName = \"Device/Lurker\"); } } requestLoadConf(e) { return i(this, void 0, void 0, function*() { let t = { ids: e }, o = yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_GetRoleDeviceConf, params: t }, a.Game_RGetRoleDeviceConf); if (o) { let e = []; for (let t = 0; t < o.datas.length; t++) { let i = o.data"
+ },
+ "game_getroledeviceids": {
+  "cmd": "game_getroledeviceids",
+  "const": "Game_GetRoleDeviceIds",
+  "resp": ""
+ },
+ "game_getrolegamedata": {
+  "cmd": "game_getrolegamedata",
+  "const": "Game_GetRoleGameData",
+  "resp": "Game_RGetRoleGameData",
+  "param_keys": [
+   "ids"
+  ],
+  "read_fields": [
+   "Game_RGetRoleGameData",
+   "OperationFlow",
+   "collectionCnt",
+   "creativeOp",
+   "data",
+   "datas",
+   "firstPublishStamp",
+   "firstPublishTime",
+   "gameRankIds",
+   "gameShopIds",
+   "hurryCnt",
+   "id",
+   "isOff",
+   "lastPublishStamp",
+   "lastPublishTime",
+   "offReason",
+   "playCnt",
+   "status",
+   "thawTime",
+   "thumbCnt"
+  ],
+  "ctx": "a = this.getOne(i); a && o.push(a); } return o; }); } loadAll() { return i(this, void 0, void 0, function*() { return yield this.loadMany(this.gameIds); }); } requestConf(e) { return i(this, void 0, void 0, function*() { let t = { ids: e }, o = yield a.NetIns.SendCmdAsync({ cmd: n.CMDS.Game_GetRoleGameData, params: t }, n.Game_RGetRoleGameData); if (o) for (let t = 0; t < e.length; t++) { let i = o.datas[t]; if (!i) continue; "
+ },
+ "game_getrolegameids": {
+  "cmd": "game_getrolegameids",
+  "const": "Game_GetRoleGameIds",
+  "resp": ""
+ },
+ "game_getrolegiftrankdata": {
+  "cmd": "game_getrolegiftrankdata",
+  "const": "Game_GetRoleGiftRankData",
+  "resp": "Game_RGetRoleGiftRankData",
+  "param_keys": [
+   "beginIndex",
+   "gameId"
+  ],
+  "read_fields": [
+   "Game_RGetRoleGiftRankData",
+   "GiftRankMng",
+   "_RF"
+  ],
+  "ctx": "kKey)) { let e = new l.GiftRankCellData(o.rankKey, o.gameName, o.gameIcon, t.length + 1, o.score); t.push(e); } } return t; }); } loadGameGiftRank(e, t) { return i(this, void 0, void 0, function*() { let o = { gameId: e, beginIndex: t }; return yield s.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_GetRoleGiftRankData, params: o }, a.Game_RGetRoleGiftRankData); }); } } o.GiftRankMng = c; c.Ins = new c(); cc._RF.pop(); }, { \"../../../s"
+ },
+ "game_getrolepropconf": {
+  "cmd": "game_getrolepropconf",
+  "const": "Game_GetRolePropConf",
+  "resp": "Game_RGetRolePropConf",
+  "param_keys": [
+   "data",
+   "id",
+   "ids"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RGetRolePropConf",
+   "Game_RSaveRolePropConf",
+   "NetIns",
+   "conf",
+   "datas",
+   "goodsUId",
+   "id"
+  ],
+  "ctx": "Prop; this.creativeConfType = r.CreativeConfType.prop; this.appendBuildIn(s.Config.propConfs); } upgradeConf(e) { e && (e.type = l.CommonDataType.Prop); } requestLoadConf(e) { return i(this, void 0, void 0, function*() { let t = { ids: e }, o = yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_GetRolePropConf, params: t }, a.Game_RGetRolePropConf); if (o) { let e = []; for (let t = 0; t < o.datas.length; t++) { let i = o.datas[t]"
+ },
+ "game_getrolepropids": {
+  "cmd": "game_getrolepropids",
+  "const": "Game_GetRolePropIds",
+  "resp": ""
+ },
+ "game_getroletileconf": {
+  "cmd": "game_getroletileconf",
+  "const": "Game_GetRoleTileConf",
+  "resp": "Game_RGetRoleTileConf",
+  "param_keys": [
+   "data",
+   "id",
+   "ids"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RGetRoleTileConf",
+   "Game_RSaveRoleTileConf",
+   "NetIns",
+   "conf",
+   "datas",
+   "goodsUId",
+   "id"
+  ],
+  "ctx": "Tile; this.creativeConfType = n.CreativeConfType.tile; this.appendBuildIn(s.Config.tileConfs); } upgradeConf(e) { e && (e.type = l.CommonDataType.Tile); } requestLoadConf(e) { return i(this, void 0, void 0, function*() { let t = { ids: e }, o = yield r.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_GetRoleTileConf, params: t }, a.Game_RGetRoleTileConf); if (o) { let e = []; for (let t = 0; t < o.datas.length; t++) { let i = o.datas[t]"
+ },
+ "game_getroletileids": {
+  "cmd": "game_getroletileids",
+  "const": "Game_GetRoleTileIds",
+  "resp": ""
+ },
+ "game_getroleweaponconf": {
+  "cmd": "game_getroleweaponconf",
+  "const": "Game_GetRoleWeaponConf",
+  "resp": "Game_RGetRoleWeaponConf",
+  "param_keys": [
+   "data",
+   "id",
+   "ids"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RGetRoleWeaponConf",
+   "Game_RSaveRoleWeaponConf",
+   "NetIns",
+   "conf",
+   "datas",
+   "goodsUId",
+   "id"
+  ],
+  "ctx": "ireShake && (e.gun.fireShake = !1); void 0 === e.gun.muzzles && (e.gun.muzzles = [ cc.Vec2.ZERO ]); void 0 === e.gun.scatter && (e.gun.scatter = 0); } } } requestLoadConf(e) { return i(this, void 0, void 0, function*() { let t = { ids: e }, o = yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_GetRoleWeaponConf, params: t }, a.Game_RGetRoleWeaponConf); if (o) { let e = []; for (let t = 0; t < o.datas.length; t++) { let i = o.data"
+ },
+ "game_getroleweaponids": {
+  "cmd": "game_getroleweaponids",
+  "const": "Game_GetRoleWeaponIds",
+  "resp": ""
+ },
+ "game_getsimplegoods": {
+  "cmd": "game_getsimplegoods",
+  "const": "Game_GetSimpleGoods",
+  "resp": "Game_RGetSimpleGoods",
+  "param_keys": [
+   "ids"
+  ],
+  "read_fields": [
+   "DynamicMng",
+   "Game_RGetSimpleGoods",
+   "gameEnv",
+   "goodsInfoList",
+   "id",
+   "isGmPlayer",
+   "loadOne",
+   "wx"
+  ],
+  "ctx": "tas(e) { return i(this, void 0, void 0, function*() { let t = new Set(); for (let o = 0; o < e.length; o++) { let i = e[o]; i && this.canShow(i) && (this.cellDataCache.has(i) || t.add(i)); } if (t.size > 0) { let e = { ids: Array.from(t) }, o = yield r.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_GetSimpleGoods, params: e }, a.Game_RGetSimpleGoods); if (o) for (let e = 0; e < o.goodsInfoList.length; e++) { let t = o.goodsInfoList[e]"
+ },
+ "game_getsourcecreativegamerank": {
+  "cmd": "game_getsourcecreativegamerank",
+  "const": "Game_GetSourceCreativeGameRank",
+  "resp": "Game_RGetSourceCreativeGameRank",
+  "param_keys": [
+   "end",
+   "start"
+  ],
+  "read_fields": [
+   "CMDS",
+   "NetIns",
+   "checkUploadGameShow",
+   "gameDatas",
+   "id",
+   "recommendList",
+   "tempGameShowDatas"
+  ],
+  "ctx": "ppendLoadCreativeGames(e)); return this.creativeGameDatas.slice(0, e); }); } appendLoadCreativeGames(e) { return n(this, void 0, void 0, function*() { let t = { start: this.creativeGameDatas.length, end: this.creativeGameDatas.length + e }, o = yield l.NetIns.SendCmdAsync({ cmd: s.CMDS.Game_GetSourceCreativeGameRank, params: t }, s.Game_RGetSourceCreativeGameRank); if (o) { for (let e = 0; e < o.gameDatas.length; e++) this.cre"
+ },
+ "game_getthumbgamecomment": {
+  "cmd": "game_getthumbgamecomment",
+  "const": "Game_GetThumbGameComment",
+  "resp": ""
+ },
+ "game_getthumbtalkcomment": {
+  "cmd": "game_getthumbtalkcomment",
+  "const": "Game_GetThumbTalkComment",
+  "resp": ""
+ },
+ "game_getvariable": {
+  "cmd": "game_getvariable",
+  "const": "Game_GetVariable",
+  "resp": ""
+ },
+ "game_getvariableids": {
+  "cmd": "game_getvariableids",
+  "const": "Game_GetVariableIds",
+  "resp": ""
+ },
+ "game_getworlddata": {
+  "cmd": "game_getworlddata",
+  "const": "Game_GetWorldData",
+  "resp": "Game_RGetWorldData",
+  "param_keys": [
+   "id",
+   "ids",
+   "info",
+   "layoutMin",
+   "needData"
+  ],
+  "read_fields": [
+   "GSMng",
+   "Game_RGetWorldData",
+   "Util",
+   "author",
+   "datas",
+   "id",
+   "info",
+   "layoutMin",
+   "name",
+   "textureName",
+   "worldLayout"
+  ],
+  "ctx": "); } return i; }); } getMany(e) { let t = []; for (let o = 0; o < e.length; o++) { let i = this.cache.get(e[o]); i && t.push(i); } return t; } requestConf(e, t) { return i(this, void 0, void 0, function*() { let o = { ids: e, needData: t }, i = yield n.NetIns.SendCmdAsync({ cmd: s.CMDS.Game_GetWorldData, params: o }, s.Game_RGetWorldData); if (i) for (let o = 0; o < e.length; o++) { let n = i.datas[o]; if (n) { let i = { id: n"
+ },
+ "game_getworlddataids": {
+  "cmd": "game_getworlddataids",
+  "const": "Game_GetWorldDataIds",
+  "resp": ""
+ },
+ "game_gmbindrole": {
+  "cmd": "game_gmbindrole",
+  "const": "Game_GMBindRole",
+  "resp": ""
+ },
+ "game_gmincothercoin": {
+  "cmd": "game_gmincothercoin",
+  "const": "Game_GMIncOtherCoin",
+  "resp": "Game_RGMIncOtherCoin",
+  "param_keys": [
+   "incCoin",
+   "targetId"
+  ],
+  "read_fields": [
+   "Game_RGMIncOtherCoin",
+   "GuideId",
+   "OpenPanelByName",
+   "coin",
+   "completeTaskIds",
+   "save",
+   "setDa"
+  ],
+  "ctx": "anel\", e => { e.setData(\"请输入ID\", \"\", e => a(this, void 0, void 0, function*() { c.default.ins.OpenPanelByName(\"NumberInputPanel\", t => { t.setData(\"请输入G币\", \"0\", t => a(this, void 0, void 0, function*() { let o = { targetId: e, incCoin: t }, i = yield p.NetIns.SendCmdAsync({ cmd: h.CMDS.Game_GMIncOtherCoin, params: o }, h.Game_RGMIncOtherCoin); i ? d.default.showToast(\"用户\" + e + \"还剩coin\" + i.coin) : d.default.showToast(\"操作失败\");"
+ },
+ "game_gmlogin": {
+  "cmd": "game_gmlogin",
+  "const": "Game_GMLogin",
+  "resp": "Game_RLogin",
+  "param_keys": [
+   "channel",
+   "roleId",
+   "secret"
+  ],
+  "read_fields": [
+   "CMDS",
+   "CollectionMng",
+   "CreditMng",
+   "DynamicMng",
+   "FollowMng",
+   "Game_RLogin",
+   "GiftRankMng",
+   "Hortor",
+   "Mng",
+   "NetIns",
+   "TGA",
+   "checkVersion",
+   "credit",
+   "dynamicConfig",
+   "followIds",
+   "ga",
+   "gameSlotUnlockLvls",
+   "giftCfgVersion",
+   "init",
+   "myGoodsIds"
+  ],
+  "ctx": "out(e, 3e3)); a += 1; } if (!i) return !1; v.NetIns.watchNetWork(); return !0; }); } roleLogin() { return a(this, void 0, void 0, function*() { let e = null; if (this.gmRoleId > 0) { let t = { roleId: this.gmRoleId, secret: this.gmSecret }; e = yield v.NetIns.SendCmdAsync({ cmd: y.CMDS.Game_GMLogin, params: t }, y.Game_RLogin); } else { let t = { channel: r.Hortor.channel }; e = yield v.NetIns.SendCmdAsync({ cmd: y.CMDS.Game_L"
+ },
+ "game_gmrevokebindrole": {
+  "cmd": "game_gmrevokebindrole",
+  "const": "Game_GMRevokeBindRole",
+  "resp": ""
+ },
+ "game_gmsetgametage": {
+  "cmd": "game_gmsetgametage",
+  "const": "Game_GMSetGameTage",
+  "resp": "Game_RGMSetGameTage",
+  "param_keys": [
+   "addTagMsg",
+   "gameID",
+   "removeTagMsg",
+   "tagCount"
+  ],
+  "read_fields": [
+   "CMDS",
+   "DynamicMng",
+   "Game_RAddGameTage",
+   "Game_RGMSetGameTage",
+   "NetIns",
+   "cache",
+   "isGmPlayer",
+   "sensitiveWords"
+  ],
+  "ctx": "(e, t) { let o = s.crossPlatform.getStorageSync(\"tagsByMe\") || {}; o[e] = t; s.crossPlatform.setStorageSync(\"tagsByMe\", o); } gmSetTagCnt(e, t, o) { return i(this, void 0, void 0, function*() { let i = { gameID: e, addTagMsg: t, tagCount: o }; (yield r.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_GMSetGameTage, params: i }, a.Game_RGMSetGameTage)) && this.syncCacheGameTagCnt(e, t, o, \"set\"); }); } uploadGameTag(e, t, o) { return i(t"
+ },
+ "game_gmsetgold": {
+  "cmd": "game_gmsetgold",
+  "const": "Game_GmSetGold",
+  "resp": ""
+ },
+ "game_hurrygames": {
+  "cmd": "game_hurrygames",
+  "const": "Game_HurryGames",
+  "resp": "Game_RHurryGames",
+  "param_keys": [
+   "ids"
+  ],
+  "read_fields": [
+   "Game_RHurryGames",
+   "HurryMng",
+   "_RF"
+  ],
+  "ctx": "0; const a = e(\"../../../scripts/_autogen/cmd/cmd\"), n = e(\"../../Frame/NetworkMgr\"), s = e(\"../../Frame/Top\"); class r { hurryGame(e) { return i(this, void 0, void 0, function*() { s.default.blockInput(!0, \"hurryGame\"); let t = { ids: [ e ] }; yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_HurryGames, params: t }, a.Game_RHurryGames); s.default.blockInput(!1, \"hurryGame\"); }); } } o.HurryMng = r; r.Ins = new r(); cc._RF.pop()"
+ },
+ "game_inccreditscore": {
+  "cmd": "game_inccreditscore",
+  "const": "Game_IncCreditScore",
+  "resp": "Game_RIncCreditScore",
+  "param_keys": [
+   "incScore",
+   "playerId"
+  ],
+  "read_fields": [
+   "Enter",
+   "Game_RIncCreditScore",
+   "ReportType",
+   "setData"
+  ],
+  "ctx": "); this.addBtn(\"恢复信誉分\", () => a(this, void 0, void 0, function*() { this.closePanel(); c.default.ins.OpenPanelByName(\"NumberInputPanel\", e => { e.setData(\"ID\", \"\", e => a(this, void 0, void 0, function*() { let t = { playerId: e, incScore: 3 }; yield p.NetIns.SendCmdAsync({ cmd: h.CMDS.Game_IncCreditScore, params: t }, h.Game_RIncCreditScore); d.default.showToast(\"恢复成功\"); })); }); })); this.addBtn(\"处理违规游戏\", () => a(this, void "
+ },
+ "game_loadfirstlevelgamecomment": {
+  "cmd": "game_loadfirstlevelgamecomment",
+  "const": "Game_LoadFirstLevelGameComment",
+  "resp": "Game_RLoadFirstLevelGameComment",
+  "param_keys": [
+   "commentId"
+  ],
+  "read_fields": [
+   "comment",
+   "crossPlatform",
+   "id"
+  ],
+  "ctx": "for (let t = 0; t < this.gameTopComment.comments.length; t++) { let o = this.gameTopComment.comments[t]; if (o.id == e) return o; let i = o.comments; for (let t = 0; t < i.length; t++) if (i[t].id == e) return o; } let t = { commentId: e }, o = yield s.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_LoadFirstLevelGameComment, params: t }, a.Game_RLoadFirstLevelGameComment); if (o && o.comment) { let t = this.gameTopComment.comments.fin"
+ },
+ "game_loadfirstleveltalkcomment": {
+  "cmd": "game_loadfirstleveltalkcomment",
+  "const": "Game_LoadFirstLevelTalkComment",
+  "resp": "Game_RLoadFirstLevelTalkComment",
+  "param_keys": [
+   "commentId"
+  ],
+  "read_fields": [
+   "NetIns",
+   "comment",
+   "crossPlatform",
+   "id"
+  ],
+  "ctx": "nction*() { for (let t = 0; t < this.talkData.comments.length; t++) { let o = this.talkData.comments[t]; if (o.id == e) return o; let i = o.comments; for (let t = 0; t < i.length; t++) if (i[t].id == e) return o; } let t = { commentId: e }, o = yield s.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_LoadFirstLevelTalkComment, params: t }, a.Game_RLoadFirstLevelTalkComment); if (o && o.comment) { let t = this.talkData.comments.findIndex"
+ },
+ "game_loadgamecomment": {
+  "cmd": "game_loadgamecomment",
+  "const": "Game_LoadGameComment",
+  "resp": "Game_RLoadGameComment",
+  "param_keys": [
+   "end",
+   "gameId",
+   "start"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RLoadGameComment",
+   "Game_RLoadGameSubComment",
+   "NetIns",
+   "comments",
+   "id",
+   "subCommentsCnt"
+  ],
+  "ctx": "ce(t, 1); break; } } }); } loadGameComment(e) { return i(this, void 0, void 0, function*() { let t = this.gameTopComment.comments.length, o = t + 10; if (t >= this.gameTopComment.commentsCnt) return; let i = { gameId: e, start: t, end: o }, n = yield s.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_LoadGameComment, params: i }, a.Game_RLoadGameComment); if (n) for (let e = 0; e < n.comments.length; e++) { let t = n.comments[e]; this.g"
+ },
+ "game_loadgamesubcomment": {
+  "cmd": "game_loadgamesubcomment",
+  "const": "Game_LoadGameSubComment",
+  "resp": "Game_RLoadGameSubComment",
+  "param_keys": [
+   "commentId",
+   "end",
+   "start"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RLoadGameSubComment",
+   "NetIns",
+   "comment",
+   "comments",
+   "id"
+  ],
+  "ctx": "i(this, void 0, void 0, function*() { let t = this.gameTopComment.comments.find(t => t.id == e); if (t) { let o = t.comments, i = o.length, n = i + 5; if (i >= t.subCommentsCnt) return t.comments; let r = { commentId: e, start: i, end: n }, l = yield s.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_LoadGameSubComment, params: r }, a.Game_RLoadGameSubComment); if (l) for (let e = 0; e < l.comments.length; e++) { let t = l.comments[e]; "
+ },
+ "game_loadowntalkcomment": {
+  "cmd": "game_loadowntalkcomment",
+  "const": "Game_LoadOwnTalkComment",
+  "resp": ""
+ },
+ "game_loadtalkcomment": {
+  "cmd": "game_loadtalkcomment",
+  "const": "Game_LoadTalkComment",
+  "resp": "Game_RLoadTalkComment",
+  "param_keys": [
+   "commentId",
+   "end",
+   "start",
+   "talkId"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RLoadTalkComment",
+   "Game_RLoadTalkSubComment",
+   "NetIns",
+   "comments",
+   "id",
+   "subCommentsCnt"
+  ],
+  "ctx": "Ins.deleteCacheComment(e); break; } } }); } loadComment(e) { return i(this, void 0, void 0, function*() { let t = this.talkData.comments.length, o = t + 6; if (t >= this.talkData.commentsCnt) return; let i = { talkId: e, start: t, end: o }, n = yield s.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_LoadTalkComment, params: i }, a.Game_RLoadTalkComment); if (n) for (let e = 0; e < n.comments.length; e++) { let t = n.comments[e]; this.t"
+ },
+ "game_loadtalkdetail": {
+  "cmd": "game_loadtalkdetail",
+  "const": "Game_LoadTalkDetail",
+  "resp": "Game_RLoadTalkDetail",
+  "param_keys": [
+   "talkId"
+  ],
+  "read_fields": [
+   "Game_RLoadTalkDetail",
+   "comments",
+   "talkData",
+   "uId"
+  ],
+  "ctx": " o.talkList.forEach(e => { this.collectTalks.set(e.uId, e); }); return o && o.talkList ? o.talkList : []; }); } loadTalkDetail(e) { return n(this, void 0, void 0, function*() { let t = this.detailMap.get(e); if (!t) { let o = { talkId: e }, i = yield l.NetIns.SendCmdAsync({ cmd: s.CMDS.Game_LoadTalkDetail, params: o }, s.Game_RLoadTalkDetail); if (i && i.talkData) { t = i.talkData; this.detailMap.set(e, t); } } return t; }); }"
+ },
+ "game_loadtalksubcomment": {
+  "cmd": "game_loadtalksubcomment",
+  "const": "Game_LoadTalkSubComment",
+  "resp": "Game_RLoadTalkSubComment",
+  "param_keys": [
+   "commentId",
+   "end",
+   "start"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RLoadTalkSubComment",
+   "NetIns",
+   "comment",
+   "comments",
+   "id"
+  ],
+  "ctx": "eturn i(this, void 0, void 0, function*() { let t = this.talkData.comments.find(t => t.id == e); if (t) { let o = t.comments, i = o.length, n = i + 5; if (i >= t.subCommentsCnt) return t.comments; let r = { commentId: e, start: i, end: n }, l = yield s.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_LoadTalkSubComment, params: r }, a.Game_RLoadTalkSubComment); if (l) for (let e = 0; e < l.comments.length; e++) { let t = l.comments[e]; "
+ },
+ "game_modifyofficialtalk": {
+  "cmd": "game_modifyofficialtalk",
+  "const": "Game_ModifyOfficialTalk",
+  "resp": "Game_RModifyTalk",
+  "param_keys": [
+   "content",
+   "reviewImageMap",
+   "reviewStr",
+   "simpleContent",
+   "talkId",
+   "title"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RModifyTalk",
+   "NetIns",
+   "role",
+   "sensitiveWords",
+   "talkData",
+   "uId"
+  ],
+  "ctx": " => e.type !== M.Text), C = { title: o, text: p.Util.clampStr(y.join(\"\\n\"), 60, \"..【查看全文】\"), specialSection: v, firstSection: v }; d.default.showLoading(\"发布中(3/3)\"); if (t) if (e) { let e = { talkId: t, title: o, content: m, simpleContent: C }; yield l.NetIns.SendCmdAsync({ cmd: s.CMDS.Game_ModifyOfficialTalk, params: e }, s.Game_RModifyTalk); } else { let e = { talkId: t, title: o, content: m, simpleContent: C, reviewStr: n, "
+ },
+ "game_modifytalk": {
+  "cmd": "game_modifytalk",
+  "const": "Game_ModifyTalk",
+  "resp": "Game_RModifyTalk",
+  "param_keys": [
+   "content",
+   "reviewImageMap",
+   "reviewStr",
+   "simpleContent",
+   "talkId",
+   "title"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RCreateTalk",
+   "Game_RModifyTalk",
+   "NetIns",
+   "role",
+   "sensitiveWords",
+   "talkData",
+   "uId"
+  ],
+  "ctx": "o, content: m, simpleContent: C }; yield l.NetIns.SendCmdAsync({ cmd: s.CMDS.Game_ModifyOfficialTalk, params: e }, s.Game_RModifyTalk); } else { let e = { talkId: t, title: o, content: m, simpleContent: C, reviewStr: n, reviewImageMap: h }, i = yield l.NetIns.SendCmdAsync({ cmd: s.CMDS.Game_ModifyTalk, params: e }, s.Game_RModifyTalk); if (i.sensitiveWords && i.sensitiveWords.length) { d.default.hideLoading(); return { msg: \"发"
+ },
+ "game_modifytalkcomment": {
+  "cmd": "game_modifytalkcomment",
+  "const": "Game_ModifyTalkComment",
+  "resp": ""
+ },
+ "game_newsearchgoods": {
+  "cmd": "game_newsearchgoods",
+  "const": "Game_NewSearchGoods",
+  "resp": "Game_RNewSearchGoods",
+  "param_keys": [
+   "end",
+   "searchName",
+   "start"
+  ],
+  "read_fields": [
+   "Game_RNewSearchGoods",
+   "Node",
+   "goodsInfoList",
+   "protot"
+  ],
+  "ctx": "turn; } this.closeSearchBtn.node.active = !0; let t = [], o = e.textLabel.string; if (o) { if (o && !y.DynamicMng.Ins.isViolationsName(o)) if (y.DynamicMng.Ins.isInspectVersion()) t = []; else { let e = { searchName: o, start: 0, end: 50 }, i = yield u.NetIns.SendCmdAsync({ cmd: n.CMDS.Game_NewSearchGoods, params: e }, n.Game_RNewSearchGoods); i && (t = i.goodsInfoList); } this.goodsList.setDataArr(t); this.emptyNode.active = "
+ },
+ "game_obtainttcoin0319": {
+  "cmd": "game_obtainttcoin0319",
+  "const": "Game_ObtainTTCoin0319",
+  "resp": "",
+  "param_keys": [
+   "coin",
+   "gameId",
+   "name",
+   "textureName",
+   "type"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RCostCoinInGame",
+   "Game_RObtainTTCoin0319",
+   "NetIns",
+   "coin",
+   "curCoin",
+   "game"
+  ],
+  "ctx": " s + r; this.flyCoinCnt += r; this.coin = d; cc.game.emit(\"refreshCoinBar\"); this._recountRewardsFlag(e, n.lastTime, n.count); return [ { type: \"coin\", cnt: r } ]; }); } requestTTCoin0319() { return i(this, void 0, void 0, function*() { let e = yield l.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_ObtainTTCoin0319, params: {} }, a.Game_RObtainTTCoin0319); if (!e) return; let t = this.coin, o = e.coin, i = o - t; this.flyCoinCnt += i;"
+ },
+ "game_offgame": {
+  "cmd": "game_offgame",
+  "const": "Game_OffGame",
+  "resp": "Game_ROffGame",
+  "param_keys": [
+   "id",
+   "needDelSourceGame",
+   "reason",
+   "score"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RClearReportGame",
+   "Game_RGetReportPlayerList",
+   "Game_ROffGame",
+   "Game_RReportPlayer",
+   "NetIns",
+   "reportPlayerIdList"
+  ],
+  "ctx": "]; for (let o = 0; o < e.length; o++) { let i = e[o]; i.reportCnt = t.reportScoreMap.get(i.id); } } return e; }); } banGame(e, t, o, s) { return i(this, void 0, void 0, function*() { let i = { id: e, score: t, reason: o, needDelSourceGame: s }; yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_OffGame, params: i }, a.Game_ROffGame); }); } clearGame() { return i(this, void 0, void 0, function*() { yield n.NetIns.SendCmdAsync({ cmd"
+ },
+ "game_offgoods": {
+  "cmd": "game_offgoods",
+  "const": "Game_OffGoods",
+  "resp": "Game_ROffGoods",
+  "param_keys": [
+   "id"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RBuyGoods",
+   "Game_ROffGoods",
+   "Game_RUploadGoods",
+   "NetIns",
+   "goodsId",
+   "id",
+   "sensitiveWords"
+  ],
+  "ctx": "th; t++) { let i = e[t], a = this.infoCache.get(i); if (a) o.push(a); else { let e = new n.GDGoodsInfo(); e.id = i; e.name = \"已失效\"; o.push(e); } } return o; }); } offGoods(e) { return i(this, void 0, void 0, function*() { let t = { id: e }; if (yield r.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_OffGoods, params: t }, a.Game_ROffGoods)) { let t = this.myGoodsIds.indexOf(e); t >= 0 && this.myGoodsIds.splice(t, 1); } }); } uploadGood"
+ },
+ "game_officialdeletetalk": {
+  "cmd": "game_officialdeletetalk",
+  "const": "Game_OfficialDeleteTalk",
+  "resp": "Game_ROfficialDeleteTalk",
+  "param_keys": [
+   "end",
+   "start",
+   "talkId"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RClearReportTalk",
+   "Game_ROfficialDeleteTalk",
+   "NetIns",
+   "ReportMng",
+   "_RF"
+  ],
+  "ctx": "etReportTalkList, params: { start: 0, end: 1e3 } }, a.Game_RGetReportTalkList); t && t.talkList && t.talkList.length > 0 && (e = t.talkList); return e; }); } banTalk(e, t, o) { return i(this, void 0, void 0, function*() { let t = { talkId: e }; yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_OfficialDeleteTalk, params: t }, a.Game_ROfficialDeleteTalk); }); } clearTalks() { return i(this, void 0, void 0, function*() { yield n.Ne"
+ },
+ "game_ownoffgame": {
+  "cmd": "game_ownoffgame",
+  "const": "Game_OwnOffGame",
+  "resp": "Game_ROwnOffGame",
+  "param_keys": [
+   "creativeSourceUId",
+   "data",
+   "id"
+  ],
+  "read_fields": [
+   "CMDS",
+   "GameStatus",
+   "Game_ROwnOffGame",
+   "Game_RSaveRoleGameData",
+   "NetIns",
+   "game",
+   "id",
+   "status"
+  ],
+  "ctx": "me_DelRoleGameData, params: t }, n.Game_RDelRoleGameData))) return; this.cache.delete(e); let o = this.gameIds.indexOf(e); o >= 0 && this.gameIds.splice(o, 1); }); } off(e) { return i(this, void 0, void 0, function*() { let t = { id: e }; if (!(yield a.NetIns.SendCmdAsync({ cmd: n.CMDS.Game_OwnOffGame, params: t }, n.Game_ROwnOffGame))) return; let o = this.cache.get(e); o && (o.status = r.GameStatus.off); }); } save(e) { retu"
+ },
+ "game_playgames": {
+  "cmd": "game_playgames",
+  "const": "Game_PlayGames",
+  "resp": "Game_RPlayGames",
+  "param_keys": [
+   "ids"
+  ],
+  "read_fields": [
+   "Enter",
+   "Game_RPlayGames",
+   "Label",
+   "Node",
+   "ShiftAnima",
+   "Sprite",
+   "_RF",
+   "playCntList",
+   "setData"
+  ],
+  "ctx": "id: this.data.id, playTime: (t - o) / 1e3 }; yield c.NetIns.SendCmdAsync({ cmd: n.CMDS.Game_PlayGameStatistics, params: i }, n.Game_RPlayGameStatistics); e.backCall = null; }); }); if (!this.data.isPlay) { let e = { ids: [ this.data.id ] }, t = yield c.NetIns.SendCmdAsync({ cmd: n.CMDS.Game_PlayGames, params: e }, n.Game_RPlayGames); if (t) { this.data.playCnt = t.playCntList[0] || 0; this.data.isPlay = !0; } } }); } onDetailB"
+ },
+ "game_playgamestatistics": {
+  "cmd": "game_playgamestatistics",
+  "const": "Game_PlayGameStatistics",
+  "resp": "Game_RPlayGameStatistics",
+  "param_keys": [
+   "ids"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Enter",
+   "Game_RPlayGameStatistics",
+   "Game_RPlayGames",
+   "Label",
+   "NetIns",
+   "Node",
+   "ShiftAnima",
+   "Sprite",
+   "backCall",
+   "playCntList",
+   "setData"
+  ],
+  "ctx": "efault.ins.Enter(\"GameScene\", e => { e.mode = \"Prod\"; e.play(t); let o = orange.TimeUtil.serverTime; e.backCall = () => a(this, void 0, void 0, function*() { let t = orange.TimeUtil.serverTime, i = { id: this.data.id, playTime: (t - o) / 1e3 }; yield c.NetIns.SendCmdAsync({ cmd: n.CMDS.Game_PlayGameStatistics, params: i }, n.Game_RPlayGameStatistics); e.backCall = null; }); }); if (!this.data.isPlay) { let e = { ids: [ this.da"
+ },
+ "game_publishgame": {
+  "cmd": "game_publishgame",
+  "const": "Game_PublishGame",
+  "resp": "Game_RPublishGame",
+  "param_keys": [],
+  "read_fields": [
+   "Game_RPublishGame",
+   "addCache",
+   "clearAll",
+   "deleteCache",
+   "id",
+   "parnetGame",
+   "role"
+  ],
+  "ctx": "Url: G, gameTags: [ \"ZongBang\" ], openCreativeGame: !e.creativeOp.isClose, openData: { openWorldIds: T, creativeResList: t.assets }, reviewStr: \"\", reviewImageMap: I }; r.default.showLoading(\"正在上传(3/3)\"); e.status = _.GameStatus.inReview; if (!(yield s.NetIns.SendCmdAsync({ cmd: n.CMDS.Game_PublishGame, params: b }, n.Game_RPublishGame))) { r.default.hideLoading(); return { msg: \"发布失败\" }; } r.default.hideLoading(\"上传成功\"); m.def"
+ },
+ "game_replytalkcomment": {
+  "cmd": "game_replytalkcomment",
+  "const": "Game_ReplyTalkComment",
+  "resp": "Game_RReplyTalkComment",
+  "param_keys": [
+   "commentId",
+   "content",
+   "reviewImageMap",
+   "reviewStr",
+   "talkId"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RCommentTalk",
+   "Game_RReplyTalkComment",
+   "NetIns",
+   "comment",
+   "comments",
+   "id",
+   "msg",
+   "openCnt",
+   "sensitiveWords",
+   "subCommentsCnt",
+   "updateCacheProperty"
+  ],
+  "ctx": "turn !1; } if (d.CreditMng.Ins.credit < 2) { r.default.showToast(\"近期违规，不能发表评论\"); return !1; } r.default.showLoading(\"发送中\"); let i = null; if (t) { let n = { talkId: e, commentId: t, content: o, reviewStr: o.msg, reviewImageMap: new Map() }; i = yield s.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_ReplyTalkComment, params: n }, a.Game_RReplyTalkComment); } else { let t = { talkId: e, content: o, reviewStr: o.msg, reviewImageMap: new "
+ },
+ "game_reportbugmsg": {
+  "cmd": "game_reportbugmsg",
+  "const": "Game_ReportBugMsg",
+  "resp": "Game_RReportBugMsg",
+  "param_keys": [
+   "msg",
+   "type"
+  ],
+  "read_fields": [
+   "Game_RReportBugMsg",
+   "_RF",
+   "next"
+  ],
+  "ctx": " = e => a(this, void 0, void 0, function*() { yield this.reportBug(i, e); this.closePanel(); d.default.showToast(\"感谢您的反馈！\"); }); }); }, this); }); }); } reportBug(e, t) { return a(this, void 0, void 0, function*() { let o = { type: e, msg: t }; yield r.NetIns.SendCmdAsync({ cmd: n.CMDS.Game_ReportBugMsg, params: o }, n.Game_RReportBugMsg); }); } }; i([ m(s.default) ], f.prototype, \"btn\", void 0); f = i([ u ], f); o.default = f"
+ },
+ "game_reportgame": {
+  "cmd": "game_reportgame",
+  "const": "Game_ReportGame",
+  "resp": "Game_RReportGame",
+  "param_keys": [
+   "end",
+   "id",
+   "ids",
+   "start"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RGetBeReportGameData",
+   "Game_RGetReportGameList",
+   "Game_RReportGame",
+   "NetIns",
+   "id",
+   "reportCnt",
+   "reportGameIdList",
+   "reportScoreMap"
+  ],
+  "ctx": "ame\"; e[e.player = 1] = \"player\"; e[e.goods = 2] = \"goods\"; e[e.comment = 3] = \"comment\"; e[e.talk = 4] = \"talk\"; })(o.ReportType || (o.ReportType = {})); class r { reportGame(e) { return i(this, void 0, void 0, function*() { let t = { id: e }; yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_ReportGame, params: t }, a.Game_RReportGame); }); } loadGames() { return i(this, void 0, void 0, function*() { let e = [], t = yield n.Net"
+ },
+ "game_reportgameclick": {
+  "cmd": "game_reportgameclick",
+  "const": "Game_ReportGameClick",
+  "resp": "Game_RReportGameClick",
+  "param_keys": [
+   "bk",
+   "clickGameData",
+   "goodsId",
+   "showId",
+   "showType",
+   "st"
+  ],
+  "read_fields": [
+   "AnalyticsGoodsData",
+   "Game_RReportGameClick",
+   "goodsId",
+   "role",
+   "showType"
+  ],
+  "ctx": "is.gameShowDatas).find(o => o.gameId == e && o.showType == t); if (i) { let l = new n.AnalyticsGameData(); l.gameId = e; l.showType = t; l.showId = i.showId; l.bk = o; l.st = s; let c = { clickGameData: l }; console.log(\"RcmdMng.gameClick\", c); yield r.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_ReportGameClick, params: c }, a.Game_RReportGameClick); } }); } goodsShow(e, t, o = 0, i = \"\", a = \"\") { o || (o = orange.TimeUtil.serverT"
+ },
+ "game_reportgamecomment": {
+  "cmd": "game_reportgamecomment",
+  "const": "Game_ReportGameComment",
+  "resp": "Game_RReportGameComment",
+  "param_keys": [
+   "commentId",
+   "end",
+   "start"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RReportGameComment",
+   "NetIns",
+   "reportGameCommentList"
+  ],
+  "ctx": ") { return i(this, void 0, void 0, function*() { yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_ClearReportGoods, params: {} }, a.Game_RClearReportGoods); }); } reportComment(e) { return i(this, void 0, void 0, function*() { let t = { commentId: e }; n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_ReportGameComment, params: t }, a.Game_RReportGameComment); }); } loadComments() { return i(this, void 0, void 0, function*() { let e = []"
+ },
+ "game_reportgameshow": {
+  "cmd": "game_reportgameshow",
+  "const": "Game_ReportGameShow",
+  "resp": "Game_RReportGameShow",
+  "param_keys": [
+   "clickGameData"
+  ],
+  "read_fields": [
+   "AnalyticsGameData",
+   "CMDS",
+   "Game_RReportGameClick",
+   "Game_RReportGameShow",
+   "NetIns",
+   "bk",
+   "gameId",
+   "goodsId",
+   "showId",
+   "showType",
+   "st"
+  ],
+  "ctx": ") { let o = this.tempGameShowDatas[e], i = new n.AnalyticsGameData(); i.gameId = o.gameId; i.showType = o.showType; i.showId = o.showId; i.bk = o.bk; i.st = o.st; t.showList.push(i); this.gameShowDatas.unshift(o); } this.tempGameShowDatas = []; yield r.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_ReportGameShow, params: t }, a.Game_RReportGameShow); } }); } gameClick(e, t, o = \"\", s = \"\") { return i(this, void 0, void 0, function*()"
+ },
+ "game_reportgoods": {
+  "cmd": "game_reportgoods",
+  "const": "Game_ReportGoods",
+  "resp": "Game_RReportGoods",
+  "param_keys": [
+   "end",
+   "id",
+   "start"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RDealWithRepo",
+   "Game_RGetReportGoodsList",
+   "Game_RReportGoods",
+   "NetIns",
+   "id",
+   "loadGoodsCellDatas",
+   "reportCnt",
+   "reportGoodsIdList",
+   "reportScoreMap"
+  ],
+  "ctx": "Player() { return i(this, void 0, void 0, function*() { yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_ClearReportPlayer, params: {} }, a.Game_RClearReportPlayer); }); } reportGoods(e) { return i(this, void 0, void 0, function*() { let t = { id: e }; n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_ReportGoods, params: t }, a.Game_RReportGoods); }); } loadGoods() { return i(this, void 0, void 0, function*() { let e = [], t = yield n.N"
+ },
+ "game_reportgoodsclick": {
+  "cmd": "game_reportgoodsclick",
+  "const": "Game_ReportGoodsClick",
+  "resp": "Game_RReportGoodsClick",
+  "param_keys": [
+   "clickGameData"
+  ],
+  "read_fields": [
+   "Game_RReportGoodsClick",
+   "_RF"
+  ],
+  "ctx": "odsShowDatas).find(o => o.goodsId == e && o.showType == t); if (i) { let l = new n.AnalyticsGoodsData(); l.goodsId = e; l.showType = t; l.showId = i.showId; l.bk = o; l.st = s; let c = { clickGameData: l }; console.log(\"RcmdMng.goodsClick\", c); yield r.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_ReportGoodsClick, params: c }, a.Game_RReportGoodsClick); } }); } } o.default = c; c.Ins = new c(); cc._RF.pop(); }, { \"../../../scripts/_"
+ },
+ "game_reportgoodsshow": {
+  "cmd": "game_reportgoodsshow",
+  "const": "Game_ReportGoodsShow",
+  "resp": "Game_RReportGoodsShow",
+  "param_keys": [
+   "clickGameData"
+  ],
+  "read_fields": [
+   "AnalyticsGoodsData",
+   "CMDS",
+   "Game_RReportGoodsClick",
+   "Game_RReportGoodsShow",
+   "NetIns",
+   "_RF",
+   "bk",
+   "goodsId",
+   "showId",
+   "showType",
+   "st"
+  ],
+  "ctx": "t o = this.tempGoodsShowDatas[t], i = new n.AnalyticsGoodsData(); i.goodsId = o.goodsId; i.showType = o.showType; i.showId = o.showId; i.bk = o.bk; i.st = o.st; e.showList.push(i); this.goodsShowDatas.unshift(o); } this.tempGoodsShowDatas = []; yield r.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_ReportGoodsShow, params: e }, a.Game_RReportGoodsShow); } }); } goodsClick(e, t, o = \"\", s = \"\") { return i(this, void 0, void 0, function"
+ },
+ "game_reportplayer": {
+  "cmd": "game_reportplayer",
+  "const": "Game_ReportPlayer",
+  "resp": "Game_RReportPlayer",
+  "param_keys": [
+   "end",
+   "id",
+   "ids",
+   "start"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RGetReportPlayerList",
+   "Game_RGetUserSimpleMsg",
+   "Game_RReportPlayer",
+   "NetIns",
+   "playerId",
+   "reportCnt",
+   "reportPlayerIdList",
+   "reportScoreMap"
+  ],
+  "ctx": "clearGame() { return i(this, void 0, void 0, function*() { yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_ClearReportGame, params: {} }, a.Game_RClearReportGame); }); } reportPlayer(e) { return i(this, void 0, void 0, function*() { let t = { id: e }; n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_ReportPlayer, params: t }, a.Game_RReportPlayer); }); } loadPlayer() { return i(this, void 0, void 0, function*() { let e = [], t = yield "
+ },
+ "game_reporttalk": {
+  "cmd": "game_reporttalk",
+  "const": "Game_ReportTalk",
+  "resp": "Game_RReportTalk",
+  "param_keys": [
+   "end",
+   "start",
+   "talkId"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RClearReportTalk",
+   "Game_RGetReportTalkList",
+   "Game_ROfficialDeleteTalk",
+   "Game_RReportTalk",
+   "NetIns",
+   "talkList"
+  ],
+  "ctx": "turn i(this, void 0, void 0, function*() { yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_ClearReportGameComment, params: {} }, a.Game_RClearReportGameComment); }); } reportTalk(e) { return i(this, void 0, void 0, function*() { let t = { talkId: e }; n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_ReportTalk, params: t }, a.Game_RReportTalk); }); } loadTalks() { return i(this, void 0, void 0, function*() { let e = [], t = yield n.Net"
+ },
+ "game_reporttalkcomment": {
+  "cmd": "game_reporttalkcomment",
+  "const": "Game_ReportTalkComment",
+  "resp": ""
+ },
+ "game_resetbannergames": {
+  "cmd": "game_resetbannergames",
+  "const": "Game_ResetBannerGames",
+  "resp": ""
+ },
+ "game_resetchosengames": {
+  "cmd": "game_resetchosengames",
+  "const": "Game_ResetChosenGames",
+  "resp": "Game_RResetChosenGames",
+  "param_keys": [
+   "gameIds",
+   "goodsIds"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Enter",
+   "Game_RResetChosenGames",
+   "Game_RResetChosenGoods",
+   "NetIns",
+   "gmLoadAllChosenGoodsIds"
+  ],
+  "ctx": "GameIds\", JSON.stringify(e)); console.log(\"IpGoodsIds\", JSON.stringify(t)); })); this.addBtn(\"上传精选游戏\", () => a(this, void 0, void 0, function*() { this.closePanel(); let e = { gameIds: (yield f.DynamicMng.Ins.loadOne(\"GameChosenIds\")) || [] }; (yield p.NetIns.SendCmdAsync({ cmd: h.CMDS.Game_ResetChosenGames, params: e }, h.Game_RResetChosenGames)) && d.default.showToast(\"上传成功\"); })); this.addBtn(\"上传精选商品\", () => a(this, void 0,"
+ },
+ "game_resetchosengoods": {
+  "cmd": "game_resetchosengoods",
+  "const": "Game_ResetChosenGoods",
+  "resp": "Game_RResetChosenGoods",
+  "param_keys": [
+   "goodsIds",
+   "score"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Enter",
+   "Game_RResetChosenGoods",
+   "Game_RUploadTakeExamScore",
+   "NetIns",
+   "role"
+  ],
+  "ctx": "商品\", () => a(this, void 0, void 0, function*() { this.closePanel(); let e = yield u.default.Ins.gmLoadAllChosenGoodsIds(), t = []; for (let o = 0; o < e.length; o++) { let i = e[o]; \"string\" == typeof i && t.push(i); } let o = { goodsIds: t }; (yield p.NetIns.SendCmdAsync({ cmd: h.CMDS.Game_ResetChosenGoods, params: o }, h.Game_RResetChosenGoods)) && d.default.showToast(\"上传成功\"); })); this.addBtn(\"统计\", () => a(this, void 0, voi"
+ },
+ "game_reviewgame": {
+  "cmd": "game_reviewgame",
+  "const": "Game_ReviewGame",
+  "resp": ""
+ },
+ "game_revokereportgame": {
+  "cmd": "game_revokereportgame",
+  "const": "Game_RevokeReportGame",
+  "resp": ""
+ },
+ "game_revokereportgamecomment": {
+  "cmd": "game_revokereportgamecomment",
+  "const": "Game_RevokeReportGameComment",
+  "resp": ""
+ },
+ "game_revokereportgoods": {
+  "cmd": "game_revokereportgoods",
+  "const": "Game_RevokeReportGoods",
+  "resp": ""
+ },
+ "game_revokereportplayer": {
+  "cmd": "game_revokereportplayer",
+  "const": "Game_RevokeReportPlayer",
+  "resp": ""
+ },
+ "game_saveactorgroups": {
+  "cmd": "game_saveactorgroups",
+  "const": "Game_SaveActorGroups",
+  "resp": "Game_RSaveActorGroups",
+  "param_keys": [
+   "groupName",
+   "refDataList"
+  ],
+  "read_fields": [
+   "ActorGroupRefData",
+   "CMDS",
+   "Game_RDelActorGroups",
+   "Game_RSaveActorGroups",
+   "NetIns",
+   "belongGameId",
+   "confId",
+   "confType",
+   "groupName",
+   "id",
+   "type"
+  ],
+  "ctx": " return this.jump; } return e == this.extra.groupName ? this.extra : this.customGroups.find(t => t.groupName == e); }); } save(e) { return i(this, void 0, void 0, function*() { let t = { groupName: e.groupName, refDataList: e.refDataList }; if (yield s.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_SaveActorGroups, params: t }, a.Game_RSaveActorGroups)) { this.customGroups.find(t => t.groupName == e.groupName) || this.customGroups.uns"
+ },
+ "game_saveallcustomcolors": {
+  "cmd": "game_saveallcustomcolors",
+  "const": "Game_SaveAllCustomColors",
+  "resp": "Game_RSaveAllCustomColors",
+  "param_keys": [
+   "colorDatas",
+   "ids"
+  ],
+  "read_fields": [
+   "CMDS",
+   "ColorMng",
+   "Game_RDelCustomColors",
+   "Game_RSaveAllCustomColors",
+   "NetIns",
+   "_RF",
+   "colorDatas",
+   "id"
+  ],
+  "ctx": "++) { let t = o.colorDatas[e], i = this.customColors.find(e => t.id == e.id); i ? i.data = t.data : this.customColors.push(t); } return o.colorDatas; }); } saveAll(e) { return i(this, void 0, void 0, function*() { let t = { colorDatas: e }, o = yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_SaveAllCustomColors, params: t }, a.Game_RSaveAllCustomColors); if (!o) { s.default.showToast(\"网路错误，创建失败！\"); return null; } this.customCol"
+ },
+ "game_saveallvariable": {
+  "cmd": "game_saveallvariable",
+  "const": "Game_SaveAllVariable",
+  "resp": "Game_RSaveAllVariable",
+  "param_keys": [
+   "variableDatas"
+  ],
+  "read_fields": [
+   "Game_RSaveAllVariable",
+   "_RF",
+   "id"
+  ],
+  "ctx": "turn i(this, void 0, void 0, function*() { let e = a.GSVariableMng.instance.getSaveData(), t = []; for (let o of e) { let e = new r.VariableData(); e.gameId = this.gameData.id; e.id = o.id; e.data = o; t.push(e); } let o = { variableDatas: t }; yield n.NetIns.SendCmdAsync({ cmd: s.CMDS.Game_SaveAllVariable, params: o }, s.Game_RSaveAllVariable); }); } loadOne(e) { return i(this, void 0, void 0, function*() { return this.gameDa"
+ },
+ "game_savecustomcolors": {
+  "cmd": "game_savecustomcolors",
+  "const": "Game_SaveCustomColors",
+  "resp": "Game_RSaveCustomColors",
+  "param_keys": [
+   "colorDatas"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RSaveAllCustomColors",
+   "Game_RSaveCustomColors",
+   "NetIns",
+   "colorDatas",
+   "data",
+   "id"
+  ],
+  "ctx": "(\"../../../scripts/_autogen/cmd/cmd\"), n = e(\"../../Frame/NetworkMgr\"), s = e(\"../../Frame/Top\"); class r { constructor() { this.customColors = new Array(); } save(e) { return i(this, void 0, void 0, function*() { let t = { colorDatas: e }, o = yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_SaveCustomColors, params: t }, a.Game_RSaveCustomColors); if (!o) { s.default.showToast(\"网路错误，创建失败！\"); return null; } for (let e = 0; e < "
+ },
+ "game_savegamerank": {
+  "cmd": "game_savegamerank",
+  "const": "Game_SaveGameRank",
+  "resp": "Game_RSaveGameRank",
+  "param_keys": [
+   "confId",
+   "confType",
+   "cycleType",
+   "data",
+   "gameId",
+   "id",
+   "ids",
+   "sortType"
+  ],
+  "read_fields": [
+   "CMDS",
+   "CreativeConfType",
+   "Game_RDelGameRank",
+   "Game_RSaveGameRank",
+   "Game_RSaveRoleCreativeConf",
+   "NetIns",
+   "belongGameId",
+   "gameRankIds",
+   "id"
+  ],
+  "ctx": "+) { let i = o.datas[t]; i.conf.id = i.id; e.push(i.conf); } return e; } }); } requestCreateConf(e, t) { return i(this, void 0, void 0, function*() { let o = { gameId: t.id, id: e.id, cycleType: e.cycleType, sortType: e.sortType, data: e }, i = yield s.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_SaveGameRank, params: o }, a.Game_RSaveGameRank); t.gameRankIds.push(i.id); return i.id; }); } requestSaveConf(e) { return i(this, void 0,"
+ },
+ "game_savegameshop": {
+  "cmd": "game_savegameshop",
+  "const": "Game_SaveGameShop",
+  "resp": "Game_RSaveGameShop",
+  "param_keys": [
+   "data",
+   "gameId",
+   "id",
+   "ids"
+  ],
+  "read_fields": [
+   "CMDS",
+   "GameGoodsCostType",
+   "Game_RDelGameShop",
+   "Game_RSaveGameShop",
+   "NetIns",
+   "gameShopIds",
+   "id"
+  ],
+  "ctx": "e = []; for (let t = 0; t < o.datas.length; t++) { let i = o.datas[t]; i.conf.id = i.id; e.push(i.conf); } return e; } }); } requestCreateConf(e, t) { return i(this, void 0, void 0, function*() { let o = { gameId: t.id, id: e.id, data: e }, i = yield a.NetIns.SendCmdAsync({ cmd: n.CMDS.Game_SaveGameShop, params: o }, n.Game_RSaveGameShop); t.gameShopIds.push(i.id); return i.id; }); } requestSaveConf(e) { return i(this, void 0,"
+ },
+ "game_saveroleactorconf": {
+  "cmd": "game_saveroleactorconf",
+  "const": "Game_SaveRoleActorConf",
+  "resp": "Game_RSaveRoleActorConf",
+  "param_keys": [
+   "data",
+   "id",
+   "ids"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RDelRoleActorConf",
+   "Game_RSaveRoleActorConf",
+   "NetIns",
+   "_RF",
+   "id"
+  ],
+  "ctx": "= 0; t < o.datas.length; t++) { let i = o.datas[t], a = i.conf; a.id = i.id; a.goodsUId = i.goodsUId; e.push(i.conf); } return e; } }); } requestCreateConf(e) { return i(this, void 0, void 0, function*() { let t = { id: null, data: e }; return (yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_SaveRoleActorConf, params: t }, a.Game_RSaveRoleActorConf)).id; }); } requestSaveConf(e) { return i(this, void 0, void 0, function*() { le"
+ },
+ "game_saverolebulletconf": {
+  "cmd": "game_saverolebulletconf",
+  "const": "Game_SaveRoleBulletConf",
+  "resp": "Game_RSaveRoleBulletConf",
+  "param_keys": [
+   "data",
+   "id",
+   "ids"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RDelRoleBulletConf",
+   "Game_RSaveRoleBulletConf",
+   "NetIns",
+   "_RF",
+   "id"
+  ],
+  "ctx": "= 0; t < o.datas.length; t++) { let i = o.datas[t], a = i.conf; a.id = i.id; a.goodsUId = i.goodsUId; e.push(i.conf); } return e; } }); } requestCreateConf(e) { return i(this, void 0, void 0, function*() { let t = { id: null, data: e }; return (yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_SaveRoleBulletConf, params: t }, a.Game_RSaveRoleBulletConf)).id; }); } requestSaveConf(e) { return i(this, void 0, void 0, function*() { "
+ },
+ "game_saverolecreativeconf": {
+  "cmd": "game_saverolecreativeconf",
+  "const": "Game_SaveRoleCreativeConf",
+  "resp": "Game_RSaveRoleCreativeConf",
+  "param_keys": [
+   "confId",
+   "confType",
+   "data",
+   "gameId"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RDelRoleCreativeConf",
+   "Game_RSaveRoleCreativeConf",
+   "NetIns",
+   "belongGameId",
+   "id"
+  ],
+  "ctx": "p(); } create(e, t) { return i(this, void 0, void 0, function*() { if (e.belongGameId) { e.id = `${e.belongGameId}+${orange.TimeUtil.serverTime}`; let t = { gameId: e.belongGameId, confType: this.creativeConfType, confId: e.id, data: e }; if (!(yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_SaveRoleCreativeConf, params: t }, a.Game_RSaveRoleCreativeConf))) { s.default.showToast(\"网路错误，创建失败！\"); return null; } this.extraCache.set"
+ },
+ "game_saveroledeviceconf": {
+  "cmd": "game_saveroledeviceconf",
+  "const": "Game_SaveRoleDeviceConf",
+  "resp": "Game_RSaveRoleDeviceConf",
+  "param_keys": [
+   "data",
+   "id",
+   "ids"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RDelRoleDeviceConf",
+   "Game_RSaveRoleDeviceConf",
+   "NetIns",
+   "_RF",
+   "id"
+  ],
+  "ctx": "= 0; t < o.datas.length; t++) { let i = o.datas[t], a = i.conf; a.id = i.id; a.goodsUId = i.goodsUId; e.push(i.conf); } return e; } }); } requestCreateConf(e) { return i(this, void 0, void 0, function*() { let t = { id: null, data: e }; return (yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_SaveRoleDeviceConf, params: t }, a.Game_RSaveRoleDeviceConf)).id; }); } requestSaveConf(e) { return i(this, void 0, void 0, function*() { "
+ },
+ "game_saverolegamedata": {
+  "cmd": "game_saverolegamedata",
+  "const": "Game_SaveRoleGameData",
+  "resp": "Game_RSaveRoleGameData",
+  "param_keys": [
+   "ids"
+  ],
+  "read_fields": [
+   "CMDS",
+   "GameStatus",
+   "Game_RDelRoleGameData",
+   "Game_ROwnOffGame",
+   "Game_RSaveRoleGameData",
+   "NetIns",
+   "id",
+   "status"
+  ],
+  "ctx": "0, firstPublishStamp: 0, tags: [], coinPropId: \"1\", status: r.GameStatus.noPublish, offReason: [], creativeOp: { isOpenAll: !1, isClose: !0, openWorldIds: [] }, parnetGame: t }, i = { id: null, creativeSourceUId: t ? t.id : null, data: o }, l = yield a.NetIns.SendCmdAsync({ cmd: n.CMDS.Game_SaveRoleGameData, params: i }, n.Game_RSaveRoleGameData); if (!l) return null; o.id = l.id; this.cache.set(o.id, o); this.gameIds.unshift("
+ },
+ "game_saverolepropconf": {
+  "cmd": "game_saverolepropconf",
+  "const": "Game_SaveRolePropConf",
+  "resp": "Game_RSaveRolePropConf",
+  "param_keys": [
+   "data",
+   "id",
+   "ids"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RDelRolePropConf",
+   "Game_RSaveRolePropConf",
+   "NetIns",
+   "_RF",
+   "id"
+  ],
+  "ctx": "= 0; t < o.datas.length; t++) { let i = o.datas[t], a = i.conf; a.id = i.id; a.goodsUId = i.goodsUId; e.push(i.conf); } return e; } }); } requestCreateConf(e) { return i(this, void 0, void 0, function*() { let t = { id: null, data: e }; return (yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_SaveRolePropConf, params: t }, a.Game_RSaveRolePropConf)).id; }); } requestSaveConf(e) { return i(this, void 0, void 0, function*() { let "
+ },
+ "game_saveroletileconf": {
+  "cmd": "game_saveroletileconf",
+  "const": "Game_SaveRoleTileConf",
+  "resp": "Game_RSaveRoleTileConf",
+  "param_keys": [
+   "data",
+   "id",
+   "ids"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RDelRoleTileConf",
+   "Game_RSaveRoleTileConf",
+   "NetIns",
+   "_RF",
+   "id"
+  ],
+  "ctx": "= 0; t < o.datas.length; t++) { let i = o.datas[t], a = i.conf; a.id = i.id; a.goodsUId = i.goodsUId; e.push(i.conf); } return e; } }); } requestCreateConf(e) { return i(this, void 0, void 0, function*() { let t = { id: null, data: e }; return (yield r.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_SaveRoleTileConf, params: t }, a.Game_RSaveRoleTileConf)).id; }); } requestSaveConf(e) { return i(this, void 0, void 0, function*() { let "
+ },
+ "game_saveroleweaponconf": {
+  "cmd": "game_saveroleweaponconf",
+  "const": "Game_SaveRoleWeaponConf",
+  "resp": "Game_RSaveRoleWeaponConf",
+  "param_keys": [
+   "data",
+   "id",
+   "ids"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RDelRoleWeaponConf",
+   "Game_RSaveRoleWeaponConf",
+   "NetIns",
+   "_RF",
+   "id"
+  ],
+  "ctx": "= 0; t < o.datas.length; t++) { let i = o.datas[t], a = i.conf; a.id = i.id; a.goodsUId = i.goodsUId; e.push(i.conf); } return e; } }); } requestCreateConf(e) { return i(this, void 0, void 0, function*() { let t = { id: null, data: e }; return (yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_SaveRoleWeaponConf, params: t }, a.Game_RSaveRoleWeaponConf)).id; }); } requestSaveConf(e) { return i(this, void 0, void 0, function*() { "
+ },
+ "game_savevariable": {
+  "cmd": "game_savevariable",
+  "const": "Game_SaveVariable",
+  "resp": "Game_RSaveVariable",
+  "param_keys": [
+   "data",
+   "gameId",
+   "id",
+   "ids"
+  ],
+  "read_fields": [
+   "CMDS",
+   "CreativeConfType",
+   "Game_RDelVariable",
+   "Game_RSaveVariable",
+   "NetIns",
+   "belongGameId",
+   "id"
+  ],
+  "ctx": " = e; let t = Array.from(this.extraCache.values()), o = [].concat(t, e.variableDatas); a.GSVariableMng.instance.load(o); }); } create(e) { return i(this, void 0, void 0, function*() { let t = { gameId: this.gameData.id, id: null, data: e }, o = yield n.NetIns.SendCmdAsync({ cmd: s.CMDS.Game_SaveVariable, params: t }, s.Game_RSaveVariable); if (!o) return null; e.id = o.id; this.gameData.variableDatas.push(e); return e; }); } d"
+ },
+ "game_saveworlddata": {
+  "cmd": "game_saveworlddata",
+  "const": "Game_SaveWorldData",
+  "resp": "Game_RSaveWorldData",
+  "param_keys": [
+   "gameId",
+   "id",
+   "ids",
+   "info",
+   "layoutMin"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RDelWorldData",
+   "Game_RSaveWorldData",
+   "NetIns",
+   "id",
+   "info",
+   "layoutMin",
+   "projectLayout",
+   "worldIds"
+  ],
+  "ctx": "ldLayout.gsData && (o.worldLayout.gsData.worldId = o.id); a.GSMng.instance.load(o.worldLayout.gsData); } } create(e, t) { return i(this, void 0, void 0, function*() { let o = { id: null, gameId: t.id, info: e.info, layoutMin: e.layoutMin }, i = yield n.NetIns.SendCmdAsync({ cmd: s.CMDS.Game_SaveWorldData, params: o }, s.Game_RSaveWorldData); if (!i) return null; e.id = i.id; t.worldIds.push(e.id); this.cache.set(e.id, e); e.la"
+ },
+ "game_searchgame": {
+  "cmd": "game_searchgame",
+  "const": "Game_SearchGame",
+  "resp": "Game_RSearchGame",
+  "param_keys": [
+   "end",
+   "searchName",
+   "start"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Enter",
+   "Game_RSearchGame",
+   "NetIns",
+   "crossPlatform",
+   "gameDatas",
+   "setData"
+  ],
+  "ctx": "\"近期违规，不可搜索作品\"); return; } let t = []; if (e) if (u.DynamicMng.Ins.isInspectVersion()) m.default.Ins.cache.forEach(o => { o.name.includes(e) && t.push(o); }); else { d.default.showLoading(\"搜索中\"); let o = { searchName: e, start: 0, end: 15 }, i = yield l.NetIns.SendCmdAsync({ cmd: n.CMDS.Game_SearchGame, params: o }, n.Game_RSearchGame); i && (t = i.gameDatas); d.default.hideLoading(); } if (t && t.length > 0) { let o = r.crossP"
+ },
+ "game_searchgamebytag": {
+  "cmd": "game_searchgamebytag",
+  "const": "Game_SearchGameByTag",
+  "resp": "Game_RSearchGameByTag",
+  "param_keys": [],
+  "read_fields": [
+   "Game_RSearchGameByTag",
+   "_RF",
+   "cache",
+   "gameDatas",
+   "id",
+   "includes"
+  ],
+  "ctx": " { let t = this.tagMap.get(e) || []; return yield c.default.Ins.loadGames(t); }); } appendLoadGame(e, t) { return i(this, void 0, void 0, function*() { let o = this.tagMap.get(e) || [], i = o.length, n = { tagMsg: e, start: i, end: i + t }, s = yield r.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_SearchGameByTag, params: n }, a.Game_RSearchGameByTag); if (s) for (let e = 0; e < s.gameDatas.length; e++) { let t = s.gameDatas[e]; o.in"
+ },
+ "game_searchgoods": {
+  "cmd": "game_searchgoods",
+  "const": "Game_SearchGoods",
+  "resp": ""
+ },
+ "game_searchrole": {
+  "cmd": "game_searchrole",
+  "const": "Game_SearchRole",
+  "resp": "Game_RSearchRole",
+  "param_keys": [
+   "end",
+   "searchName",
+   "start"
+  ],
+  "read_fields": [
+   "CMDS",
+   "EditBox",
+   "Enter",
+   "Game_RSearchGame",
+   "Game_RSearchRole",
+   "NetIns",
+   "Node",
+   "roleDatas",
+   "setData"
+  ],
+  "ctx": "searchRole(e) { return a(this, void 0, void 0, function*() { if (u.DynamicMng.Ins.isInspectVersion()) { d.default.showToast(\"找不到用户\"); return; } let t = []; if (e) { d.default.showLoading(\"搜索中\"); let o = { searchName: e, start: 0, end: 15 }, i = yield l.NetIns.SendCmdAsync({ cmd: n.CMDS.Game_SearchRole, params: o }, n.Game_RSearchRole); i && (t = i.roleDatas); d.default.hideLoading(); } t && t.length > 0 ? c.default.ins.Enter(\""
+ },
+ "game_sendgift": {
+  "cmd": "game_sendgift",
+  "const": "Game_SendGift",
+  "resp": "Game_RSendGift",
+  "param_keys": [
+   "gameId",
+   "giftCount",
+   "giftID"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RGetGiftRankData",
+   "Game_RSendGift",
+   "GiftRankCellData",
+   "NetIns",
+   "gameIcon",
+   "gameId",
+   "gameName",
+   "rankKey",
+   "rankList",
+   "score"
+  ],
+  "ctx": "ld r.Util.downLoadPng(\"gift/\" + e.iconUrl + \".png\"); this.giftSpriteFrame.set(t, o); })); } else cc.error(\"礼物列表加载失败\"); }); } sendGift(e, t, o) { return i(this, void 0, void 0, function*() { let i = { gameId: e, giftID: t, giftCount: o }; return yield s.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_SendGift, params: i }, a.Game_RSendGift); }); } getGiftRank(e) { return this.giftRankMap.get(e) || []; } deleteGiftRank(e) { this.giftRank"
+ },
+ "game_sensitivemsg": {
+  "cmd": "game_sensitivemsg",
+  "const": "Game_SensitiveMsg",
+  "resp": "Game_RSensitiveMsg",
+  "param_keys": [
+   "msg"
+  ],
+  "read_fields": [
+   "CREATE_GAME",
+   "EditBox",
+   "Enter",
+   "Game_RSensitiveMsg",
+   "Mng",
+   "TGA",
+   "game",
+   "gameMng",
+   "id",
+   "name",
+   "prototyp",
+   "sensitiveWords",
+   "setData",
+   "version"
+  ],
+  "ctx": "; this.parentGame = t; }); } onCreateBtnTap() { return n(this, void 0, void 0, function*() { p.Mng.switchMine(); let e = this.nameEditbox.textLabel.string; if (\"\" == e.trim()) { h.default.showToast(\"必须填写作品名！\"); return; } let t = { msg: e }, o = yield l.NetIns.SendCmdAsync({ cmd: s.CMDS.Game_SensitiveMsg, params: t }, s.Game_RSensitiveMsg); if (o && o.sensitiveWords && o.sensitiveWords.length) { h.default.showToast(\"名称违规\"); ret"
+ },
+ "game_settalkchosen": {
+  "cmd": "game_settalkchosen",
+  "const": "Game_SetTalkChosen",
+  "resp": "Game_RSetTalkChosen",
+  "param_keys": [
+   "talkId"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RDownTalk",
+   "Game_RSetTalkChosen",
+   "Game_RUpTalk",
+   "NetIns",
+   "upCnt"
+  ],
+  "ctx": "n n(this, void 0, void 0, function*() { let t = { talkId: e }; yield l.NetIns.SendCmdAsync({ cmd: s.CMDS.Game_DelTalkTop, params: t }, s.Game_RDelTalkTop); }); } setChosen(e) { return n(this, void 0, void 0, function*() { let t = { talkId: e }; yield l.NetIns.SendCmdAsync({ cmd: s.CMDS.Game_SetTalkChosen, params: t }, s.Game_RSetTalkChosen); }); } removeChosen(e) { return n(this, void 0, void 0, function*() { let t = { talkId:"
+ },
+ "game_settalkcommenttop": {
+  "cmd": "game_settalkcommenttop",
+  "const": "Game_SetTalkCommentTop",
+  "resp": ""
+ },
+ "game_settalktop": {
+  "cmd": "game_settalktop",
+  "const": "Game_SetTalkTop",
+  "resp": "Game_RSetTalkTop",
+  "param_keys": [
+   "talkId"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RDelTalkTop",
+   "Game_RSetTalkChosen",
+   "Game_RSetTalkTop",
+   "NetIn",
+   "NetIns"
+  ],
+  "ctx": "-, 1); }; this.userTalks.forEach(e => { e.forEach(t); }); this.collectTalks.forEach(t); this.detailMap.forEach(t); this.simpleMap.forEach(e => { e.forEach(t); }); } setTop(e) { return n(this, void 0, void 0, function*() { let t = { talkId: e }; yield l.NetIns.SendCmdAsync({ cmd: s.CMDS.Game_SetTalkTop, params: t }, s.Game_RSetTalkTop); }); } removeTop(e) { return n(this, void 0, void 0, function*() { let t = { talkId: e }; yie"
+ },
+ "game_subgamelist": {
+  "cmd": "game_subgamelist",
+  "const": "Game_SubGameList",
+  "resp": ""
+ },
+ "game_thumbgamecomment": {
+  "cmd": "game_thumbgamecomment",
+  "const": "Game_ThumbGameComment",
+  "resp": "Game_RThumbGameComment",
+  "param_keys": [
+   "commentId"
+  ],
+  "read_fields": [
+   "CMDS",
+   "CommentMng",
+   "Game_RThumbGameComment",
+   "NetIns",
+   "_RF"
+  ],
+  "ctx": "(e, t) { n.crossPlatform.setStorageSync(\"commentLikeData\" + e, t); } isLike(e, t) { return !!this.loadLikeData(e)[t]; } like(e, t) { return i(this, void 0, void 0, function*() { r.default.blockInput(!0, \"likeComment\"); let o = { commentId: t }; yield s.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_ThumbGameComment, params: o }, a.Game_RThumbGameComment); let i = this.loadLikeData(e); i[t] = !0; this.saveLikeData(e, i); r.default.bloc"
+ },
+ "game_thumbgames": {
+  "cmd": "game_thumbgames",
+  "const": "Game_ThumbGames",
+  "resp": "Game_RThumbGames",
+  "param_keys": [
+   "ids"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RCancelThumbGames",
+   "Game_RThumbGames",
+   "NetIns",
+   "ThumbMng",
+   "_RF"
+  ],
+  "ctx": "0; const a = e(\"../../../scripts/_autogen/cmd/cmd\"), n = e(\"../../Frame/NetworkMgr\"), s = e(\"../../Frame/Top\"); class r { thumbGame(e) { return i(this, void 0, void 0, function*() { s.default.blockInput(!0, \"thumbGame\"); let t = { ids: [ e ] }; yield n.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_ThumbGames, params: t }, a.Game_RThumbGames); s.default.blockInput(!1, \"thumbGame\"); }); } unThumbGame(e) { return i(this, void 0, void 0,"
+ },
+ "game_thumbtalk": {
+  "cmd": "game_thumbtalk",
+  "const": "Game_ThumbTalk",
+  "resp": ""
+ },
+ "game_thumbtalkcomment": {
+  "cmd": "game_thumbtalkcomment",
+  "const": "Game_ThumbTalkComment",
+  "resp": "Game_RThumbTalkComment",
+  "param_keys": [
+   "commentId"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RThumbTalkComment",
+   "NetIns",
+   "TalkCommentMng",
+   "_RF"
+  ],
+  "ctx": "s.likeMap.set(e, t); } return t; } saveLikeData(e, t) { n.crossPlatform.setStorageSync(\"talkCommentLikeData\" + e, t); } like(e, t) { return i(this, void 0, void 0, function*() { r.default.blockInput(!0, \"likeComment\"); let o = { commentId: t }; yield s.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_ThumbTalkComment, params: o }, a.Game_RThumbTalkComment); let i = this.loadLikeData(e); i[t] = !0; this.saveLikeData(e, i); r.default.bloc"
+ },
+ "game_updateuserinfo": {
+  "cmd": "game_updateuserinfo",
+  "const": "Game_UpdateUserInfo",
+  "resp": "Game_RUpdateUserInfo",
+  "param_keys": [
+   "userImg",
+   "userIntro",
+   "userName"
+  ],
+  "read_fields": [
+   "EditBox",
+   "Game_RUpdateUserInfo",
+   "OperationFlow",
+   "game",
+   "sensitiveWords",
+   "userImg",
+   "userIntro",
+   "userName"
+  ],
+  "ctx": "userImg); } } onBtnClick() { return a(this, void 0, void 0, function*() { let e = this.nameEditBox.textLabel.string, t = this.introEditBox.textLabel.string; h.default.showLoading(\"修改中\"); let o = { userName: e, userImg: null, userIntro: t }, i = yield c.NetIns.SendCmdAsync({ cmd: n.CMDS.Game_UpdateUserInfo, params: o }, n.Game_RUpdateUserInfo); if (i) if (i.sensitiveWords && i.sensitiveWords.length > 0) h.default.hideLoading(\"审"
+ },
+ "game_uploadgamerankscore": {
+  "cmd": "game_uploadgamerankscore",
+  "const": "Game_UploadGameRankScore",
+  "resp": "Game_RUploadGameRankScore",
+  "param_keys": [
+   "gameId",
+   "id",
+   "scores",
+   "targetId"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RDeleteGameRankScore",
+   "Game_RUploadGameRankScore",
+   "NetIns",
+   "crossPla",
+   "crossPlatform"
+  ],
+  "ctx": "o.datas[0]) { let e = o.datas[0]; for (let t = 0; t < e.rankList.length; t++) e.rankList[t].rank = t + 1; return o.datas[0]; } return null; }); } uploadScore(e, t) { return i(this, void 0, void 0, function*() { let o = { gameId: e, scores: t }; yield s.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_UploadGameRankScore, params: o }, a.Game_RUploadGameRankScore); }); } deleteScore(e, t) { return i(this, void 0, void 0, function*() { let"
+ },
+ "game_uploadgoods": {
+  "cmd": "game_uploadgoods",
+  "const": "Game_UploadGoods",
+  "resp": "Game_RUploadGoods",
+  "param_keys": [
+   "id",
+   "isDiscount"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RBuyGoods",
+   "Game_RUploadGoods",
+   "Mng",
+   "NetIns",
+   "conf",
+   "goodsId",
+   "id",
+   "sensitiveWords",
+   "tileConfs",
+   "tileMng"
+  ],
+  "ctx": "yield r.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_OffGoods, params: t }, a.Game_ROffGoods)) { let t = this.myGoodsIds.indexOf(e); t >= 0 && this.myGoodsIds.splice(t, 1); } }); } uploadGoods(e) { return i(this, void 0, void 0, function*() { let t = yield r.NetIns.SendCmdAsync({ cmd: a.CMDS.Game_UploadGoods, params: e }, a.Game_RUploadGoods); if (t) if (e.goodsId) { this.cellDataCache.delete(e.goodsId); this.infoCache.delete(e.good"
+ },
+ "game_uploadreleasegame": {
+  "cmd": "game_uploadreleasegame",
+  "const": "Game_UploadReleaseGame",
+  "resp": "Game_RUploadReleaseGame",
+  "param_keys": [
+   "content",
+   "dataVersion",
+   "imageList"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RUploadReleaseGame",
+   "NetIns",
+   "Util",
+   "assets",
+   "cdnUrl",
+   "gameEnv",
+   "iconTextureName",
+   "needImageList",
+   "textureName"
+  ],
+  "ctx": "s: t.gameShopConfs, gameRankConfs: t.gameRankConfs, creatorVersion: h.gameEnv.creatorVersion }, v = bon.encode(c), S = pako.gzip(v, { level: 1 }), G = \"\"; { r.default.showLoading(\"正在上传(1/3)\"); let t = { dataVersion: e.version, content: S }, o = yield s.NetIns.SendCmdAsync({ cmd: n.CMDS.Game_UploadReleaseGame, params: t }, n.Game_RUploadReleaseGame); if (!o) { r.default.hideLoading(); return { msg: \"发布失败\" }; } G = o.cdnUrl; } l"
+ },
+ "game_uploadtakeexamscore": {
+  "cmd": "game_uploadtakeexamscore",
+  "const": "Game_UploadTakeExamScore",
+  "resp": "Game_RUploadTakeExamScore",
+  "param_keys": [
+   "score"
+  ],
+  "read_fields": [
+   "Game_RUploadTakeExamScore",
+   "TweenUtil",
+   "role"
+  ],
+  "ctx": "onDatas[o], n = !0; for (let e = 0; e < a.anwsers.length; e++) a.anwserIdxs.includes(e) !== i[e] && (n = !1); if (n) e += this.questionDatas[o].score; else { t.push(o + 1); console.log(\"第\" + o + \"错了\", i, a.anwserIdxs); } } let o = { score: e }; yield d.NetIns.SendCmdAsync({ cmd: n.CMDS.Game_UploadTakeExamScore, params: o }, n.Game_RUploadTakeExamScore); y.default.Ins.role.examScore = e; this.setResultState(e, t); }), .4); } })"
+ },
+ "game_uptalk": {
+  "cmd": "game_uptalk",
+  "const": "Game_UpTalk",
+  "resp": "Game_RUpTalk",
+  "param_keys": [
+   "talkId"
+  ],
+  "read_fields": [
+   "CMDS",
+   "Game_RCancelUpTalk",
+   "Game_RDownTalk",
+   "Game_RUpTalk",
+   "NetIns",
+   "upCnt"
+  ],
+  "ctx": "s, void 0, void 0, function*() { let t = { talkId: e }; yield l.NetIns.SendCmdAsync({ cmd: s.CMDS.Game_DelTalkChosen, params: t }, s.Game_RSetTalkChosen); }); } upTalk(e) { return n(this, void 0, void 0, function*() { let t = { talkId: e }, o = yield l.NetIns.SendCmdAsync({ cmd: s.CMDS.Game_UpTalk, params: t }, s.Game_RUpTalk); this.updateCacheProperty(e, \"upCnt\", o.upCnt); this.updateCacheProperty(e, \"isUp\", !0); }); } downTa"
+ },
+ "game_uptalkcomment": {
+  "cmd": "game_uptalkcomment",
+  "const": "Game_UpTalkComment",
+  "resp": ""
+ }
+}

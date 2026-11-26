@@ -1,0 +1,2169 @@
+{
+ "game_addcoinbyadvert": {
+  "resp": "Game_RAddCoinByAdvert",
+  "fields": {
+   "coin": 0,
+   "addCoinByAdvertCnt": 0,
+   "addCoinByAdvertLimit": 0,
+   "addCoinByAdvertReset": 0
+  },
+  "params": []
+ },
+ "game_addcoinbyadvertv2": {
+  "resp": "Game_RAddCoinByAdvertV2",
+  "fields": {
+   "coin": 0,
+   "addCoinByAdvertCnt": 0,
+   "addCoinByAdvertLimit": 0,
+   "addCoinByAdvertReset": 0
+  },
+  "params": [
+   "transId"
+  ]
+ },
+ "game_addcoinbysharevideo": {
+  "resp": "Game_RAddCoinByShareVideo",
+  "fields": {
+   "coin": 0
+  },
+  "params": []
+ },
+ "game_addgametage": {
+  "resp": "Game_RAddGameTage",
+  "fields": {
+   "code": 0,
+   "gameID": 0,
+   "sensitiveWords": 2
+  },
+  "params": [
+   "addTagMsg",
+   "gameID",
+   "removeTagMsg",
+   "tagCount"
+  ]
+ },
+ "game_addothercoinbyadvert": {
+  "resp": "Game_RAddOtherCoinByAdvert",
+  "fields": {
+   "coin": 0,
+   "addCoinByAdvertCnt": 0,
+   "addCoinByAdvertLimit": 0,
+   "addCoinByAdvertReset": 0
+  },
+  "params": []
+ },
+ "game_addothercoinbyadvertv2": {
+  "resp": "Game_RAddOtherCoinByAdvertV2",
+  "fields": {
+   "coin": 0,
+   "addCoinByAdvertCnt": 0,
+   "addCoinByAdvertLimit": 0,
+   "addCoinByAdvertReset": 0
+  },
+  "params": [
+   "gameId",
+   "name",
+   "targetId",
+   "textureName",
+   "transId"
+  ]
+ },
+ "game_admingetgamemsgbyreviewid": {
+  "resp": "Game_RAdminGetGameMsgByReviewId",
+  "fields": {
+   "gameData": 1
+  },
+  "params": []
+ },
+ "game_adminsetgamestatus": {
+  "resp": "Game_RAdminSetGameStatus",
+  "fields": {
+   "gameData": 1
+  },
+  "params": []
+ },
+ "game_bindrole": {
+  "resp": "Game_RBindRole",
+  "fields": {
+   "errorCode": 0
+  },
+  "params": [
+   "code",
+   "info",
+   "platform"
+  ]
+ },
+ "game_buygoods": {
+  "resp": "Game_RBuyGoods",
+  "fields": {
+   "id": 0,
+   "tileConfs": 2,
+   "actorConfs": 2,
+   "deviceConfs": 2,
+   "propConfs": 2,
+   "weaponConfs": 2,
+   "bulletConfs": 2,
+   "bulletMap": 5
+  },
+  "params": [
+   "id",
+   "isDiscount"
+  ]
+ },
+ "game_cancelcollectiongames": {
+  "resp": "Game_RCancelCollectionGames",
+  "fields": {
+   "ids": 2
+  },
+  "params": [
+   "ids"
+  ]
+ },
+ "game_cancelcollectiongoods": {
+  "resp": "Game_RCancelCollectionGoods",
+  "fields": {
+   "ids": 2
+  },
+  "params": [
+   "ids"
+  ]
+ },
+ "game_cancelcollectiontalk": {
+  "resp": "Game_RCancelCollectionTalk",
+  "fields": {
+   "code": 0,
+   "iD": 0
+  },
+  "params": [
+   "iD"
+  ]
+ },
+ "game_canceldowntalk": {
+  "resp": "Game_RCancelDownTalk",
+  "fields": {
+   "upCnt": 0
+  },
+  "params": [
+   "talkId"
+  ]
+ },
+ "game_cancelfollowuser": {
+  "resp": "Game_RFollowUser",
+  "fields": {
+   "followId": 0
+  },
+  "params": [
+   "followId"
+  ]
+ },
+ "game_cancelthumbgamecomment": {
+  "resp": "Game_RCancelThumbGameComment",
+  "fields": {
+   "thumbCnt": 0
+  },
+  "params": [
+   "commentId"
+  ]
+ },
+ "game_cancelthumbgames": {
+  "resp": "Game_RCancelThumbGames",
+  "fields": {
+   "ids": 2
+  },
+  "params": [
+   "ids"
+  ]
+ },
+ "game_cancelthumbtalk": {
+  "resp": "Game_RCancelThumbTalk",
+  "fields": {
+   "thumbCnt": 0
+  },
+  "params": []
+ },
+ "game_cancelthumbtalkcomment": {
+  "resp": "Game_RCancelThumbTalkComment",
+  "fields": {
+   "thumbCnt": 0
+  },
+  "params": [
+   "commentId"
+  ]
+ },
+ "game_canceluptalk": {
+  "resp": "Game_RCancelUpTalk",
+  "fields": {
+   "upCnt": 0
+  },
+  "params": [
+   "talkId"
+  ]
+ },
+ "game_clickrecommendsgames": {
+  "resp": "Game_RClickRecommendsGames",
+  "fields": {
+   "id": 0,
+   "clickCnt": 0
+  },
+  "params": [
+   "id"
+  ]
+ },
+ "game_collectiongames": {
+  "resp": "Game_RCollectionGames",
+  "fields": {
+   "ids": 2
+  },
+  "params": [
+   "ids"
+  ]
+ },
+ "game_collectionggoods": {
+  "resp": "Game_RCollectionGGoods",
+  "fields": {
+   "ids": 2
+  },
+  "params": [
+   "ids"
+  ]
+ },
+ "game_collectiontalk": {
+  "resp": "Game_RCollectionTalk",
+  "fields": {
+   "code": 0,
+   "iD": 0
+  },
+  "params": [
+   "iD"
+  ]
+ },
+ "game_commentgame": {
+  "resp": "Game_RCommentGame",
+  "fields": {
+   "code": 0,
+   "sensitiveWords": 2,
+   "comment": 1
+  },
+  "params": [
+   "commentId",
+   "gameId",
+   "msg"
+  ]
+ },
+ "game_commenttalk": {
+  "resp": "Game_RCommentTalk",
+  "fields": {
+   "code": 0,
+   "sensitiveWords": 2,
+   "comment": 1
+  },
+  "params": [
+   "commentId",
+   "content",
+   "reviewImageMap",
+   "reviewStr",
+   "talkId"
+  ]
+ },
+ "game_costcoiningame": {
+  "resp": "Game_RCostCoinInGame",
+  "fields": {
+   "curCoin": 0
+  },
+  "params": [
+   "coin",
+   "gameId",
+   "name",
+   "textureName",
+   "type"
+  ]
+ },
+ "game_costcoinrecommendgame": {
+  "resp": "Game_RCostCoinRecommendGame",
+  "fields": {
+   "errorCode": 0
+  },
+  "params": []
+ },
+ "game_createofficialtalk": {
+  "resp": "Game_RCreateTalk",
+  "fields": {
+   "code": 0,
+   "sensitiveWords": 2,
+   "talkData": 1
+  },
+  "params": [
+   "content",
+   "simpleContent",
+   "title"
+  ]
+ },
+ "game_createtalk": {
+  "resp": "Game_RCreateTalk",
+  "fields": {
+   "code": 0,
+   "sensitiveWords": 2,
+   "talkData": 1
+  },
+  "params": [
+   "content",
+   "reviewImageMap",
+   "reviewStr",
+   "simpleContent",
+   "title"
+  ]
+ },
+ "game_dealwithreportgamecomment": {
+  "resp": "Game_RDealWithReportGameComment",
+  "fields": {
+   "id": 0
+  },
+  "params": [
+   "end",
+   "id",
+   "reason",
+   "score",
+   "start"
+  ]
+ },
+ "game_dealwithreportgoods": {
+  "resp": "Game_RDealWithReportGoods",
+  "fields": {
+   "id": 0
+  },
+  "params": [
+   "id",
+   "reason",
+   "score"
+  ]
+ },
+ "game_dealwithreportplayer": {
+  "resp": "Game_RDealWithReportPlayer",
+  "fields": {
+   "id": 0
+  },
+  "params": [
+   "id",
+   "needResetIntro",
+   "needResetUserImg",
+   "needResetUserName",
+   "reason",
+   "score"
+  ]
+ },
+ "game_debuggetrecommendgamemsg": {
+  "resp": "Game_RDebugGetRecommendGameMsg",
+  "fields": {
+   "allStartupRecommendLeftCnt": 0,
+   "allPastRecommendLeftCnt": 0,
+   "allStartupHadRecommendCount": 0,
+   "allPastHadRecommendCount": 0,
+   "allHadRecommendCount": 0,
+   "allNeedRecommendCount": 0,
+   "lastRecommendScala": 0
+  },
+  "params": []
+ },
+ "game_delactorgroups": {
+  "resp": "Game_RDelActorGroups",
+  "fields": {},
+  "params": [
+   "groupName"
+  ]
+ },
+ "game_delcustomcolors": {
+  "resp": "Game_RDelCustomColors",
+  "fields": {},
+  "params": [
+   "ids"
+  ]
+ },
+ "game_deletegamerankscore": {
+  "resp": "Game_RDeleteGameRankScore",
+  "fields": {},
+  "params": [
+   "gameId",
+   "id",
+   "scores",
+   "targetId"
+  ]
+ },
+ "game_deletetalk": {
+  "resp": "Game_RDeleteTalk",
+  "fields": {
+   "code": 0
+  },
+  "params": [
+   "talkId"
+  ]
+ },
+ "game_delgamecomment": {
+  "resp": "Game_RDelGameComment",
+  "fields": {
+   "commentId": 0
+  },
+  "params": [
+   "commentId"
+  ]
+ },
+ "game_delgamerank": {
+  "resp": "Game_RDelGameRank",
+  "fields": {
+   "ids": 2
+  },
+  "params": [
+   "confId",
+   "confType",
+   "data",
+   "gameId",
+   "ids"
+  ]
+ },
+ "game_delgameshop": {
+  "resp": "Game_RDelGameShop",
+  "fields": {
+   "ids": 2
+  },
+  "params": [
+   "data",
+   "gameId",
+   "id",
+   "ids"
+  ]
+ },
+ "game_delreleasegamerank": {
+  "resp": "Game_RDelReleaseGameRank",
+  "fields": {
+   "ids": 2
+  },
+  "params": []
+ },
+ "game_delroleactorconf": {
+  "resp": "Game_RDelRoleActorConf",
+  "fields": {
+   "ids": 2
+  },
+  "params": [
+   "data",
+   "id",
+   "ids"
+  ]
+ },
+ "game_delrolebulletconf": {
+  "resp": "Game_RDelRoleBulletConf",
+  "fields": {
+   "ids": 2
+  },
+  "params": [
+   "data",
+   "id",
+   "ids"
+  ]
+ },
+ "game_delrolecreativeconf": {
+  "resp": "Game_RDelRoleCreativeConf",
+  "fields": {
+   "gameId": 0,
+   "confId": 0
+  },
+  "params": [
+   "confId",
+   "confType",
+   "gameId"
+  ]
+ },
+ "game_delroledeviceconf": {
+  "resp": "Game_RDelRoleDeviceConf",
+  "fields": {
+   "ids": 2
+  },
+  "params": [
+   "data",
+   "id",
+   "ids"
+  ]
+ },
+ "game_delrolegamedata": {
+  "resp": "Game_RDelRoleGameData",
+  "fields": {
+   "ids": 2
+  },
+  "params": [
+   "ids"
+  ]
+ },
+ "game_delrolepropconf": {
+  "resp": "Game_RDelRolePropConf",
+  "fields": {
+   "ids": 2
+  },
+  "params": [
+   "data",
+   "id",
+   "ids"
+  ]
+ },
+ "game_delroletileconf": {
+  "resp": "Game_RDelRoleTileConf",
+  "fields": {
+   "ids": 2
+  },
+  "params": [
+   "data",
+   "id",
+   "ids"
+  ]
+ },
+ "game_delroleweaponconf": {
+  "resp": "Game_RDelRoleWeaponConf",
+  "fields": {
+   "ids": 2
+  },
+  "params": [
+   "data",
+   "id",
+   "ids"
+  ]
+ },
+ "game_deltalkchosen": {
+  "resp": "Game_RSetTalkChosen",
+  "fields": {
+   "code": 0
+  },
+  "params": [
+   "talkId"
+  ]
+ },
+ "game_deltalkcomment": {
+  "resp": "Game_RDelTalkComment",
+  "fields": {
+   "commentId": 0
+  },
+  "params": [
+   "commentId"
+  ]
+ },
+ "game_deltalkcommenttop": {
+  "resp": "Game_RDelTalkCommentTop",
+  "fields": {
+   "code": 0
+  },
+  "params": []
+ },
+ "game_deltalktop": {
+  "resp": "Game_RDelTalkTop",
+  "fields": {
+   "code": 0
+  },
+  "params": [
+   "talkId"
+  ]
+ },
+ "game_delvariable": {
+  "resp": "Game_RDelVariable",
+  "fields": {
+   "ids": 2
+  },
+  "params": [
+   "data",
+   "gameId",
+   "id",
+   "ids"
+  ]
+ },
+ "game_delworlddata": {
+  "resp": "Game_RDelWorldData",
+  "fields": {
+   "ids": 2
+  },
+  "params": [
+   "ids"
+  ]
+ },
+ "game_downtalk": {
+  "resp": "Game_RDownTalk",
+  "fields": {
+   "upCnt": 0
+  },
+  "params": [
+   "talkId"
+  ]
+ },
+ "game_downtalkcomment": {
+  "resp": "Game_RDownTalkComment",
+  "fields": {
+   "upCnt": 0
+  },
+  "params": []
+ },
+ "game_followuser": {
+  "resp": "Game_RFollowUser",
+  "fields": {
+   "followId": 0
+  },
+  "params": [
+   "followId"
+  ]
+ },
+ "game_getaggregatemsglist": {
+  "resp": "Game_RGetAggregateMsgList",
+  "fields": {
+   "newMsgCnt": 0,
+   "newAggregateMsgCnt": 0,
+   "aggregateMsgList": 2
+  },
+  "params": [
+   "endIndex",
+   "startIndex"
+  ]
+ },
+ "game_getbereportgamedata": {
+  "resp": "Game_RGetBeReportGameData",
+  "fields": {
+   "gameDatas": 2
+  },
+  "params": [
+   "end",
+   "ids",
+   "start"
+  ]
+ },
+ "game_getbindrolemsg": {
+  "resp": "Game_RGetBindRoleMsg",
+  "fields": {
+   "code": 0
+  },
+  "params": [
+   "bindType"
+  ]
+ },
+ "game_getchosengoodsids": {
+  "resp": "Game_RGetChosenGoodsIds",
+  "fields": {
+   "goodsIds": 2,
+   "recommendGoodsIds": 2
+  },
+  "params": [
+   "end",
+   "goodsSort",
+   "goodsType",
+   "start"
+  ]
+ },
+ "game_getcostcoinrecommendgames": {
+  "resp": "Game_RGetCostCoinRecommendGames",
+  "fields": {
+   "gameDatas": 2
+  },
+  "params": []
+ },
+ "game_getcreativerank": {
+  "resp": "Game_RGetCreativeRank",
+  "fields": {
+   "gameDatas": 2,
+   "sourceReleaseGame": 1
+  },
+  "params": []
+ },
+ "game_getfans": {
+  "resp": "Game_RGetFans",
+  "fields": {
+   "newFansCnt": 0,
+   "ids": 2
+  },
+  "params": [
+   "endIndex",
+   "rid",
+   "startIndex"
+  ]
+ },
+ "game_getfollow": {
+  "resp": "Game_RGetFollow",
+  "fields": {
+   "ids": 2
+  },
+  "params": [
+   "rid"
+  ]
+ },
+ "game_getgamedetail": {
+  "resp": "Game_RGetGameDetail",
+  "fields": {
+   "authorMsg": 1,
+   "releaseGameData": 1,
+   "gameTopComment": 1,
+   "creativeGameData": 1,
+   "rankList": 2
+  },
+  "params": [
+   "id"
+  ]
+ },
+ "game_getgameidlistbygametag": {
+  "resp": "Game_RGetGameIdListByGameTag",
+  "fields": {
+   "gameIdList": 2
+  },
+  "params": [
+   "end",
+   "gameTag",
+   "start"
+  ]
+ },
+ "game_getgamerank": {
+  "resp": "Game_RGetGameRank",
+  "fields": {
+   "datas": 2
+  },
+  "params": [
+   "ids"
+  ]
+ },
+ "game_getgameshop": {
+  "resp": "Game_RGetGameShop",
+  "fields": {
+   "datas": 2
+  },
+  "params": [
+   "ids"
+  ]
+ },
+ "game_getgameshopids": {
+  "resp": "Game_RGetGameShopIds",
+  "fields": {
+   "ids": 2
+  },
+  "params": []
+ },
+ "game_getgiftdyncfg": {
+  "resp": "Game_RGetGiftDynCfg",
+  "fields": {
+   "cfg": 1
+  },
+  "params": []
+ },
+ "game_getgiftrankdata": {
+  "resp": "Game_RGetGiftRankData",
+  "fields": {
+   "code": 0,
+   "rankType": 0,
+   "beginIndex": 0,
+   "rankList": 2
+  },
+  "params": []
+ },
+ "game_getgoodsids": {
+  "resp": "Game_RGetGoodsIds",
+  "fields": {
+   "goodsIds": 2,
+   "recommendGoodsIds": 2,
+   "startMember": 0
+  },
+  "params": []
+ },
+ "game_getgoodsinfos": {
+  "resp": "Game_RGetGoodsInfos",
+  "fields": {
+   "goodsInfoList": 2
+  },
+  "params": [
+   "ids"
+  ]
+ },
+ "game_gethomepagefollowusergames": {
+  "resp": "Game_RGetHomepageFollowUserGames",
+  "fields": {
+   "gameDatas": 2
+  },
+  "params": [
+   "endIndex",
+   "startIndex"
+  ]
+ },
+ "game_gethomepagegamedata": {
+  "resp": "Game_RGetHomepageGameData",
+  "fields": {
+   "gameDatas": 2
+  },
+  "params": [
+   "ids"
+  ]
+ },
+ "game_gethomepagenewgames": {
+  "resp": "Game_RGetHomepageNewGames",
+  "fields": {
+   "startMember": 0,
+   "gameDatas": 2
+  },
+  "params": []
+ },
+ "game_gethomepagerecommendsgames": {
+  "resp": "Game_RGetHomepageRecommendsGames",
+  "fields": {
+   "gameDatas": 2
+  },
+  "params": []
+ },
+ "game_getmanualreportsensitiveimg": {
+  "resp": "Game_RGetManualReportSensitiveImg",
+  "fields": {
+   "sensitiveImgMsgList": 2
+  },
+  "params": []
+ },
+ "game_getmsglist": {
+  "resp": "Game_RGetMsgList",
+  "fields": {
+   "newMsgCnt": 0,
+   "msgList": 2
+  },
+  "params": []
+ },
+ "game_getneedreviewimagelist": {
+  "resp": "Game_RGetNeedReviewImageList",
+  "fields": {
+   "needImageList": 2
+  },
+  "params": [
+   "imageList"
+  ]
+ },
+ "game_getnewcommentlist": {
+  "resp": "Game_RGetNewCommentList",
+  "fields": {
+   "startIndex": 0,
+   "newCommentCnt": 0,
+   "commentList": 2
+  },
+  "params": []
+ },
+ "game_getnewcommentlistv2": {
+  "resp": "Game_RGetNewCommentListV2",
+  "fields": {
+   "startIndex": 0,
+   "newCommentCnt": 0,
+   "commentList": 2
+  },
+  "params": [
+   "count",
+   "startIndex"
+  ]
+ },
+ "game_getnewgameidlist": {
+  "resp": "Game_RGetNewGameIdList",
+  "fields": {
+   "gameIdList": 2,
+   "startMember": 0
+  },
+  "params": []
+ },
+ "game_getnewgamelist": {
+  "resp": "Game_RGetNewGameList",
+  "fields": {
+   "gameDatas": 2,
+   "startMember": 0
+  },
+  "params": [
+   "end",
+   "start",
+   "startMember"
+  ]
+ },
+ "game_getnewgoods": {
+  "resp": "Game_RGetNewGoods",
+  "fields": {
+   "goodsInfoList": 2,
+   "recommendGoods": 2,
+   "startMember": 0
+  },
+  "params": [
+   "end",
+   "goodsSort",
+   "goodsType",
+   "start",
+   "startMember"
+  ]
+ },
+ "game_getonedynamicconfig": {
+  "resp": "Game_RGetOneDynamicConfig",
+  "fields": {
+   "dynamicConfig": 0
+  },
+  "params": [
+   "id"
+  ]
+ },
+ "game_getowngoodsinfos": {
+  "resp": "Game_RGetOwnGoodsInfos",
+  "fields": {
+   "goodsInfoList": 2
+  },
+  "params": [
+   "ids"
+  ]
+ },
+ "game_getplaygamestatistics": {
+  "resp": "Game_RGetPlayGameStatistics",
+  "fields": {
+   "gameDatas": 2
+  },
+  "params": [
+   "end",
+   "start"
+  ]
+ },
+ "game_getrecommendgameidlist": {
+  "resp": "Game_RGetRecommendGameIdList",
+  "fields": {
+   "recommendList": 2
+  },
+  "params": [
+   "count",
+   "showType"
+  ]
+ },
+ "game_getrecommendgoodsidlist": {
+  "resp": "Game_RGetRecommendGoodsIdList",
+  "fields": {
+   "recommendList": 2
+  },
+  "params": [
+   "count",
+   "showType"
+  ]
+ },
+ "game_getreleasegamerank": {
+  "resp": "Game_RGetReleaseGameRank",
+  "fields": {
+   "datas": 2
+  },
+  "params": [
+   "ids"
+  ]
+ },
+ "game_getreportgamecommentlist": {
+  "resp": "Game_RGetReportGameCommentList",
+  "fields": {
+   "reportGameCommentList": 2,
+   "reportScoreMap": 5
+  },
+  "params": [
+   "commentId",
+   "end",
+   "start"
+  ]
+ },
+ "game_getreportsensitiveimg": {
+  "resp": "Game_RGetReportSensitiveImg",
+  "fields": {
+   "sensitiveImgMsgList": 2
+  },
+  "params": []
+ },
+ "game_getreporttalkcommentlist": {
+  "resp": "Game_RGetReportTalkCommentList",
+  "fields": {
+   "comments": 2,
+   "reportScoreMap": 5
+  },
+  "params": []
+ },
+ "game_getreporttalklist": {
+  "resp": "Game_RGetReportTalkList",
+  "fields": {
+   "talkList": 2,
+   "reportScoreMap": 5
+  },
+  "params": [
+   "end",
+   "start",
+   "talkId"
+  ]
+ },
+ "game_getreviewgamedata": {
+  "resp": "Game_RGetReviewGameData",
+  "fields": {
+   "datas": 2
+  },
+  "params": []
+ },
+ "game_getroleactorconf": {
+  "resp": "Game_RGetRoleActorConf",
+  "fields": {
+   "datas": 2
+  },
+  "params": [
+   "ids"
+  ]
+ },
+ "game_getroleactorids": {
+  "resp": "Game_RGetRoleActorIds",
+  "fields": {
+   "ids": 2
+  },
+  "params": []
+ },
+ "game_getrolebulletconf": {
+  "resp": "Game_RGetRoleBulletConf",
+  "fields": {
+   "datas": 2
+  },
+  "params": [
+   "ids"
+  ]
+ },
+ "game_getrolebulletids": {
+  "resp": "Game_RGetRoleBulletIds",
+  "fields": {
+   "ids": 2
+  },
+  "params": []
+ },
+ "game_getrolecreativeconf": {
+  "resp": "Game_RGetRoleCreativeConf",
+  "fields": {
+   "confMap": 5
+  },
+  "params": [
+   "gameId"
+  ]
+ },
+ "game_getroledeviceconf": {
+  "resp": "Game_RGetRoleDeviceConf",
+  "fields": {
+   "datas": 2
+  },
+  "params": [
+   "ids"
+  ]
+ },
+ "game_getroledeviceids": {
+  "resp": "Game_RGetRoleDeviceIds",
+  "fields": {
+   "ids": 2
+  },
+  "params": []
+ },
+ "game_getrolegamedata": {
+  "resp": "Game_RGetRoleGameData",
+  "fields": {
+   "datas": 2
+  },
+  "params": [
+   "ids"
+  ]
+ },
+ "game_getrolegameids": {
+  "resp": "Game_RGetRoleGameIds",
+  "fields": {
+   "ids": 2
+  },
+  "params": []
+ },
+ "game_getrolegiftrankdata": {
+  "resp": "Game_RGetRoleGiftRankData",
+  "fields": {
+   "code": 0,
+   "score": 0,
+   "beginIndex": 0,
+   "rankList": 2,
+   "checkerInfo": 1
+  },
+  "params": [
+   "beginIndex",
+   "gameId"
+  ]
+ },
+ "game_getrolepropconf": {
+  "resp": "Game_RGetRolePropConf",
+  "fields": {
+   "datas": 2
+  },
+  "params": [
+   "ids"
+  ]
+ },
+ "game_getrolepropids": {
+  "resp": "Game_RGetRolePropIds",
+  "fields": {
+   "ids": 2
+  },
+  "params": []
+ },
+ "game_getroletileconf": {
+  "resp": "Game_RGetRoleTileConf",
+  "fields": {
+   "datas": 2
+  },
+  "params": [
+   "ids"
+  ]
+ },
+ "game_getroletileids": {
+  "resp": "Game_RGetRoleTileIds",
+  "fields": {
+   "ids": 2
+  },
+  "params": []
+ },
+ "game_getroleweaponconf": {
+  "resp": "Game_RGetRoleWeaponConf",
+  "fields": {
+   "datas": 2
+  },
+  "params": [
+   "ids"
+  ]
+ },
+ "game_getroleweaponids": {
+  "resp": "Game_RGetRoleWeaponIds",
+  "fields": {
+   "ids": 2
+  },
+  "params": []
+ },
+ "game_getsimplegoods": {
+  "resp": "Game_RGetSimpleGoods",
+  "fields": {
+   "goodsInfoList": 2
+  },
+  "params": [
+   "ids"
+  ]
+ },
+ "game_getsourcecreativegamerank": {
+  "resp": "Game_RGetSourceCreativeGameRank",
+  "fields": {
+   "gameDatas": 2
+  },
+  "params": [
+   "end",
+   "start"
+  ]
+ },
+ "game_getthumbgamecomment": {
+  "resp": "Game_RGetThumbGameComment",
+  "fields": {
+   "gameCommentMap": 5
+  },
+  "params": []
+ },
+ "game_getthumbtalkcomment": {
+  "resp": "Game_RGetThumbTalkComment",
+  "fields": {
+   "thumbMap": 5
+  },
+  "params": []
+ },
+ "game_getusercreditmsg": {
+  "resp": "Game_RGetUserCreditMsg",
+  "fields": {
+   "creditScore": 0,
+   "creditScoreRecoverProcess": 0,
+   "userCreditMsgList": 2
+  },
+  "params": []
+ },
+ "game_getuserdetailmsg": {
+  "resp": "Game_RGetUserDetailMsg",
+  "fields": {
+   "userDetailMsg": 1
+  },
+  "params": [
+   "id"
+  ]
+ },
+ "game_getusersimplemsg": {
+  "resp": "Game_RGetUserSimpleMsg",
+  "fields": {
+   "userSimpleMsgList": 2
+  },
+  "params": [
+   "end",
+   "ids",
+   "start"
+  ]
+ },
+ "game_getvariable": {
+  "resp": "Game_RGetVariable",
+  "fields": {
+   "datas": 2
+  },
+  "params": []
+ },
+ "game_getvariableids": {
+  "resp": "Game_RGetVariableIds",
+  "fields": {
+   "ids": 2
+  },
+  "params": []
+ },
+ "game_getworlddata": {
+  "resp": "Game_RGetWorldData",
+  "fields": {
+   "datas": 2
+  },
+  "params": [
+   "ids",
+   "needData"
+  ]
+ },
+ "game_getworlddataids": {
+  "resp": "Game_RGetWorldDataIds",
+  "fields": {
+   "ids": 2
+  },
+  "params": []
+ },
+ "game_gmbindrole": {
+  "resp": "Game_RGMBindRole",
+  "fields": {
+   "errorCode": 0,
+   "user": 1
+  },
+  "params": []
+ },
+ "game_gmincothercoin": {
+  "resp": "Game_RGMIncOtherCoin",
+  "fields": {
+   "coin": 0
+  },
+  "params": [
+   "incCoin",
+   "targetId"
+  ]
+ },
+ "game_gmlogin": {
+  "resp": "Game_RLogin",
+  "fields": {
+   "role": 1,
+   "dynamicConfig": 5,
+   "roleGameConf": 1,
+   "offLineChangeMsg": 1,
+   "saleSummarys": 2,
+   "gameSaleSummarys": 2,
+   "adSummarys": 2,
+   "rebornSummarys": 2,
+   "unlockGameRewards": 2,
+   "unlockGoodsRewards": 2,
+   "gameSlotUnlockLvls": 2,
+   "goodsSlotUnlockLvls": 2,
+   "hotGameIdList": 2,
+   "newGameDatas": 2,
+   "followGameDatas": 2,
+   "newMsgCnt": 0,
+   "newAggregateMsgCnt": 0,
+   "newFansCnt": 0,
+   "newCommentCnt": 0,
+   "canObtainTTCoin": 0,
+   "customActorGroups": 2,
+   "addCoinByAdvertCnt": 0,
+   "addCoinByAdvertLimit": 0,
+   "addCoinByAdvertReset": 0,
+   "collectionGoods": 2,
+   "giftCfgVersion": 0,
+   "userPlatforms": 2
+  },
+  "params": [
+   "channel",
+   "roleId",
+   "secret"
+  ]
+ },
+ "game_gmrevokebindrole": {
+  "resp": "Game_RGMRevokeBindRole",
+  "fields": {
+   "errorCode": 0,
+   "user": 1
+  },
+  "params": []
+ },
+ "game_gmsetgametage": {
+  "resp": "Game_RGMSetGameTage",
+  "fields": {
+   "code": 0,
+   "gameID": 0
+  },
+  "params": [
+   "addTagMsg",
+   "gameID",
+   "tagCount"
+  ]
+ },
+ "game_hurrygames": {
+  "resp": "Game_RHurryGames",
+  "fields": {
+   "ids": 2
+  },
+  "params": [
+   "ids"
+  ]
+ },
+ "game_inccreditscore": {
+  "resp": "Game_RIncCreditScore",
+  "fields": {
+   "playerId": 0,
+   "incScore": 0
+  },
+  "params": [
+   "incScore",
+   "playerId"
+  ]
+ },
+ "game_loadfirstlevelgamecomment": {
+  "resp": "Game_RLoadFirstLevelGameComment",
+  "fields": {
+   "comment": 1
+  },
+  "params": [
+   "commentId"
+  ]
+ },
+ "game_loadfirstleveltalkcomment": {
+  "resp": "Game_RLoadFirstLevelTalkComment",
+  "fields": {
+   "comment": 1
+  },
+  "params": [
+   "commentId"
+  ]
+ },
+ "game_loadgamecomment": {
+  "resp": "Game_RLoadGameComment",
+  "fields": {
+   "commentsCnt": 0,
+   "commentsCntSum": 0,
+   "comments": 2
+  },
+  "params": [
+   "end",
+   "gameId",
+   "start"
+  ]
+ },
+ "game_loadgamesubcomment": {
+  "resp": "Game_RLoadGameSubComment",
+  "fields": {
+   "comments": 2
+  },
+  "params": [
+   "commentId",
+   "end",
+   "start"
+  ]
+ },
+ "game_loadowntalk": {
+  "resp": "Game_RLoadOwnTalk",
+  "fields": {
+   "talkList": 2
+  },
+  "params": [
+   "roleId"
+  ]
+ },
+ "game_loadowntalkcomment": {
+  "resp": "Game_RLoadOwnTalkComment",
+  "fields": {
+   "comments": 2
+  },
+  "params": []
+ },
+ "game_loadtalk": {
+  "resp": "Game_RLoadTalk",
+  "fields": {
+   "startMember": 0,
+   "talkList": 2
+  },
+  "params": []
+ },
+ "game_loadtalkbyidlist": {
+  "resp": "Game_RLoadOwnTalk",
+  "fields": {
+   "talkList": 2
+  },
+  "params": [
+   "roleId",
+   "talkIdList"
+  ]
+ },
+ "game_loadtalkcomment": {
+  "resp": "Game_RLoadTalkComment",
+  "fields": {
+   "commentsCnt": 0,
+   "commentsCntSum": 0,
+   "comments": 2
+  },
+  "params": [
+   "end",
+   "start",
+   "talkId"
+  ]
+ },
+ "game_loadtalkdetail": {
+  "resp": "Game_RLoadTalkDetail",
+  "fields": {
+   "talkData": 1
+  },
+  "params": [
+   "talkId"
+  ]
+ },
+ "game_loadtalksubcomment": {
+  "resp": "Game_RLoadTalkSubComment",
+  "fields": {
+   "comments": 2
+  },
+  "params": [
+   "commentId",
+   "end",
+   "start"
+  ]
+ },
+ "game_login": {
+  "resp": "Game_RLogin",
+  "fields": {
+   "role": 1,
+   "dynamicConfig": 5,
+   "roleGameConf": 1,
+   "offLineChangeMsg": 1,
+   "saleSummarys": 2,
+   "gameSaleSummarys": 2,
+   "adSummarys": 2,
+   "rebornSummarys": 2,
+   "unlockGameRewards": 2,
+   "unlockGoodsRewards": 2,
+   "gameSlotUnlockLvls": 2,
+   "goodsSlotUnlockLvls": 2,
+   "hotGameIdList": 2,
+   "newGameDatas": 2,
+   "followGameDatas": 2,
+   "newMsgCnt": 0,
+   "newAggregateMsgCnt": 0,
+   "newFansCnt": 0,
+   "newCommentCnt": 0,
+   "canObtainTTCoin": 0,
+   "customActorGroups": 2,
+   "addCoinByAdvertCnt": 0,
+   "addCoinByAdvertLimit": 0,
+   "addCoinByAdvertReset": 0,
+   "collectionGoods": 2,
+   "giftCfgVersion": 0,
+   "userPlatforms": 2
+  },
+  "params": [
+   "channel",
+   "roleId",
+   "secret"
+  ]
+ },
+ "game_modifyofficialtalk": {
+  "resp": "Game_RModifyTalk",
+  "fields": {
+   "code": 0,
+   "sensitiveWords": 2,
+   "talkData": 1
+  },
+  "params": [
+   "content",
+   "simpleContent",
+   "talkId",
+   "title"
+  ]
+ },
+ "game_modifytalk": {
+  "resp": "Game_RModifyTalk",
+  "fields": {
+   "code": 0,
+   "sensitiveWords": 2,
+   "talkData": 1
+  },
+  "params": [
+   "content",
+   "reviewImageMap",
+   "reviewStr",
+   "simpleContent",
+   "talkId",
+   "title"
+  ]
+ },
+ "game_modifytalkcomment": {
+  "resp": "Game_RModifyTalkComment",
+  "fields": {
+   "code": 0,
+   "comment": 1
+  },
+  "params": []
+ },
+ "game_newsearchgoods": {
+  "resp": "Game_RNewSearchGoods",
+  "fields": {
+   "goodsInfoList": 2
+  },
+  "params": [
+   "end",
+   "searchName",
+   "start"
+  ]
+ },
+ "game_obtainttcoin0319": {
+  "resp": "Game_RObtainTTCoin0319",
+  "fields": {
+   "coin": 0
+  },
+  "params": []
+ },
+ "game_offgame": {
+  "resp": "Game_ROffGame",
+  "fields": {
+   "id": 0
+  },
+  "params": [
+   "id",
+   "needDelSourceGame",
+   "reason",
+   "score"
+  ]
+ },
+ "game_offgoods": {
+  "resp": "Game_ROffGoods",
+  "fields": {
+   "id": 0
+  },
+  "params": [
+   "id"
+  ]
+ },
+ "game_officialdeletetalk": {
+  "resp": "Game_ROfficialDeleteTalk",
+  "fields": {
+   "code": 0
+  },
+  "params": [
+   "end",
+   "start",
+   "talkId"
+  ]
+ },
+ "game_ownoffgame": {
+  "resp": "Game_ROwnOffGame",
+  "fields": {
+   "id": 0
+  },
+  "params": [
+   "id",
+   "ids"
+  ]
+ },
+ "game_playgames": {
+  "resp": "Game_RPlayGames",
+  "fields": {
+   "ids": 2,
+   "playCntList": 2
+  },
+  "params": [
+   "ids"
+  ]
+ },
+ "game_playgamestatistics": {
+  "resp": "Game_RPlayGameStatistics",
+  "fields": {},
+  "params": []
+ },
+ "game_publishgame": {
+  "resp": "Game_RPublishGame",
+  "fields": {
+   "id": 0,
+   "code": 0,
+   "sensitiveWords": 2
+  },
+  "params": []
+ },
+ "game_replytalkcomment": {
+  "resp": "Game_RReplyTalkComment",
+  "fields": {
+   "code": 0,
+   "sensitiveWords": 2,
+   "comment": 1
+  },
+  "params": [
+   "commentId",
+   "content",
+   "reviewImageMap",
+   "reviewStr",
+   "talkId"
+  ]
+ },
+ "game_reportbugmsg": {
+  "resp": "Game_RReportBugMsg",
+  "fields": {},
+  "params": [
+   "msg",
+   "type"
+  ]
+ },
+ "game_reportgame": {
+  "resp": "Game_RReportGame",
+  "fields": {
+   "id": 0
+  },
+  "params": [
+   "id"
+  ]
+ },
+ "game_reportgameclick": {
+  "resp": "Game_RReportGameClick",
+  "fields": {},
+  "params": [
+   "clickGameData"
+  ]
+ },
+ "game_reportgamecomment": {
+  "resp": "Game_RReportGameComment",
+  "fields": {
+   "reportCnt": 0
+  },
+  "params": [
+   "commentId"
+  ]
+ },
+ "game_reportgameshow": {
+  "resp": "Game_RReportGameShow",
+  "fields": {},
+  "params": [
+   "showList"
+  ]
+ },
+ "game_reportgoods": {
+  "resp": "Game_RReportGoods",
+  "fields": {
+   "id": 0
+  },
+  "params": [
+   "id"
+  ]
+ },
+ "game_reportgoodsclick": {
+  "resp": "Game_RReportGoodsClick",
+  "fields": {},
+  "params": [
+   "clickGameData"
+  ]
+ },
+ "game_reportgoodsshow": {
+  "resp": "Game_RReportGoodsShow",
+  "fields": {},
+  "params": [
+   "showList"
+  ]
+ },
+ "game_reportplayer": {
+  "resp": "Game_RReportPlayer",
+  "fields": {
+   "id": 0
+  },
+  "params": [
+   "id"
+  ]
+ },
+ "game_reporttalk": {
+  "resp": "Game_RReportTalk",
+  "fields": {
+   "reportCnt": 0
+  },
+  "params": [
+   "talkId"
+  ]
+ },
+ "game_reporttalkcomment": {
+  "resp": "Game_RReportTalkComment",
+  "fields": {
+   "reportCnt": 0
+  },
+  "params": []
+ },
+ "game_resetchosengames": {
+  "resp": "Game_RResetChosenGames",
+  "fields": {},
+  "params": [
+   "gameIds"
+  ]
+ },
+ "game_resetchosengoods": {
+  "resp": "Game_RResetChosenGoods",
+  "fields": {},
+  "params": [
+   "goodsIds"
+  ]
+ },
+ "game_reviewgame": {
+  "resp": "Game_RReviewGame",
+  "fields": {
+   "datas": 2
+  },
+  "params": []
+ },
+ "game_revokereportgame": {
+  "resp": "Game_RRevokeReportGame",
+  "fields": {
+   "id": 0
+  },
+  "params": []
+ },
+ "game_revokereportgamecomment": {
+  "resp": "Game_RRevokeReportGameComment",
+  "fields": {
+   "id": 0
+  },
+  "params": []
+ },
+ "game_revokereportgoods": {
+  "resp": "Game_RRevokeReportGoods",
+  "fields": {
+   "id": 0
+  },
+  "params": []
+ },
+ "game_revokereportplayer": {
+  "resp": "Game_RRevokeReportPlayer",
+  "fields": {
+   "id": 0
+  },
+  "params": []
+ },
+ "game_saveactorgroups": {
+  "resp": "Game_RSaveActorGroups",
+  "fields": {},
+  "params": [
+   "groupName",
+   "refDataList"
+  ]
+ },
+ "game_saveallcustomcolors": {
+  "resp": "Game_RSaveAllCustomColors",
+  "fields": {
+   "colorDatas": 2
+  },
+  "params": [
+   "colorDatas"
+  ]
+ },
+ "game_saveallvariable": {
+  "resp": "Game_RSaveAllVariable",
+  "fields": {
+   "retVariableDatas": 2
+  },
+  "params": [
+   "variableDatas"
+  ]
+ },
+ "game_savecustomcolors": {
+  "resp": "Game_RSaveCustomColors",
+  "fields": {
+   "colorDatas": 2
+  },
+  "params": [
+   "colorDatas"
+  ]
+ },
+ "game_savegamerank": {
+  "resp": "Game_RSaveGameRank",
+  "fields": {
+   "gameId": 0,
+   "id": 0
+  },
+  "params": [
+   "cycleType",
+   "data",
+   "gameId",
+   "id",
+   "sortType"
+  ]
+ },
+ "game_savegameshop": {
+  "resp": "Game_RSaveGameShop",
+  "fields": {
+   "gameId": 0,
+   "id": 0
+  },
+  "params": [
+   "data",
+   "gameId",
+   "id"
+  ]
+ },
+ "game_saveguide": {
+  "resp": "Game_RSaveGuide",
+  "fields": {},
+  "params": [
+   "completeTaskIds",
+   "guideVersion"
+  ]
+ },
+ "game_saveroleactorconf": {
+  "resp": "Game_RSaveRoleActorConf",
+  "fields": {
+   "id": 0
+  },
+  "params": [
+   "data",
+   "id"
+  ]
+ },
+ "game_saverolebulletconf": {
+  "resp": "Game_RSaveRoleBulletConf",
+  "fields": {
+   "id": 0
+  },
+  "params": [
+   "data",
+   "id"
+  ]
+ },
+ "game_saverolecreativeconf": {
+  "resp": "Game_RSaveRoleCreativeConf",
+  "fields": {
+   "gameId": 0,
+   "confId": 0
+  },
+  "params": [
+   "confId",
+   "confType",
+   "data",
+   "gameId"
+  ]
+ },
+ "game_saveroledeviceconf": {
+  "resp": "Game_RSaveRoleDeviceConf",
+  "fields": {
+   "id": 0
+  },
+  "params": [
+   "data",
+   "id"
+  ]
+ },
+ "game_saverolegamedata": {
+  "resp": "Game_RSaveRoleGameData",
+  "fields": {
+   "id": 0
+  },
+  "params": [
+   "creativeSourceUId",
+   "data",
+   "id"
+  ]
+ },
+ "game_saverolepropconf": {
+  "resp": "Game_RSaveRolePropConf",
+  "fields": {
+   "id": 0
+  },
+  "params": [
+   "data",
+   "id"
+  ]
+ },
+ "game_saveroletileconf": {
+  "resp": "Game_RSaveRoleTileConf",
+  "fields": {
+   "id": 0
+  },
+  "params": [
+   "data",
+   "id"
+  ]
+ },
+ "game_saveroleweaponconf": {
+  "resp": "Game_RSaveRoleWeaponConf",
+  "fields": {
+   "id": 0
+  },
+  "params": [
+   "data",
+   "id"
+  ]
+ },
+ "game_savevariable": {
+  "resp": "Game_RSaveVariable",
+  "fields": {
+   "gameId": 0,
+   "id": 0
+  },
+  "params": [
+   "confId",
+   "confType",
+   "data",
+   "gameId",
+   "id"
+  ]
+ },
+ "game_saveworlddata": {
+  "resp": "Game_RSaveWorldData",
+  "fields": {
+   "gameId": 0,
+   "id": 0
+  },
+  "params": [
+   "gameId",
+   "id",
+   "ids",
+   "info",
+   "layoutMin"
+  ]
+ },
+ "game_searchgame": {
+  "resp": "Game_RSearchGame",
+  "fields": {
+   "gameDatas": 2
+  },
+  "params": [
+   "end",
+   "searchName",
+   "start"
+  ]
+ },
+ "game_searchgamebytag": {
+  "resp": "Game_RSearchGameByTag",
+  "fields": {
+   "gameDatas": 2
+  },
+  "params": []
+ },
+ "game_searchgoods": {
+  "resp": "Game_RSearchGoods",
+  "fields": {
+   "goodsInfoList": 2
+  },
+  "params": []
+ },
+ "game_searchrole": {
+  "resp": "Game_RSearchRole",
+  "fields": {
+   "roleDatas": 2
+  },
+  "params": [
+   "end",
+   "searchName",
+   "start"
+  ]
+ },
+ "game_searchtalk": {
+  "resp": "Game_RSearchTalk",
+  "fields": {
+   "talkList": 2
+  },
+  "params": [
+   "end",
+   "searchName",
+   "start"
+  ]
+ },
+ "game_sendgift": {
+  "resp": "Game_RSendGift",
+  "fields": {
+   "code": 0,
+   "coin": 0
+  },
+  "params": [
+   "gameId",
+   "giftCount",
+   "giftID"
+  ]
+ },
+ "game_sensitivemsg": {
+  "resp": "Game_RSensitiveMsg",
+  "fields": {
+   "code": 0,
+   "sensitiveWords": 2
+  },
+  "params": [
+   "msg"
+  ]
+ },
+ "game_settalkchosen": {
+  "resp": "Game_RSetTalkChosen",
+  "fields": {
+   "code": 0
+  },
+  "params": [
+   "talkId"
+  ]
+ },
+ "game_settalkcommenttop": {
+  "resp": "Game_RSetTalkCommentTop",
+  "fields": {
+   "code": 0
+  },
+  "params": []
+ },
+ "game_settalktop": {
+  "resp": "Game_RSetTalkTop",
+  "fields": {
+   "code": 0
+  },
+  "params": [
+   "talkId"
+  ]
+ },
+ "game_thumbgamecomment": {
+  "resp": "Game_RThumbGameComment",
+  "fields": {
+   "thumbCnt": 0
+  },
+  "params": [
+   "commentId"
+  ]
+ },
+ "game_thumbgames": {
+  "resp": "Game_RThumbGames",
+  "fields": {
+   "ids": 2
+  },
+  "params": [
+   "ids"
+  ]
+ },
+ "game_thumbtalk": {
+  "resp": "Game_RThumbTalk",
+  "fields": {
+   "thumbCnt": 0
+  },
+  "params": []
+ },
+ "game_thumbtalkcomment": {
+  "resp": "Game_RThumbTalkComment",
+  "fields": {
+   "thumbCnt": 0
+  },
+  "params": [
+   "commentId"
+  ]
+ },
+ "game_updateuserimg": {
+  "resp": "Game_RUpdateUserImg",
+  "fields": {
+   "code": 0
+  },
+  "params": [
+   "newUserImg"
+  ]
+ },
+ "game_updateuserinfo": {
+  "resp": "Game_RUpdateUserInfo",
+  "fields": {
+   "code": 0,
+   "sensitiveWords": 2
+  },
+  "params": [
+   "userImg",
+   "userIntro",
+   "userName"
+  ]
+ },
+ "game_uploadgamerankscore": {
+  "resp": "Game_RUploadGameRankScore",
+  "fields": {
+   "gameId": 0,
+   "scores": 2
+  },
+  "params": [
+   "gameId",
+   "scores"
+  ]
+ },
+ "game_uploadgoods": {
+  "resp": "Game_RUploadGoods",
+  "fields": {
+   "id": 0,
+   "code": 0,
+   "sensitiveWords": 2
+  },
+  "params": [
+   "id"
+  ]
+ },
+ "game_uploadimage": {
+  "resp": "Game_RUploadImage",
+  "fields": {
+   "isOK": 0,
+   "sensitiveImageResult": 1,
+   "url": 0,
+   "reason": 0
+  },
+  "params": []
+ },
+ "game_uploadreleasegame": {
+  "resp": "Game_RUploadReleaseGame",
+  "fields": {
+   "cdnUrl": 0
+  },
+  "params": [
+   "content",
+   "dataVersion"
+  ]
+ },
+ "game_uploadtakeexamscore": {
+  "resp": "Game_RUploadTakeExamScore",
+  "fields": {
+   "score": 0
+  },
+  "params": [
+   "score"
+  ]
+ },
+ "game_uptalk": {
+  "resp": "Game_RUpTalk",
+  "fields": {
+   "upCnt": 0
+  },
+  "params": [
+   "talkId"
+  ]
+ },
+ "game_uptalkcomment": {
+  "resp": "Game_RUpTalkComment",
+  "fields": {
+   "upCnt": 0
+  },
+  "params": []
+ },
+ "oim_getconversationlist": {
+  "resp": "OIM_GetConversationListResp",
+  "fields": {
+   "convs": 2
+  },
+  "params": []
+ },
+ "oim_gethistory": {
+  "resp": "OIM_GetHistoryResp",
+  "fields": {
+   "msgs": 2
+  },
+  "params": []
+ },
+ "oim_sendmsg": {
+  "resp": "RespNone",
+  "fields": {},
+  "params": []
+ },
+ "oim_delconversation": {
+  "resp": "RespNone",
+  "fields": {},
+  "params": []
+ },
+ "game_clearnewcomment": {
+  "resp": "Game_RClearNewComment",
+  "fields": {},
+  "params": []
+ },
+ "game_clearnewfans": {
+  "resp": "Game_RClearNewFans",
+  "fields": {},
+  "params": []
+ },
+ "game_clearnewmsg": {
+  "resp": "Game_RClearNewMsg",
+  "fields": {},
+  "params": []
+ }
+}

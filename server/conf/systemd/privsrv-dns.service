@@ -1,0 +1,14 @@
+[Unit]
+Description=Private Server DNS hijack (UDP 53)
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/privsrv
+EnvironmentFile=/opt/privsrv/conf/privsrv.env
+ExecStart=/usr/bin/python3 /opt/privsrv/dnssrv.py 53
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

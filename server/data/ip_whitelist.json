@@ -1,0 +1,5 @@
+{
+  "allow": [],
+  "strict": false,
+  "_note": "strict=true 时仅允许名单内 IP 访问 8080 代理。默认关闭，任何能连到本机的设备都可用。"
+}

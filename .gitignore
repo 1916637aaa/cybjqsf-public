@@ -1,0 +1,28 @@
+# ---- Python 缓存 ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# ---- 运行时日志（logs 目录仅保留 .gitkeep）----
+server/logs/*.log
+server/logs/*.log.*
+
+# ---- 安装时现场生成的证书 / 私钥（不入库）----
+server/certs/*.crt
+server/certs/*.key
+server/certs/*.pem
+server/certs/*.csr
+*.jks
+*.keystore
+
+# ---- 后台随机密码（init_admin.sh 现场生成）----
+server/admin_password.txt
+
+# ---- 客户端构建产物（out 目录仅保留 README 说明）----
+client/out/*.apk
+client/out/*.jks
+
+# ---- 系统 / 编辑器杂项 ----
+.DS_Store
+Thumbs.db
+*.swp

@@ -1,0 +1,4 @@
+# Python 3 第三方依赖（其余均为标准库；dnssrv/features/review/server/store 是本地模块）
+flask>=2.0
+bcrypt>=3.2
+websockets>=10.0

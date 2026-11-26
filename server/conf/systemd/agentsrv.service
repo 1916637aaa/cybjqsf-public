@@ -1,0 +1,14 @@
+[Unit]
+Description=Private Server WebSocket agent (8765)
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/privsrv
+EnvironmentFile=/opt/privsrv/conf/privsrv.env
+ExecStart=/usr/bin/python3 /opt/privsrv/agentsrv.py
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target
